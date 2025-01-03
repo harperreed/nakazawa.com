@@ -14,14 +14,25 @@
     </head>
     <body>
         <script>
-            document.addEventListener('click', function(e) {
+            var myCanvas = document.createElement("canvas");
+            document.body.appendChild(myCanvas);
+
+            var myConfetti = confetti.create(myCanvas, {
+                resize: true,
+                useWorker: true,
+            });
+
+            document.addEventListener("click", function (e) {
                 confetti({
                     particleCount: 100,
                     spread: 70,
-                    origin: { 
+                    gravity: 0.4,
+                    shapes: ["star", "circle", "square"],
+
+                    origin: {
                         x: e.clientX / window.innerWidth,
-                        y: e.clientY / window.innerHeight
-                    }
+                        y: e.clientY / window.innerHeight,
+                    },
                 });
             });
         </script>
