@@ -1,16 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <title>nakazawa 🐇🥕🐰</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta name="theme-color" content="#ffffff"/>
-        <meta name="description" content="A delightful bunny experience">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="Bunnies">
-        <link rel="manifest" href="manifest.json">
-        <link rel="apple-touch-icon" href="android-chrome-192x192.png">
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="description" content="A delightful bunny experience" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="apple-mobile-web-app-title" content="Bunnies" />
+        <link rel="manifest" href="manifest.json" />
+        <link rel="apple-touch-icon" href="android-chrome-192x192.png" />
         <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
         <link
             rel="icon"
@@ -34,14 +38,20 @@
     <body>
         <script>
             // Register Service Worker
-            if ('serviceWorker' in navigator) {
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/sw.js')
-                        .then(registration => {
-                            console.log('ServiceWorker registration successful');
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", () => {
+                    navigator.serviceWorker
+                        .register("/sw.js")
+                        .then((registration) => {
+                            console.log(
+                                "ServiceWorker registration successful",
+                            );
                         })
-                        .catch(err => {
-                            console.log('ServiceWorker registration failed: ', err);
+                        .catch((err) => {
+                            console.log(
+                                "ServiceWorker registration failed: ",
+                                err,
+                            );
                         });
                 });
             }
@@ -50,7 +60,7 @@
             document.body.appendChild(myCanvas);
             const myConfetti = confetti.create(myCanvas, {
                 resize: true,
-                useWorker: true
+                useWorker: true,
             });
 
             // Handle clicks for confetti
@@ -60,17 +70,23 @@
                     spread: 70,
                     gravity: 0.4,
                     shapes: ["star", "circle", "square"],
-                    colors: ['#FFB6C1', '#87CEEB', '#98FB98', '#DDA0DD', '#F0E68C'],
+                    colors: [
+                        "#FFB6C1",
+                        "#87CEEB",
+                        "#98FB98",
+                        "#DDA0DD",
+                        "#F0E68C",
+                    ],
                     origin: {
                         x: e.clientX / window.innerWidth,
-                        y: e.clientY / window.innerHeight
-                    }
+                        y: e.clientY / window.innerHeight,
+                    },
                 });
             });
 
             // Handle PWA installation prompt
             let deferredPrompt;
-            window.addEventListener('beforeinstallprompt', (e) => {
+            window.addEventListener("beforeinstallprompt", (e) => {
                 e.preventDefault();
                 deferredPrompt = e;
             });
