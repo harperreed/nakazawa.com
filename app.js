@@ -37,7 +37,9 @@ document.addEventListener("click", (e) => {
 
     clickCounter++;
     if (clickCounter >= 10) {
-        document.getElementById("click-counter").innerText = `Clicks: ${clickCounter}`;
+        const clickCounterElement = document.getElementById("click-counter");
+        clickCounterElement.style.display = "block";
+        clickCounterElement.innerText = `Clicks: ${clickCounter}`;
     }
 });
 
