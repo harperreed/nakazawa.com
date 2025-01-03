@@ -20,10 +20,53 @@
             href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐰</text></svg>"
         />
         <link rel="stylesheet" href="style.css?1" />
+        <!-- Content Security Policy (CSP) -->
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="
+            default-src 'self';
+            script-src 'self' https://cdn.jsdelivr.net https://tinylytics.app;
+            style-src 'self' ;
+            font-src 'self';
+            img-src 'self' data: https: http: * https://s.gravatar.com;
+            connect-src 'self' https:;
+            media-src 'self';
+            object-src 'none';
+            frame-src 'self';
+            frame-ancestors 'self';
+            form-action 'self';
+            base-uri 'self';
+            upgrade-insecure-requests;"
+        />
+
+        <meta http-equiv="x-dns-prefetch-control" content="on" />
+
+        <!-- Cross-Site Scripting Protection -->
+        <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+
+        <!-- Prevent MIME-type sniffing -->
+        <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+
+        <!-- Referrer Policy -->
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+        <!-- Force HTTPS -->
+        <meta
+            http-equiv="Strict-Transport-Security"
+            content="max-age=31536000; includeSubDomains"
+        />
+
+        <!-- Disable caching for sensitive pages -->
+        <meta
+            http-equiv="Cache-Control"
+            content="no-store, no-cache, must-revalidate, proxy-revalidate"
+        />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
     </head>
     <body>
-        <div id="click-counter" style="display: none; position: absolute; top: 10px; right: 10px; background-color: white; padding: 5px; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">Clicks: 0</div>
-        <script src="app.js?1" defer></script>
+        <div id="click-counter" class="click-counter-hidden"></div>
+        <script src="app.js?2" defer></script>
         <script
             src="https://tinylytics.app/embed/NEzSvjX3csHHBPZpdojg.js"
             defer

@@ -39,7 +39,7 @@ document.addEventListener("click", (e) => {
     clickCounter++;
     if (clickCounter >= 10) {
         clickCounterElement.style.display = "block";
-        clickCounterElement.innerText = `Clicks: ${clickCounter}`;
+        clickCounterElement.innerText = `🎉: ${clickCounter}`;
     }
 });
 
