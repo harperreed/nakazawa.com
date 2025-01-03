@@ -23,3 +23,15 @@ body {
     font-size: 14px;
     color: #333;
 }
+
+@media (max-width: 600px) {
+    #click-counter {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 400px) {
+    #click-counter {
+        font-size: 16px;
+    }
+}
