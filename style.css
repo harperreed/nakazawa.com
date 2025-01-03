@@ -22,6 +22,7 @@ body {
     font-family: Arial, sans-serif;
     font-size: 14px;
     color: #333;
+    animation: fadeIn 1s ease-in-out;
 }
 
 @media (max-width: 600px) {
@@ -34,4 +35,9 @@ body {
     #click-counter {
         font-size: 16px;
     }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
