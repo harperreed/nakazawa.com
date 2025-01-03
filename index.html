@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>nakazawa &middot; an important company</title>
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
         <style>
             body {
                 background-image: url("bunnies.gif");
@@ -11,5 +12,18 @@
             }
         </style>
     </head>
-    <body></body>
+    <body>
+        <script>
+            document.addEventListener('click', function(e) {
+                confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: { 
+                        x: e.clientX / window.innerWidth,
+                        y: e.clientY / window.innerHeight
+                    }
+                });
+            });
+        </script>
+    </body>
 </html>
