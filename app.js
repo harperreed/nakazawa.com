@@ -1,4 +1,5 @@
 let clickCounter = 0;
+const clickCounterElement = document.getElementById("click-counter");
 
 // Register Service Worker
 if ("serviceWorker" in navigator) {
@@ -37,7 +38,6 @@ document.addEventListener("click", (e) => {
 
     clickCounter++;
     if (clickCounter >= 10) {
-        const clickCounterElement = document.getElementById("click-counter");
         clickCounterElement.style.display = "block";
         clickCounterElement.innerText = `Clicks: ${clickCounter}`;
     }
