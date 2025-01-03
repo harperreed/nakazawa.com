@@ -1,3 +1,6 @@
+let clickCounter = 0;
+const clickCounterElement = document.getElementById("click-counter");
+
 // Register Service Worker
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
@@ -32,6 +35,12 @@ document.addEventListener("click", (e) => {
             y: e.clientY / window.innerHeight,
         },
     });
+
+    clickCounter++;
+    if (clickCounter >= 10) {
+        clickCounterElement.style.display = "block";
+        clickCounterElement.innerText = `🎉: ${clickCounter}`;
+    }
 });
 
 // Handle PWA installation prompt

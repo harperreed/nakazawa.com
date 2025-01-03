@@ -10,3 +10,49 @@ body {
     max-width: 100%;
     overflow-x: hidden;
 }
+
+#click-counter {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.click-counter-hidden {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+    #click-counter {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 400px) {
+    #click-counter {
+        font-size: 24px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
