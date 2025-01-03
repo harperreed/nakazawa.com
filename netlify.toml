@@ -61,3 +61,9 @@ Cache-Control = "public, max-age=31536000, immutable"
 for = "/"
 [headers.values]
 Cache-Control = "public, max-age=3600"
+
+
+[[redirects]]
+from = "/hiromi"
+to = "https://linkedin.com/in/hiromi"
+status = 302
