@@ -49,6 +49,17 @@ document.addEventListener("click", (e) => {
             fullscreenButton.style.display = "block";
         }
     }
+
+    // Haptic feedback
+    if (navigator.vibrate) {
+        if (clickCounter % 100 === 0) {
+            navigator.vibrate([200, 100, 200, 100, 200]); // Even bigger vibration
+        } else if (clickCounter % 10 === 0) {
+            navigator.vibrate([200, 100, 200]); // Large vibration
+        } else {
+            navigator.vibrate(200); // Small vibration
+        }
+    }
 });
 
 // Add event listener to fullscreen button to toggle full screen mode
