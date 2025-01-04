@@ -27,6 +27,24 @@ const myConfetti = confetti.create(myCanvas, {
     useWorker: true,
 });
 
+// Define vibration patterns
+const patterns = {
+    small: 200,
+    large: [200, 100, 200],
+    evenBigger: [200, 100, 200, 100, 200],
+};
+
+// Vibration pattern function
+function vibrationPattern(index) {
+    if (!window.navigator.vibrate) {
+        alert(
+            "Your device does not support the Vibration API. Try on an Android phone!",
+        );
+    } else {
+        window.navigator.vibrate(patterns[index]);
+    }
+}
+
 // Function to blend/fade the background color every 25 clicks
 function blendBackgroundColor() {
     const colors = ["#FFB6C1", "#87CEEB", "#98FB98", "#DDA0DD", "#F0E68C"];
@@ -73,6 +91,18 @@ document.addEventListener("click", (e) => {
         if (isDesktop) {
             fullscreenButton.style.display = "block";
         }
+    }
+
+    // Haptic feedback
+    if (clickCounter % 100 === 0) {
+        console.log(`Click count ${clickCounter} divisible by 100 - triggering even bigger vibration`);
+        vibrationPattern("evenBigger"); // Even bigger vibration
+    } else if (clickCounter % 10 === 0) {
+        console.log(`Click count ${clickCounter} divisible by 10 - triggering large vibration`);
+        vibrationPattern("large"); // Large vibration
+    } else {
+        console.log(`Click count ${clickCounter} - triggering small vibration`);
+        vibrationPattern("small"); // Small vibration
     }
 
     if (clickCounter % 25 === 0) {
