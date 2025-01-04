@@ -27,18 +27,19 @@ const myConfetti = confetti.create(myCanvas, {
     useWorker: true,
 });
 
-
 // Define vibration patterns
 const patterns = {
     small: 200,
     large: [200, 100, 200],
-    evenBigger: [200, 100, 200, 100, 200]
+    evenBigger: [200, 100, 200, 100, 200],
 };
 
 // Vibration pattern function
 function vibrationPattern(index) {
     if (!window.navigator.vibrate) {
-        alert("Your device does not support the Vibration API. Try on an Android phone!");
+        alert(
+            "Your device does not support the Vibration API. Try on an Android phone!",
+        );
     } else {
         window.navigator.vibrate(patterns[index]);
     }
@@ -63,11 +64,10 @@ function changeBackgroundImage() {
         "url('image2.jpg')",
         "url('image3.jpg')",
         "url('image4.jpg')",
-        "url('image5.jpg')"
+        "url('image5.jpg')",
     ];
     const imageIndex = Math.floor((clickCounter - 500) / 25) % images.length;
     document.body.style.backgroundImage = images[imageIndex];
-
 }
 
 // Handle clicks for confetti
@@ -85,7 +85,7 @@ document.addEventListener("click", (e) => {
     });
 
     clickCounter++;
-    if (clickCounter >= 25) {
+    if (clickCounter >= 10) {
         clickCounterElement.style.display = "block";
         clickCounterElement.innerText = `🎉: ${clickCounter}`;
         if (isDesktop) {
@@ -95,32 +95,41 @@ document.addEventListener("click", (e) => {
 
     // Haptic feedback
     if (clickCounter % 100 === 0) {
-        vibrationPattern('evenBigger'); // Even bigger vibration
+        console.log(`Click count ${clickCounter} divisible by 100 - triggering even bigger vibration`);
+        vibrationPattern("evenBigger"); // Even bigger vibration
     } else if (clickCounter % 10 === 0) {
-        vibrationPattern('large'); // Large vibration
+        console.log(`Click count ${clickCounter} divisible by 10 - triggering large vibration`);
+        vibrationPattern("large"); // Large vibration
     } else {
-        vibrationPattern('small'); // Small vibration
+        console.log(`Click count ${clickCounter} - triggering small vibration`);
+        vibrationPattern("small"); // Small vibration
+    }
+
+    if (clickCounter % 25 === 0) {
+        console.log(
+            `Click count ${clickCounter} divisible by 25 - changing background color`,
+        );
+        blendBackgroundColor();
+    }
+
+    if (clickCounter >= 500) {
+        console.log(
+            `Click count ${clickCounter} >= 5 - changing background image`,
+        );
+        // changeBackgroundImage();
     }
 });
 
 // Add event listener to fullscreen button to toggle full screen mode
 fullscreenButton.addEventListener("click", () => {
     if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen().catch(err => {
+        document.documentElement.requestFullscreen().catch((err) => {
             console.warn("Fullscreen request denied:", err);
         });
     } else {
         if (document.exitFullscreen) {
             document.exitFullscreen();
         }
-    }
-
-    if (clickCounter % 25 === 0) {
-        blendBackgroundColor();
-    }
-
-    if (clickCounter >= 500) {
-        changeBackgroundImage();
     }
 });
 
