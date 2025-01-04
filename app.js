@@ -1,5 +1,6 @@
 let clickCounter = 0;
 const clickCounterElement = document.getElementById("click-counter");
+const fullscreenButton = document.getElementById("fullscreen-button");
 
 // Register Service Worker
 if ("serviceWorker" in navigator) {
@@ -14,6 +15,10 @@ if ("serviceWorker" in navigator) {
             });
     });
 }
+
+// Detect if the website is loaded on a desktop
+const isDesktop = window.innerWidth > 1024;
+
 // Initialize confetti canvas
 const myCanvas = document.createElement("canvas");
 document.body.appendChild(myCanvas);
@@ -40,6 +45,20 @@ document.addEventListener("click", (e) => {
     if (clickCounter >= 10) {
         clickCounterElement.style.display = "block";
         clickCounterElement.innerText = `🎉: ${clickCounter}`;
+        if (isDesktop) {
+            fullscreenButton.style.display = "block";
+        }
+    }
+});
+
+// Add event listener to fullscreen button to toggle full screen mode
+fullscreenButton.addEventListener("click", () => {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
     }
 });
 
