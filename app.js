@@ -22,6 +22,31 @@ const myConfetti = confetti.create(myCanvas, {
     useWorker: true,
 });
 
+// Function to blend/fade the background color every ten clicks
+function blendBackgroundColor() {
+    const colors = ["#FFB6C1", "#87CEEB", "#98FB98", "#DDA0DD", "#F0E68C"];
+    const currentColorIndex = Math.floor(clickCounter / 10) % colors.length;
+    const nextColorIndex = (currentColorIndex + 1) % colors.length;
+    const currentColor = colors[currentColorIndex];
+    const nextColor = colors[nextColorIndex];
+
+    document.body.style.transition = "background-color 1s ease-in-out";
+    document.body.style.backgroundColor = nextColor;
+}
+
+// Function to change the background to various images after 500 clicks
+function changeBackgroundImage() {
+    const images = [
+        "url('image1.jpg')",
+        "url('image2.jpg')",
+        "url('image3.jpg')",
+        "url('image4.jpg')",
+        "url('image5.jpg')"
+    ];
+    const imageIndex = Math.floor((clickCounter - 500) / 10) % images.length;
+    document.body.style.backgroundImage = images[imageIndex];
+}
+
 // Handle clicks for confetti
 document.addEventListener("click", (e) => {
     confetti({
@@ -40,6 +65,14 @@ document.addEventListener("click", (e) => {
     if (clickCounter >= 10) {
         clickCounterElement.style.display = "block";
         clickCounterElement.innerText = `🎉: ${clickCounter}`;
+    }
+
+    if (clickCounter % 10 === 0) {
+        blendBackgroundColor();
+    }
+
+    if (clickCounter >= 500) {
+        changeBackgroundImage();
     }
 });
 

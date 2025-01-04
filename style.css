@@ -63,3 +63,45 @@ body {
         opacity: 1;
     }
 }
+
+/* New background colors */
+.bg-color-1 {
+    background-color: #FFB6C1;
+}
+
+.bg-color-2 {
+    background-color: #87CEEB;
+}
+
+.bg-color-3 {
+    background-color: #98FB98;
+}
+
+.bg-color-4 {
+    background-color: #DDA0DD;
+}
+
+.bg-color-5 {
+    background-color: #F0E68C;
+}
+
+/* New background images */
+.bg-image-1 {
+    background-image: url('image1.jpg');
+}
+
+.bg-image-2 {
+    background-image: url('image2.jpg');
+}
+
+.bg-image-3 {
+    background-image: url('image3.jpg');
+}
+
+.bg-image-4 {
+    background-image: url('image4.jpg');
+}
+
+.bg-image-5 {
+    background-image: url('image5.jpg');
+}
