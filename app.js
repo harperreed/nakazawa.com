@@ -46,7 +46,7 @@ function changeBackgroundImage() {
         "url('image2.jpg')",
         "url('image3.jpg')",
         "url('image4.jpg')",
-        "url('image5.jpg')"
+        "url('image5.jpg')",
     ];
     const imageIndex = Math.floor((clickCounter - 500) / 25) % images.length;
     document.body.style.backgroundImage = images[imageIndex];
@@ -67,33 +67,39 @@ document.addEventListener("click", (e) => {
     });
 
     clickCounter++;
-    if (clickCounter >= 25) {
+    if (clickCounter >= 10) {
         clickCounterElement.style.display = "block";
         clickCounterElement.innerText = `🎉: ${clickCounter}`;
         if (isDesktop) {
             fullscreenButton.style.display = "block";
         }
     }
+
+    if (clickCounter % 25 === 0) {
+        console.log(
+            `Click count ${clickCounter} divisible by 25 - changing background color`,
+        );
+        blendBackgroundColor();
+    }
+
+    if (clickCounter >= 500) {
+        console.log(
+            `Click count ${clickCounter} >= 5 - changing background image`,
+        );
+        // changeBackgroundImage();
+    }
 });
 
 // Add event listener to fullscreen button to toggle full screen mode
 fullscreenButton.addEventListener("click", () => {
     if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen().catch(err => {
+        document.documentElement.requestFullscreen().catch((err) => {
             console.warn("Fullscreen request denied:", err);
         });
     } else {
         if (document.exitFullscreen) {
             document.exitFullscreen();
         }
-    }
-
-    if (clickCounter % 25 === 0) {
-        blendBackgroundColor();
-    }
-
-    if (clickCounter >= 500) {
-        changeBackgroundImage();
     }
 });
 

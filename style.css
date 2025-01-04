@@ -57,6 +57,7 @@ body {
     font-size: 16px;
     cursor: pointer;
     display: none;
+    user-select: none;
 }
 
 #fullscreen-button:hover {
@@ -124,8 +125,4 @@ body {
 
 .bg-image-5 {
     background-image: url("image5.jpg");
-}
-
-.button_gone {
-    display: none;
 }
