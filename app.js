@@ -27,6 +27,22 @@ const myConfetti = confetti.create(myCanvas, {
     useWorker: true,
 });
 
+// Define vibration patterns
+const patterns = {
+    small: 200,
+    large: [200, 100, 200],
+    evenBigger: [200, 100, 200, 100, 200]
+};
+
+// Vibration pattern function
+function vibrationPattern(index) {
+    if (!window.navigator.vibrate) {
+        alert("Your device does not support the Vibration API. Try on an Android phone!");
+    } else {
+        window.navigator.vibrate(patterns[index]);
+    }
+}
+
 // Handle clicks for confetti
 document.addEventListener("click", (e) => {
     confetti({
@@ -51,14 +67,12 @@ document.addEventListener("click", (e) => {
     }
 
     // Haptic feedback
-    if (navigator.vibrate) {
-        if (clickCounter % 100 === 0) {
-            navigator.vibrate([200, 100, 200, 100, 200]); // Even bigger vibration
-        } else if (clickCounter % 10 === 0) {
-            navigator.vibrate([200, 100, 200]); // Large vibration
-        } else {
-            navigator.vibrate(200); // Small vibration
-        }
+    if (clickCounter % 100 === 0) {
+        vibrationPattern('evenBigger'); // Even bigger vibration
+    } else if (clickCounter % 10 === 0) {
+        vibrationPattern('large'); // Large vibration
+    } else {
+        vibrationPattern('small'); // Small vibration
     }
 });
 
