@@ -43,6 +43,26 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+#fullscreen-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    display: none;
+}
+
+#fullscreen-button:hover {
+    background-color: #45a049;
+}
+
 @media (max-width: 600px) {
     #click-counter {
         font-size: 36px;
