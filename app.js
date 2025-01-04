@@ -54,7 +54,9 @@ document.addEventListener("click", (e) => {
 // Add event listener to fullscreen button to toggle full screen mode
 fullscreenButton.addEventListener("click", () => {
     if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen();
+        document.documentElement.requestFullscreen().catch(err => {
+            console.warn("Fullscreen request denied:", err);
+        });
     } else {
         if (document.exitFullscreen) {
             document.exitFullscreen();
