@@ -1,4 +1,5 @@
 import confetti from "canvas-confetti";
+import { flashMessage } from "./flashMessage.js";
 
 let clickCounter = 0;
 const clickCounterElement = document.getElementById("click-counter");
@@ -103,6 +104,7 @@ document.addEventListener("click", (e) => {
 			`Click count ${clickCounter} divisible by 100 - triggering even bigger vibration`,
 		);
 		vibrationPattern("evenBigger"); // Even bigger vibration
+		flashMessage(`You've reached ${clickCounter} clicks!`); // Display flash message
 	} else if (clickCounter % 10 === 0) {
 		console.log(
 			`Click count ${clickCounter} divisible by 10 - triggering large vibration`,

@@ -124,3 +124,33 @@ body {
 .bg-image-5 {
 	background-image: url("image2.jpg");
 }
+
+/* Styles for the flash message */
+#flash-message {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: yellow;
+	color: black;
+	text-align: center;
+	padding: 10px;
+	font-family: Arial, sans-serif;
+	font-size: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	animation: flashMessage 1s ease-in-out;
+	z-index: 1000;
+	display: none;
+}
+
+@keyframes flashMessage {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}

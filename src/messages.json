@@ -1,0 +1,24 @@
+{
+    "messages": [
+        {
+            "clicks": 100,
+            "message": "You've reached 100 clicks!"
+        },
+        {
+            "clicks": 200,
+            "message": "You've reached 200 clicks!"
+        },
+        {
+            "clicks": 300,
+            "message": "You've reached 300 clicks!"
+        },
+        {
+            "clicks": 400,
+            "message": "You've reached 400 clicks!"
+        },
+        {
+            "clicks": 500,
+            "message": "You've reached 500 clicks!"
+        }
+    ]
+}
