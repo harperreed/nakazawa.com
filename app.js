@@ -37,7 +37,7 @@ const patterns = {
 // Vibration pattern function
 function vibrationPattern(index) {
     if (!window.navigator.vibrate) {
-        alert(
+        console.log(
             "Your device does not support the Vibration API. Try on an Android phone!",
         );
     } else {
