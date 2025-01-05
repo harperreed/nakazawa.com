@@ -1,24 +1,172 @@
 {
     "messages": [
         {
-            "clicks": 20,
-            "message": "You've reached 20 clicks!"
+            "clicks": 13,
+            "message": "The ancient clicking prophecy begins to unfold..."
         },
         {
-            "clicks": 200,
-            "message": "You've reached 200 clicks!"
+            "clicks": 42,
+            "message": "The cosmic clicksters would be proud of your progress!"
         },
         {
-            "clicks": 300,
-            "message": "You've reached 300 clicks!"
+            "clicks": 67,
+            "message": "The clicking echoes through the astral plane..."
         },
         {
-            "clicks": 400,
-            "message": "You've reached 400 clicks!"
+            "clicks": 87,
+            "message": "Wait... did you hear that? The clicks are speaking to me..."
         },
         {
-            "clicks": 500,
-            "message": "You've reached 500 clicks!"
+            "clicks": 110,
+            "message": "Your clicking resonates with ancient power!"
+        },
+        {
+            "clicks": 133,
+            "message": "The Click Sages whisper of your potential..."
+        },
+        {
+            "clicks": 156,
+            "message": "BEHOLD! The Click Demons arise from their slumber!"
+        },
+        {
+            "clicks": 189,
+            "message": "Your clicks pierce the veil of reality!"
+        },
+        {
+            "clicks": 215,
+            "message": "The Click Spirits dance to your rhythm..."
+        },
+        {
+            "clicks": 238,
+            "message": "The Grand Click Council has noticed your dedication"
+        },
+        {
+            "clicks": 275,
+            "message": "Your clicking awakens primordial forces!"
+        },
+        {
+            "clicks": 299,
+            "message": "The clicking void gazes back at you..."
+        },
+        {
+            "clicks": 315,
+            "message": "Ancient click runes glow with your power!"
+        },
+        {
+            "clicks": 333,
+            "message": "THREE THREE THREE - THE NUMBER OF THE CLICK BEAST"
+        },
+        {
+            "clicks": 350,
+            "message": "The Click Prophets sing of your coming!"
+        },
+        {
+            "clicks": 375,
+            "message": "Your clicks echo through the dimensions..."
+        },
+        {
+            "clicks": 420,
+            "message": "Your clicks have opened a portal to the Click Dimension!"
+        },
+        {
+            "clicks": 567,
+            "message": "The ancient Click Gods demand MORE SACRIFICE"
+        },
+        {
+            "clicks": 777,
+            "message": "JACKPOT! The Click Casino welcomes its newest champion!"
+        },
+        {
+            "clicks": 888,
+            "message": "你的点击力量无人能及! (Your click power is unmatched!)"
+        },
+        {
+            "clicks": 999,
+            "message": "Reality itself bends to your clicking will!"
+        },
+        {
+            "clicks": 1337,
+            "message": "YOU HAVE BECOME THE ELITE CLICK MASTER"
+        },
+        {
+            "clicks": 1500,
+            "message": "Your clicking power level is over 1500!"
+        },
+        {
+            "clicks": 1666,
+            "message": "The Click Devils bow before your might"
+        },
+        {
+            "clicks": 1777,
+            "message": "Lucky clicks flow through your veins"
+        },
+        {
+            "clicks": 1888,
+            "message": "The Click Dynasty recognizes your supremacy"
+        },
+        {
+            "clicks": 2000,
+            "message": "Two thousand clicks of pure power!"
+        },
+        {
+            "clicks": 2222,
+            "message": "The prophecy of the Click Quartet is fulfilled"
+        },
+        {
+            "clicks": 2500,
+            "message": "Your clicking transcends mortal understanding"
+        },
+        {
+            "clicks": 2750,
+            "message": "The Click Constellation aligns in your honor"
+        },
+        {
+            "clicks": 3000,
+            "message": "THREE THOUSAND CLICKS OF DESTINY"
+        },
+        {
+            "clicks": 3333,
+            "message": "The Triple Click Triforce awakens!"
+        },
+        {
+            "clicks": 3777,
+            "message": "Fortune favors the persistent clicker"
+        },
+        {
+            "clicks": 4000,
+            "message": "Your clicking power reaches new dimensions"
+        },
+        {
+            "clicks": 4444,
+            "message": "The Quadruple Click Quartet harmonizes"
+        },
+        {
+            "clicks": 4999,
+            "message": "Standing at the threshold of click divinity"
+        },
+        {
+            "clicks": 5000,
+            "message": "FIVE THOUSAND CLICKS OF ULTIMATE POWER!"
+        },
+        {
+            "clicks": 5555,
+            "message": "The Five Fingered Click Force is yours to command"
+        },
+        {
+            "clicks": 6666,
+            "message": "The Click Underworld crowns you their ruler"
+        },
+        {
+            "clicks": 7777,
+            "message": "MAXIMUM JACKPOT CLICKING ACHIEVED"
+        },
+        {
+            "clicks": 8888,
+            "message": "无限点击力量! (INFINITE CLICKING POWER!)"
+        },
+        {
+            "clicks": 10000,
+            "message": "YOU HAVE ASCENDED TO CLICK GODHOOD"
         }
     ]
 }

@@ -151,6 +151,7 @@ body {
     animation: flashMessage 1s ease-in-out;
     z-index: 1000;
     display: none;
+    user-select: none;
 }
 
 @keyframes flashMessage {
