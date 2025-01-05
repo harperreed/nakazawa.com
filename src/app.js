@@ -5,10 +5,8 @@ const fullscreenButton = document.getElementById("fullscreen-button");
 // Register Service Worker
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
-
-
         navigator.serviceWorker
-            .register(new URL('./sw.js', import.meta.url))
+            .register(new URL("./sw.js", import.meta.url))
             .then((registration) => {
                 console.log("ServiceWorker registration successful");
             })
@@ -97,10 +95,14 @@ document.addEventListener("click", (e) => {
 
     // Haptic feedback
     if (clickCounter % 100 === 0) {
-        console.log(`Click count ${clickCounter} divisible by 100 - triggering even bigger vibration`);
+        console.log(
+            `Click count ${clickCounter} divisible by 100 - triggering even bigger vibration`,
+        );
         vibrationPattern("evenBigger"); // Even bigger vibration
     } else if (clickCounter % 10 === 0) {
-        console.log(`Click count ${clickCounter} divisible by 10 - triggering large vibration`);
+        console.log(
+            `Click count ${clickCounter} divisible by 10 - triggering large vibration`,
+        );
         vibrationPattern("large"); // Large vibration
     } else {
         console.log(`Click count ${clickCounter} - triggering small vibration`);
