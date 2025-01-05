@@ -9,8 +9,8 @@ Permissions-Policy = "microphone 'none'; payment 'none'; geolocation 'none'; mid
 Content-Security-Policy = """
     default-src 'self';
     script-src 'self' https://cdn.jsdelivr.net https://tinylytics.app;
-    style-src 'self' ;
-    font-src 'self';
+    style-src 'self' https://fonts.googleapis.com;
+    font-src 'self' https://fonts.googleapis.com;
     img-src 'self' data: https: http: * https://s.gravatar.com;
     connect-src 'self' https:;
     media-src 'self';
