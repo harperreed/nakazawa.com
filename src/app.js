@@ -1,5 +1,6 @@
 import confetti from "canvas-confetti";
 import { flashMessage } from "./flashMessage.js";
+import messages from "./messages.json";
 
 let clickCounter = 0;
 const clickCounterElement = document.getElementById("click-counter");
@@ -98,7 +99,7 @@ document.addEventListener("click", (e) => {
         }
     }
 
-    flashMessage(`You've reached ${clickCounter} clicks!`);
+    flashMessage(clickCounter, messages.messages);
 
     // Haptic feedback
     if (clickCounter % 100 === 0) {
