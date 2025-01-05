@@ -20,18 +20,32 @@ To help you get started with Nakazawa, follow these simple steps:
    cd nakazawa
    ```
 
-2. **Open the Application**:
-   Open the `index.html` file in your preferred web browser:
+2. **Install Dependencies**:
+   Install the required dependencies using npm:
    ```bash
-   open index.html  # For macOS
-   start index.html # For Windows
+   npm install
    ```
 
-3. **Explore the Experience**:
+3. **Run the Application**:
+   Start the development server using Parcel:
+   ```bash
+   npm start
+   ```
+
+4. **Open the Application**:
+   Open your web browser and navigate to `http://localhost:1234` to see the application in action.
+
+5. **Build for Production**:
+   To create a production build, run:
+   ```bash
+   npm run build
+   ```
+
+6. **Explore the Experience**:
    - Click anywhere on the screen to see confetti fall!
    - Enjoy the lovely visuals and the delightful rabbit theme.
 
-4. **Deploy**:
+7. **Deploy**:
    If you'd like to deploy the application, consider using services like Netlify or Vercel for easy integration and hosting.
 
 ---
@@ -45,6 +59,7 @@ The Nakazawa project is powered by a variety of technologies:
 - **JavaScript**: 
   - Features such as confetti celebrations use the Canvas API.
   - Implements a service worker (sw.js) for offline mode and asset caching.
+- **Parcel**: A zero-configuration build tool that handles bundling, minification, and other optimizations.
 - **Manifest File**: A `manifest.json` file to enhance the mobile web app experience.
 - **SVG Graphics**: Includes impressive vector graphics for creating icons and UI elements.
   

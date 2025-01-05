@@ -1,0 +1,22 @@
+{
+  "name": "nakazawa",
+  "version": "1.0.0",
+  "description": "A delightful bunny experience",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.6.0",
+    "tinylytics": "^1.0.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not < 0.2%"
+  ]
+}
