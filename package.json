@@ -4,6 +4,7 @@
     "description": "A delightful bunny experience",
     "scripts": {
         "start": "parcel src/index.html",
+        "clean": "rm -rf dist .parcel-cache",
         "build": "parcel build src/index.html",
         "lint": "npx @biomejs/biome check src/",
         "lint-fix": "npx @biomejs/biome check --fix src/",
