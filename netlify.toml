@@ -84,5 +84,5 @@ to = "https://linkedin.com/in/hiromi"
 status = 302
 
 [build]
-command = "yarn; yarn build;"
+command = "yarn install --frozen-lockfile; yarn build;"
 publish = "dist"

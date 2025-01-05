@@ -4,7 +4,10 @@
     "description": "A delightful bunny experience",
     "scripts": {
         "start": "parcel src/index.html",
-        "build": "parcel build src/index.html"
+        "build": "parcel build src/index.html",
+        "lint": "npx @biomejs/biome check src/",
+        "lint-fix": "npx @biomejs/biome check --fix src/",
+        "format": "npx @biomejs/biome format --write src/"
     },
     "dependencies": {
         "@parcel/core": "^2.13.3",
@@ -12,6 +15,7 @@
         "canvas-confetti": "^1.9.3"
     },
     "devDependencies": {
+        "@biomejs/biome": "^1.9.4",
         "@parcel/packager-raw-url": "2.13.3",
         "@parcel/transformer-webmanifest": "2.13.3",
         "parcel": "^2.13.3"
