@@ -105,6 +105,7 @@ document.addEventListener("click", (e) => {
 		);
 		vibrationPattern("evenBigger"); // Even bigger vibration
 		flashMessage(`You've reached ${clickCounter} clicks!`); // Display flash message
+		console.log(`Flash message displayed: You've reached ${clickCounter} clicks!`); // Debug logging
 	} else if (clickCounter % 10 === 0) {
 		console.log(
 			`Click count ${clickCounter} divisible by 10 - triggering large vibration`,
