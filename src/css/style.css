@@ -11,10 +11,10 @@ body {
 }
 
 body {
-    background-image: url("bunnies.gif?7");
+    background-image: url("../images/bunnies.gif");
     background-repeat: repeat;
     cursor:
-        url("carrot.png") 16 16,
+        url("../images/carrot.png") 16 16,
         auto;
 
     min-height: 100vh;
@@ -117,23 +117,23 @@ body {
 
 /* New background images */
 .bg-image-1 {
-    background-image: url("image1.jpg");
+    background-image: url("../images/image1.jpg");
 }
 
 .bg-image-2 {
-    background-image: url("image2.jpg");
+    background-image: url("../images/image2.jpg");
 }
 
 .bg-image-3 {
-    background-image: url("image2.jpg");
+    background-image: url("../images/image2.jpg");
 }
 
 .bg-image-4 {
-    background-image: url("image2.jpg");
+    background-image: url("../images/image2.jpg");
 }
 
 .bg-image-5 {
-    background-image: url("image2.jpg");
+    background-image: url("../images/image2.jpg");
 }
 
 /* Styles for the flash message */

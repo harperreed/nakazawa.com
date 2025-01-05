@@ -1,6 +1,6 @@
 import confetti from "canvas-confetti";
 // import { flashMessage } from "./flashMessage.js";
-import messages from "./messages.json";
+import messages from "../messages.json";
 
 let clickCounter = 0;
 const clickCounterElement = document.getElementById("click-counter");
