@@ -266,7 +266,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parcel/core@npm:2.13.3":
+"@parcel/core@npm:2.13.3, @parcel/core@npm:^2.13.3":
   version: 2.13.3
   resolution: "@parcel/core@npm:2.13.3"
   dependencies:
@@ -522,6 +522,16 @@ __metadata:
     globals: "npm:^13.2.0"
     nullthrows: "npm:^1.1.1"
   checksum: 10c0/a994ff3fb255b208127d5865e5b4205192b476a34161a671ed59e671e77089e52f43e597d36f3de96dd36815e728ec33bbb4a992e9ba26d8b57f0a527bf63db5
+  languageName: node
+  linkType: hard
+
+"@parcel/packager-raw-url@npm:2.13.3":
+  version: 2.13.3
+  resolution: "@parcel/packager-raw-url@npm:2.13.3"
+  dependencies:
+    "@parcel/plugin": "npm:2.13.3"
+    "@parcel/utils": "npm:2.13.3"
+  checksum: 10c0/20879802455652563f2d010b8c3230adb7f0df2d5ca9a9212fbf6a209d6f21cb9c7352874f612af909258a83a691e6ce7c4d58e2303a23cfdd06b03018959d30
   languageName: node
   linkType: hard
 
@@ -839,6 +849,18 @@ __metadata:
     posthtml-render: "npm:^3.0.0"
     semver: "npm:^7.5.2"
   checksum: 10c0/ad54b84f00613b70452ef3f01f2c21702255c802fa6b7cf7bf5cbfd11288ad2add512a2c38cdbad322bbf379728aa3f8ce8e3f3b159fbf9dd4298e4c590c69a1
+  languageName: node
+  linkType: hard
+
+"@parcel/transformer-webmanifest@npm:2.13.3":
+  version: 2.13.3
+  resolution: "@parcel/transformer-webmanifest@npm:2.13.3"
+  dependencies:
+    "@mischnic/json-sourcemap": "npm:^0.1.0"
+    "@parcel/diagnostic": "npm:2.13.3"
+    "@parcel/plugin": "npm:2.13.3"
+    "@parcel/utils": "npm:2.13.3"
+  checksum: 10c0/9ad2b9a559eddcb2ba8cd0b7fb0665ec578ba9c1f7c36bc61522b051d793790252614ed2c2e961a643bf031ba98a566b705f9a3f374e90031e5fbfbeb26d26d8
   languageName: node
   linkType: hard
 
@@ -2265,6 +2287,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nakazawa@workspace:."
   dependencies:
+    "@parcel/core": "npm:^2.13.3"
+    "@parcel/packager-raw-url": "npm:2.13.3"
+    "@parcel/transformer-webmanifest": "npm:2.13.3"
     canvas-confetti: "npm:^1.6.0"
     parcel: "npm:^2.13.3"
   languageName: unknown

@@ -5,8 +5,10 @@ const fullscreenButton = document.getElementById("fullscreen-button");
 // Register Service Worker
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
+
+
         navigator.serviceWorker
-            .register("/sw.js")
+            .register(new URL('./sw.js', import.meta.url))
             .then((registration) => {
                 console.log("ServiceWorker registration successful");
             })
