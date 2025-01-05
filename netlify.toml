@@ -1,5 +1,3 @@
-
-
 [[headers]]
 for = "/*"
 [headers.values]
@@ -84,3 +82,7 @@ Cache-Control = "public, max-age=3600"
 from = "/hiromi"
 to = "https://linkedin.com/in/hiromi"
 status = 302
+
+[build]
+command = "yarn install --frozen-lockfile; yarn build;"
+publish = "dist"

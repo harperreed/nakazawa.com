@@ -1,0 +1,126 @@
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: url("bunnies.gif?7");
+	background-repeat: repeat;
+	cursor: url("carrot.png") 16 16, auto;
+
+	min-height: 100vh;
+	max-width: 100vw;
+	overflow: hidden;
+}
+
+#click-counter {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-color: white;
+	padding: 5px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	font-family: Arial, sans-serif;
+	font-size: 24px;
+	color: #333;
+	animation: fadeIn 1s ease-in-out;
+	user-select: none;
+}
+
+.click-counter-hidden {
+	display: none;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-color: white;
+	padding: 5px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#fullscreen-button {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	background-color: #4caf50;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	cursor: pointer;
+	display: none;
+	user-select: none;
+}
+
+#fullscreen-button:hover {
+	background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+	#click-counter {
+		font-size: 36px;
+	}
+}
+
+@media (max-width: 400px) {
+	#click-counter {
+		font-size: 24px;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* New background colors */
+.bg-color-1 {
+	background-color: #ffb6c1;
+}
+
+.bg-color-2 {
+	background-color: #87ceeb;
+}
+
+.bg-color-3 {
+	background-color: #98fb98;
+}
+
+.bg-color-4 {
+	background-color: #dda0dd;
+}
+
+.bg-color-5 {
+	background-color: #f0e68c;
+}
+
+/* New background images */
+.bg-image-1 {
+	background-image: url("image1.jpg");
+}
+
+.bg-image-2 {
+	background-image: url("image2.jpg");
+}
+
+.bg-image-3 {
+	background-image: url("image2.jpg");
+}
+
+.bg-image-4 {
+	background-image: url("image2.jpg");
+}
+
+.bg-image-5 {
+	background-image: url("image2.jpg");
+}

@@ -1,2 +1,9 @@
 .aider*
 .env
+node_modules
+output.txt
+.parcel-cache/
+.pnp.cjs
+.pnp.loader.mjs
+.yarn/
+dist/
