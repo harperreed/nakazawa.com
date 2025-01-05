@@ -2,7 +2,15 @@ import confetti from "canvas-confetti";
 import { flashMessage } from "./flashMessage.js";
 import messages from "../messages.json";
 
-let clickCounter = 0;
+let clickCounter = parseInt(localStorage.getItem('clickCount') || '0');
+// Update the counter display if there's a stored value
+if (clickCounter >= 10) {
+    clickCounterElement.style.display = "block";
+    clickCounterElement.innerText = `🎉: ${clickCounter}`;
+    if (isDesktop) {
+        fullscreenButton.style.display = "block";
+    }
+}
 const clickCounterElement = document.getElementById("click-counter");
 const fullscreenButton = document.getElementById("fullscreen-button");
 
@@ -91,6 +99,7 @@ document.addEventListener("click", (e) => {
     });
 
     clickCounter++;
+    localStorage.setItem('clickCount', clickCounter.toString());
     if (clickCounter >= 10) {
         clickCounterElement.style.display = "block";
         clickCounterElement.innerText = `🎉: ${clickCounter}`;
