@@ -1,8 +1,8 @@
 {
     "messages": [
         {
-            "clicks": 100,
-            "message": "You've reached 100 clicks!"
+            "clicks": 20,
+            "message": "You've reached 20 clicks!"
         },
         {
             "clicks": 200,
