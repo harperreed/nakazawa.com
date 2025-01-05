@@ -124,3 +124,6 @@ body {
 .bg-image-5 {
 	background-image: url("image2.jpg");
 }
+
+/* Add Google Font reference */
+@import url('PressStart2P.woff2');
