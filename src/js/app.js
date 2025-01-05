@@ -2,6 +2,9 @@ import confetti from "canvas-confetti";
 import { flashMessage } from "./flashMessage.js";
 import messages from "../messages.json";
 
+const clickCounterElement = document.getElementById("click-counter");
+const fullscreenButton = document.getElementById("fullscreen-button");
+
 let clickCounter = parseInt(localStorage.getItem('clickCount') || '0');
 // Update the counter display if there's a stored value
 if (clickCounter >= 10) {
@@ -11,8 +14,6 @@ if (clickCounter >= 10) {
         fullscreenButton.style.display = "block";
     }
 }
-const clickCounterElement = document.getElementById("click-counter");
-const fullscreenButton = document.getElementById("fullscreen-button");
 
 // Register Service Worker
 if ("serviceWorker" in navigator) {
