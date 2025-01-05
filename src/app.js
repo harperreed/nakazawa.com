@@ -1,5 +1,5 @@
 import confetti from "canvas-confetti";
-import { flashMessage } from "./flashMessage.js";
+// import { flashMessage } from "./flashMessage.js";
 import messages from "./messages.json";
 
 let clickCounter = 0;
