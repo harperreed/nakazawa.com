@@ -8,6 +8,7 @@
     },
     "dependencies": {
         "@parcel/core": "^2.13.3",
+        "@parcel/service-worker": "^2.13.3",
         "canvas-confetti": "^1.6.0"
     },
     "devDependencies": {

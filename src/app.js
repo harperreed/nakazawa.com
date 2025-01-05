@@ -1,3 +1,5 @@
+import confetti from "canvas-confetti";
+
 let clickCounter = 0;
 const clickCounterElement = document.getElementById("click-counter");
 const fullscreenButton = document.getElementById("fullscreen-button");
@@ -6,7 +8,9 @@ const fullscreenButton = document.getElementById("fullscreen-button");
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
         navigator.serviceWorker
-            .register(new URL("./sw.js", import.meta.url))
+            .register(new URL("./sw.js", import.meta.url), {
+                type: "module", // Add this line to specify module type
+            })
             .then((registration) => {
                 console.log("ServiceWorker registration successful");
             })

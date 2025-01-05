@@ -683,6 +683,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@parcel/service-worker@npm:^2.13.3":
+  version: 2.13.3
+  resolution: "@parcel/service-worker@npm:2.13.3"
+  checksum: 10c0/9bca50c48794a0ba7da9cd2302141075c138aaa62d3e3576dfe6fa0f33beeed1caafbd95036ee3ef9f8762c24704a40c571680ef2ce5648214c21fb0c327d6c4
+  languageName: node
+  linkType: hard
+
 "@parcel/source-map@npm:^2.1.1":
   version: 2.1.1
   resolution: "@parcel/source-map@npm:2.1.1"
@@ -2289,6 +2296,7 @@ __metadata:
   dependencies:
     "@parcel/core": "npm:^2.13.3"
     "@parcel/packager-raw-url": "npm:2.13.3"
+    "@parcel/service-worker": "npm:^2.13.3"
     "@parcel/transformer-webmanifest": "npm:2.13.3"
     canvas-confetti: "npm:^1.6.0"
     parcel: "npm:^2.13.3"
