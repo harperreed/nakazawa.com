@@ -2,6 +2,9 @@ import confetti from "canvas-confetti";
 import { flashMessage } from "./flashMessage.js";
 import messages from "../messages.json";
 
+// Detect if the website is loaded on a desktop
+const isDesktop = window.innerWidth > 1024;
+
 
 const clickCounterElement = document.getElementById("click-counter");
 const fullscreenButton = document.getElementById("fullscreen-button");
@@ -32,8 +35,6 @@ if ("serviceWorker" in navigator) {
     });
 }
 
-// Detect if the website is loaded on a desktop
-const isDesktop = window.innerWidth > 1024;
 
 // Initialize confetti canvas
 const myCanvas = document.createElement("canvas");
