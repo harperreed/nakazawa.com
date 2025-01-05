@@ -84,5 +84,5 @@ to = "https://linkedin.com/in/hiromi"
 status = 302
 
 [build]
-  command = "npm run build"
-  publish = "dist"
+command = "yarn; yarn build src/index.html"
+publish = "dist"
