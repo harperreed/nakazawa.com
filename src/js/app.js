@@ -38,9 +38,9 @@ function updateAchievementsTable(clicks) {
     // Show different achievements based on screen size
     let hasEarned = false;
     const isMobile = window.innerWidth <= 768;
-    const achievementsToShow = isMobile 
+    const achievementsToShow = isMobile
         ? nextUnearned.slice(0, 1) // Show only next achievement on mobile
-        : [lastEarned, ...nextUnearned].filter(a => a !== null); // Show last earned + next two on desktop
+        : [lastEarned, ...nextUnearned].filter((a) => a !== null); // Show last earned + next two on desktop
 
     for (const achievement of achievementsToShow) {
         const row = document.createElement("tr");
@@ -59,15 +59,18 @@ function updateAchievementsTable(clicks) {
     }
 
     // Always show the table on mobile if there are achievements to show
-    table.style.display = (isMobile && achievementsToShow.length > 0) || hasEarned ? "table" : "none";
+    table.style.display =
+        (isMobile && achievementsToShow.length > 0) || hasEarned
+            ? "table"
+            : "none";
 }
 
 function screenShake() {
-    document.body.style.transform = 'translate(5px, 5px)';
+    document.body.style.transform = "translate(5px, 5px)";
     setTimeout(() => {
-        document.body.style.transform = 'translate(-5px, -5px)';
+        document.body.style.transform = "translate(-5px, -5px)";
         setTimeout(() => {
-            document.body.style.transform = 'translate(0, 0)';
+            document.body.style.transform = "translate(0, 0)";
         }, 50);
     }, 50);
 }
@@ -110,8 +113,8 @@ let lastClickTime = Date.now();
 let clickSpeed = 0; // clicks per second
 let streakCount = 0;
 // Initialize counter and button container with hidden state
-clickCounterElement.style.display = 'none';
-mobileCounterElement.style.display = 'none';
+clickCounterElement.style.display = "none";
+mobileCounterElement.style.display = "none";
 document.getElementById("button-container").style.display = "none";
 clickCounterElement.innerText = `${clickCounter}`;
 mobileCounterElement.innerText = `${clickCounter}`;
@@ -120,7 +123,7 @@ mobileCounterElement.innerText = `${clickCounter}`;
 updateAchievementsTable(clickCounter);
 
 // Update achievements table on window resize
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
     updateAchievementsTable(clickCounter);
 });
 
@@ -237,9 +240,9 @@ function spawnPowerup() {
     });
 
     // Add animation keyframes
-    if (!document.querySelector('#powerup-animation')) {
-        const style = document.createElement('style');
-        style.id = 'powerup-animation';
+    if (!document.querySelector("#powerup-animation")) {
+        const style = document.createElement("style");
+        style.id = "powerup-animation";
         style.textContent = `
             @keyframes fall {
                 from { top: -50px; }
@@ -248,7 +251,7 @@ function spawnPowerup() {
         `;
         document.head.appendChild(style);
     }
-    
+
     document.body.appendChild(powerup);
 
     // Remove powerup if not clicked after animation
@@ -298,22 +301,26 @@ function activatePowerup() {
 // Calculate time since last click and update click speed
 function updateClickSpeed() {
     const now = Date.now();
-    const timeDiff = (now - lastClickTime) / 1000; // convert to seconds
+    const timeDiff = (now - lastClickTime) / 500; // convert to seconds
     clickSpeed = 1 / timeDiff; // clicks per second
-    
+
     // Update streak
-    if (timeDiff < 1) { // Within 1 second
+    if (timeDiff < 1) {
+        // Within 1 second
         streakCount++;
-        if (streakCount % 10 === 0) { // Every 10 clicks in streak
-            flashMessage(clickCounter, [{
-                clicks: clickCounter,
-                message: `🔥 ${streakCount} Click Streak!`
-            }]);
+        if (streakCount % 50 === 0) {
+            // Every 10 clicks in streak
+            flashMessage(clickCounter, [
+                {
+                    clicks: clickCounter,
+                    message: `🔥 ${streakCount} Click Streak!`,
+                },
+            ]);
         }
     } else {
         streakCount = 0;
     }
-    
+
     lastClickTime = now;
 }
 
@@ -321,11 +328,11 @@ function updateClickSpeed() {
 function startPowerupSpawnTimer() {
     const minDelay = 45000; // 45 seconds minimum
     const maxDelay = 60000; // 60 seconds maximum
-    
+
     // Faster clicking = shorter spawn time
     const speedMultiplier = Math.max(0.1, Math.min(1, clickSpeed / 5)); // cap at 5 clicks/sec
     const delay = maxDelay - (maxDelay - minDelay) * speedMultiplier;
-    
+
     setTimeout(() => {
         spawnPowerup();
         startPowerupSpawnTimer(); // Schedule next spawn
@@ -357,8 +364,8 @@ document.addEventListener("click", (e) => {
 
     // Show counter at 10 clicks
     if (clickCounter >= 10) {
-        clickCounterElement.style.display = 'block';
-        mobileCounterElement.style.display = 'block';
+        clickCounterElement.style.display = "block";
+        mobileCounterElement.style.display = "block";
     }
 
     // Show menu at 20 clicks
