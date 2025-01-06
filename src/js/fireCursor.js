@@ -4,13 +4,13 @@ const CELL_WIDTH = 8 * DPR;
 const CELL_HEIGHT = 8 * DPR;
 const FLAME_COLOR_DEPTH = 24;
 const FLAME_COLOR_TABLE = [
-    [0, "lavender"],
-    [0.1, "yellow"],
-    [0.3, "gold"],
-    [0.5, "hotpink"],
-    [0.6, "tomato"],
-    [0.8, "darkslateblue"],
-    [1, "#222"],
+    [0, "rgba(230, 230, 250, 0.4)"],    // transparent lavender
+    [0.1, "rgba(255, 255, 0, 0.4)"],    // transparent yellow
+    [0.3, "rgba(255, 215, 0, 0.4)"],    // transparent gold
+    [0.5, "rgba(255, 105, 180, 0.4)"],  // transparent hotpink
+    [0.6, "rgba(255, 99, 71, 0.4)"],    // transparent tomato
+    [0.8, "rgba(72, 61, 139, 0.4)"],    // transparent darkslateblue
+    [1, "rgba(34, 34, 34, 0.2)"],       // very transparent dark
 ];
 const SPREAD_FROM = [
     "bottom",

@@ -267,7 +267,7 @@ body {
     border: 4px solid #333;
     border-style: double;
     image-rendering: pixelated;
-    z-index: 1000;
+    z-index: -1;
     display: none;
     user-select: none;
 }
