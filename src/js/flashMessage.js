@@ -14,7 +14,7 @@ export function flashMessage(clickCount, messages) {
         for (let i = 0; i < existingMessages.length - 1; i++) {
             const msg = existingMessages[i];
             msg.style.transform = `translateY(${totalHeight}px)`;
-            totalHeight += msg.offsetHeight + 10; // 10px for margin
+            totalHeight += msg.offsetHeight + 5; // 5px for margin
         }
         
         // Position and fade in new message
@@ -37,7 +37,7 @@ export function flashMessage(clickCount, messages) {
                 for (let i = 0; i < remainingMessages.length; i++) {
                     const msg = remainingMessages[i];
                     msg.style.transform = `translateY(${newTotalHeight}px)`;
-                    newTotalHeight += msg.offsetHeight + 10;
+                    newTotalHeight += msg.offsetHeight + 5;
                 }
                 // Remove container if empty
                 if (container.children.length === 0) {
