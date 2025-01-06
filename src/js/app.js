@@ -20,7 +20,7 @@ function updateAchievementsTable(clicks) {
     const tbody = document.getElementById('achievements-body');
     tbody.innerHTML = '';
 
-    let hasProgress = false;
+    let hasEarned = false;
     for (const [name, achievement] of Object.entries(achievements)) {
         const row = document.createElement('tr');
         const progress = Math.min(clicks / achievement.threshold * 100, 100).toFixed(0);
@@ -29,13 +29,13 @@ function updateAchievementsTable(clicks) {
             <td>${progress}%</td>
         `;
         tbody.appendChild(row);
-        if (progress > 0) {
-            hasProgress = true;
+        if (achievement.earned) {
+            hasEarned = true;
         }
     }
     
-    // Only show table if there's progress toward any achievement
-    table.style.display = hasProgress ? 'table' : 'none';
+    // Only show table if at least one achievement is earned
+    table.style.display = hasEarned ? 'table' : 'none';
 }
 
 function checkAchievements(clicks) {
