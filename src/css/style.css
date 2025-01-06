@@ -53,6 +53,7 @@ body {
         flex: 1;
         text-align: center;
         background: transparent;
+        display: block !important;
     }
 }
 

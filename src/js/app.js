@@ -94,8 +94,7 @@ let powerupMultiplier = 1;
 let powerupTimeout = null;
 let lastClickTime = Date.now();
 let clickSpeed = 0; // clicks per second
-// Update the counter display if there's a stored value
-clickCounterElement.style.display = "block";
+// Initialize counter and button container
 clickCounterElement.innerText = `${clickCounter}`;
 document.getElementById("button-container").style.display = "flex";
 
