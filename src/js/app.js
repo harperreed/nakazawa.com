@@ -2,6 +2,7 @@ import confetti from "canvas-confetti";
 import achievementsData from "../achievements.json";
 import messages from "../messages.json";
 import { flashMessage } from "./flashMessage.js";
+import { FireCursor } from "./fireCursor.js";
 
 // Achievement System
 const achievements = achievementsData.achievements;
@@ -217,12 +218,23 @@ function spawnPowerup() {
     setTimeout(() => powerup.remove(), 3000);
 }
 
+let fireCursor = null;
+
 function activatePowerup() {
     powerupActive = true;
     powerupMultiplier = 2;
 
     const timerElement = document.getElementById("timer");
     timerElement.style.display = "block";
+
+    // Initialize fire cursor if not already created
+    if (!fireCursor) {
+        const canvas = document.getElementById("fire-cursor");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        fireCursor = new FireCursor(canvas);
+    }
+    document.getElementById("fire-cursor").style.display = "block";
 
     let timeLeft = 30;
 
@@ -236,6 +248,7 @@ function activatePowerup() {
             powerupActive = false;
             powerupMultiplier = 1;
             timerElement.style.display = "none";
+            document.getElementById("fire-cursor").style.display = "none";
         }
     }, 1000);
 }
