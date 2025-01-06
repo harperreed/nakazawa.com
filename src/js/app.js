@@ -86,6 +86,9 @@ function checkAchievements(clicks) {
 const isDesktop = window.innerWidth > 1024;
 
 const clickCounterElement = document.getElementById("click-counter");
+const mobileCounterElement = document.createElement("div");
+mobileCounterElement.id = "mobile-counter";
+document.getElementById("button-container").prepend(mobileCounterElement);
 const fullscreenButton = document.getElementById("fullscreen-button");
 
 let clickCounter = Number.parseInt(localStorage.getItem("clickCount") || "0");
@@ -96,6 +99,7 @@ let lastClickTime = Date.now();
 let clickSpeed = 0; // clicks per second
 // Initialize counter and button container
 clickCounterElement.innerText = `${clickCounter}`;
+mobileCounterElement.innerText = `${clickCounter}`;
 document.getElementById("button-container").style.display = "flex";
 
 // Initialize achievements table
@@ -228,6 +232,9 @@ function activatePowerup() {
     powerupMultiplier = 2;
 
     const timerElement = document.getElementById("timer");
+    const mobileTimerElement = document.createElement("div");
+    mobileTimerElement.id = "mobile-timer";
+    document.getElementById("button-container").prepend(mobileTimerElement);
     timerElement.style.display = "block";
 
     // Initialize fire cursor if not already created
@@ -245,6 +252,7 @@ function activatePowerup() {
     powerupTimeout = setInterval(() => {
         timeLeft--;
         timerElement.textContent = `${timeLeft}s`;
+        mobileTimerElement.textContent = `${timeLeft}s`;
 
         if (timeLeft <= 0) {
             clearInterval(powerupTimeout);
@@ -300,6 +308,7 @@ document.addEventListener("click", (e) => {
     localStorage.setItem("clickCount", clickCounter.toString());
 
     clickCounterElement.innerText = `${clickCounter}`;
+    mobileCounterElement.innerText = `${clickCounter}`;
 
     flashMessage(clickCounter, messages.messages);
 

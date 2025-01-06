@@ -25,7 +25,7 @@ body {
     font-style: normal;
 }
 
-#click-counter {
+#click-counter, #mobile-counter {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -41,8 +41,17 @@ body {
     user-select: none;
 }
 
+#mobile-counter {
+    display: none;
+}
+
 @media (max-width: 768px) {
     #click-counter {
+        display: none !important;
+    }
+    
+    #mobile-counter {
+        display: block;
         position: static;
         margin: 0;
         box-shadow: none;
@@ -53,7 +62,6 @@ body {
         flex: 1;
         text-align: center;
         background: transparent;
-        display: block !important;
     }
 }
 
@@ -341,7 +349,7 @@ body {
     transform: scale(1.1);
 }
 
-#timer {
+#timer, #mobile-timer {
     position: fixed;
     top: 10px;
     left: 10px;
@@ -358,8 +366,17 @@ body {
     user-select: none;
 }
 
+#mobile-timer {
+    display: none;
+}
+
 @media (max-width: 768px) {
     #timer {
+        display: none !important;
+    }
+    
+    #mobile-timer {
+        display: block;
         position: static;
         margin: 0;
         box-shadow: none;
