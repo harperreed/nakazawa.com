@@ -108,6 +108,7 @@ let powerupMultiplier = 1;
 let powerupTimeout = null;
 let lastClickTime = Date.now();
 let clickSpeed = 0; // clicks per second
+let streakCount = 0;
 // Initialize counter and button container with hidden state
 clickCounterElement.style.display = 'none';
 mobileCounterElement.style.display = 'none';
@@ -299,6 +300,20 @@ function updateClickSpeed() {
     const now = Date.now();
     const timeDiff = (now - lastClickTime) / 1000; // convert to seconds
     clickSpeed = 1 / timeDiff; // clicks per second
+    
+    // Update streak
+    if (timeDiff < 1) { // Within 1 second
+        streakCount++;
+        if (streakCount % 10 === 0) { // Every 10 clicks in streak
+            flashMessage(clickCounter, [{
+                clicks: clickCounter,
+                message: `🔥 ${streakCount} Click Streak!`
+            }]);
+        }
+    } else {
+        streakCount = 0;
+    }
+    
     lastClickTime = now;
 }
 
