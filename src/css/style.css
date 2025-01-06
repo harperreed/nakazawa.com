@@ -220,10 +220,7 @@ body {
 
 /* Styles for the flash message */
 .flash-message {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
     width: 75%;
     background-color: rgba(255, 255, 255, 0.9);
     color: #333;
