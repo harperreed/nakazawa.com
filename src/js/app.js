@@ -62,12 +62,23 @@ function updateAchievementsTable(clicks) {
     table.style.display = (isMobile && achievementsToShow.length > 0) || hasEarned ? "table" : "none";
 }
 
+function screenShake() {
+    document.body.style.transform = 'translate(5px, 5px)';
+    setTimeout(() => {
+        document.body.style.transform = 'translate(-5px, -5px)';
+        setTimeout(() => {
+            document.body.style.transform = 'translate(0, 0)';
+        }, 50);
+    }, 50);
+}
+
 function checkAchievements(clicks) {
     let earned = false;
     for (const [name, achievement] of Object.entries(achievements)) {
         if (!achievement.earned && clicks >= achievement.threshold) {
             achievement.earned = true;
             earned = true;
+            screenShake();
             flashMessage(clicks, [
                 {
                     clicks,
