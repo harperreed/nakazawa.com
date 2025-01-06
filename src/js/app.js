@@ -97,10 +97,12 @@ let powerupMultiplier = 1;
 let powerupTimeout = null;
 let lastClickTime = Date.now();
 let clickSpeed = 0; // clicks per second
-// Initialize counter and button container
+// Initialize counter and button container with hidden state
+clickCounterElement.style.display = 'none';
+mobileCounterElement.style.display = 'none';
+document.getElementById("button-container").style.display = "none";
 clickCounterElement.innerText = `${clickCounter}`;
 mobileCounterElement.innerText = `${clickCounter}`;
-document.getElementById("button-container").style.display = "flex";
 
 // Initialize achievements table
 updateAchievementsTable(clickCounter);
@@ -309,6 +311,17 @@ document.addEventListener("click", (e) => {
 
     clickCounterElement.innerText = `${clickCounter}`;
     mobileCounterElement.innerText = `${clickCounter}`;
+
+    // Show counter at 10 clicks
+    if (clickCounter >= 10) {
+        clickCounterElement.style.display = 'block';
+        mobileCounterElement.style.display = 'block';
+    }
+
+    // Show menu at 20 clicks
+    if (clickCounter >= 20) {
+        document.getElementById("button-container").style.display = "flex";
+    }
 
     flashMessage(clickCounter, messages.messages);
 
