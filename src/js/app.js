@@ -58,8 +58,8 @@ function updateAchievementsTable(clicks) {
         }
     }
 
-    // Only show table if at least one achievement is earned
-    table.style.display = hasEarned ? "table" : "none";
+    // Always show the table on mobile if there are achievements to show
+    table.style.display = (isMobile && achievementsToShow.length > 0) || hasEarned ? "table" : "none";
 }
 
 function checkAchievements(clicks) {
@@ -95,13 +95,9 @@ let powerupTimeout = null;
 let lastClickTime = Date.now();
 let clickSpeed = 0; // clicks per second
 // Update the counter display if there's a stored value
-if (clickCounter >= 10) {
-    clickCounterElement.style.display = "block";
-    clickCounterElement.innerText = `${clickCounter}`;
-}
-if (clickCounter >= 25) {
-    document.getElementById("button-container").style.display = "flex";
-}
+clickCounterElement.style.display = "block";
+clickCounterElement.innerText = `${clickCounter}`;
+document.getElementById("button-container").style.display = "flex";
 
 // Initialize achievements table
 updateAchievementsTable(clickCounter);
@@ -304,11 +300,7 @@ document.addEventListener("click", (e) => {
     clickCounter += powerupMultiplier;
     localStorage.setItem("clickCount", clickCounter.toString());
 
-    if (clickCounter >= 10) {
-        clickCounterElement.style.display = "block";
-        document.getElementById("button-container").style.display = "flex";
-        clickCounterElement.innerText = `${clickCounter}`;
-    }
+    clickCounterElement.innerText = `${clickCounter}`;
 
     flashMessage(clickCounter, messages.messages);
 
