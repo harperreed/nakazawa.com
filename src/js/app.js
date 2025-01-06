@@ -17,8 +17,28 @@ function updateAchievementsTable(clicks) {
     const tbody = document.getElementById('achievements-body');
     tbody.innerHTML = '';
 
+    // Convert achievements to array and sort by threshold
+    const achievementsArray = Object.entries(achievements)
+        .map(([name, achievement]) => ({ name, ...achievement }))
+        .sort((a, b) => a.threshold - b.threshold);
+
+    // Find the last earned achievement and next two unearned
+    let lastEarned = null;
+    let nextUnearned = [];
+    
+    for (const achievement of achievementsArray) {
+        if (achievement.earned) {
+            lastEarned = achievement;
+        } else if (nextUnearned.length < 2) {
+            nextUnearned.push(achievement);
+        }
+    }
+
+    // Show only these three achievements
     let hasEarned = false;
-    for (const [name, achievement] of Object.entries(achievements)) {
+    const achievementsToShow = [lastEarned, ...nextUnearned].filter(a => a !== null);
+    
+    for (const achievement of achievementsToShow) {
         const row = document.createElement('tr');
         const progress = Math.min(clicks / achievement.threshold * 100, 100).toFixed(0);
         row.innerHTML = `
