@@ -86,7 +86,7 @@ const isDesktop = window.innerWidth > 1024;
 const clickCounterElement = document.getElementById("click-counter");
 const fullscreenButton = document.getElementById("fullscreen-button");
 
-let clickCounter = parseInt(localStorage.getItem("clickCount") || "0");
+let clickCounter = Number.parseInt(localStorage.getItem("clickCount") || "0");
 // Update the counter display if there's a stored value
 if (clickCounter >= 10) {
     clickCounterElement.style.display = "block";
