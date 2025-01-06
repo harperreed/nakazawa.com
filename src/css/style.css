@@ -82,10 +82,16 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#fullscreen-button {
-    position: absolute;
+#button-container {
+    position: fixed;
     bottom: 10px;
     right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.control-button {
     background-color: #4caf50;
     color: white;
     border: 4px solid #45a049;
@@ -95,22 +101,57 @@ body {
     cursor: pointer;
     image-rendering: pixelated;
     transition: all 0.1s ease;
-    display: none;
     user-select: none;
     font-family: "Press Start 2P", serif;
     font-weight: 400;
     font-style: normal;
+    min-width: 200px;
 }
 
-#fullscreen-button:hover {
+.control-button:hover {
     background-color: #45a049;
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0px #333;
 }
 
-#fullscreen-button:active {
+.control-button:active {
     transform: translate(4px, 4px);
     box-shadow: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 4px solid #333;
+    border-style: double;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    font-family: "Press Start 2P", serif;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+#modal-achievements {
+    margin-top: 20px;
 }
 
 @media (max-width: 600px) {

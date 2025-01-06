@@ -230,7 +230,12 @@ document.addEventListener("click", (e) => {
     }
 });
 
-// Add event listener to fullscreen button to toggle full screen mode
+// Button functionality
+const achievementsButton = document.getElementById("achievements-button");
+const resetButton = document.getElementById("reset-button");
+const modal = document.getElementById("modal");
+const closeBtn = document.querySelector(".close");
+
 fullscreenButton.addEventListener("click", () => {
     if (!document.fullscreenElement) {
         document.documentElement.requestFullscreen().catch((err) => {
@@ -240,6 +245,60 @@ fullscreenButton.addEventListener("click", () => {
         if (document.exitFullscreen) {
             document.exitFullscreen();
         }
+    }
+});
+
+achievementsButton.addEventListener("click", () => {
+    const modalAchievements = document.getElementById("modal-achievements");
+    modalAchievements.innerHTML = ""; // Clear existing content
+    
+    // Convert achievements to array and sort by threshold
+    const achievementsArray = Object.entries(achievements)
+        .map(([name, achievement]) => ({ name, ...achievement }))
+        .sort((a, b) => a.threshold - b.threshold);
+
+    achievementsArray.forEach(achievement => {
+        const progress = Math.min(
+            (clickCounter / achievement.threshold) * 100,
+            100
+        ).toFixed(0);
+        
+        const achievementDiv = document.createElement("div");
+        achievementDiv.style.margin = "10px 0";
+        achievementDiv.style.padding = "10px";
+        achievementDiv.style.borderBottom = "2px solid #333";
+        achievementDiv.innerHTML = `
+            <div class="${achievement.earned ? "earned" : "locked"}">
+                ${achievement.message}
+                <div style="margin-top: 5px;">Progress: ${progress}%</div>
+            </div>
+        `;
+        modalAchievements.appendChild(achievementDiv);
+    });
+    
+    modal.style.display = "block";
+});
+
+resetButton.addEventListener("click", () => {
+    if (confirm("Are you sure you want to reset all progress? This cannot be undone.")) {
+        localStorage.clear();
+        clickCounter = 0;
+        Object.keys(achievements).forEach(key => {
+            achievements[key].earned = false;
+        });
+        clickCounterElement.style.display = "none";
+        updateAchievementsTable(0);
+        location.reload(); // Refresh the page to reset everything
+    }
+});
+
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        modal.style.display = "none";
     }
 });
 

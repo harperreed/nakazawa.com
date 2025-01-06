@@ -108,9 +108,25 @@
     <body>
         <div id="click-counter" class="click-counter-hidden"></div>
         <div id="flash-message" class="flash-message-hidden"></div>
-        <button id="fullscreen-button" class="button_gone">
-            Go Fullscreen
-        </button>
+        <div id="button-container">
+            <button id="fullscreen-button" class="control-button">
+                Fullscreen
+            </button>
+            <button id="achievements-button" class="control-button">
+                Achievements
+            </button>
+            <button id="reset-button" class="control-button">
+                Reset
+            </button>
+        </div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Achievements</h2>
+                <div id="modal-achievements"></div>
+            </div>
+        </div>
 
         <table id="achievements-table" style="display: none;">
             <thead>
