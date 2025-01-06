@@ -2,6 +2,33 @@ import confetti from "canvas-confetti";
 import { flashMessage } from "./flashMessage.js";
 import messages from "../messages.json";
 
+// Achievement System
+const achievements = {
+    "Beginner": { threshold: 50, earned: false, message: "🎯 Beginner Bunny" },
+    "Expert": { threshold: 500, earned: false, message: "🌟 Expert Hopper" },
+    "Master": { threshold: 1000, earned: false, message: "👑 Carrot King" }
+};
+
+// Load saved achievements
+const savedAchievements = localStorage.getItem('achievements');
+if (savedAchievements) {
+    Object.assign(achievements, JSON.parse(savedAchievements));
+}
+
+function checkAchievements(clicks) {
+    let earned = false;
+    for (const [name, achievement] of Object.entries(achievements)) {
+        if (!achievement.earned && clicks >= achievement.threshold) {
+            achievement.earned = true;
+            earned = true;
+            flashMessage(clicks, [{ clicks, message: `Achievement Unlocked: ${achievement.message}` }]);
+        }
+    }
+    if (earned) {
+        localStorage.setItem('achievements', JSON.stringify(achievements));
+    }
+}
+
 // Detect if the website is loaded on a desktop
 const isDesktop = window.innerWidth > 1024;
 
@@ -112,6 +139,9 @@ document.addEventListener("click", (e) => {
     }
 
     flashMessage(clickCounter, messages.messages);
+    
+    // Check achievements
+    checkAchievements(clickCounter);
 
     // Haptic feedback
     if (clickCounter % 100 === 0) {
