@@ -35,11 +35,12 @@ function updateAchievementsTable(clicks) {
         }
     }
 
-    // Show only these three achievements
+    // Show different achievements based on screen size
     let hasEarned = false;
-    const achievementsToShow = [lastEarned, ...nextUnearned].filter(
-        (a) => a !== null,
-    );
+    const isMobile = window.innerWidth <= 768;
+    const achievementsToShow = isMobile 
+        ? nextUnearned.slice(0, 1) // Show only next achievement on mobile
+        : [lastEarned, ...nextUnearned].filter(a => a !== null); // Show last earned + next two on desktop
 
     for (const achievement of achievementsToShow) {
         const row = document.createElement("tr");
@@ -104,6 +105,11 @@ if (clickCounter >= 25) {
 
 // Initialize achievements table
 updateAchievementsTable(clickCounter);
+
+// Update achievements table on window resize
+window.addEventListener('resize', () => {
+    updateAchievementsTable(clickCounter);
+});
 
 // Register Service Worker
 if ("serviceWorker" in navigator) {

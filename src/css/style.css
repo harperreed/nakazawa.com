@@ -77,12 +77,21 @@ body {
 @media (max-width: 768px) {
     #achievements-table {
         left: 0;
-        bottom: 10px;
+        bottom: 0;
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
-        font-size: 10px;
-        max-height: 40vh;
+        font-size: 12px;
+        max-height: unset;
+        background-color: rgba(255, 255, 255, 0.98);
+        border-bottom: none;
+        margin: 0;
+        padding: 10px;
+    }
+
+    #achievements-table td {
+        padding: 8px 12px;
+        border-bottom: none;
     }
 }
 
