@@ -385,7 +385,7 @@ body {
         top: -50px;
     }
     to {
-        top: 100vh;
+        top: calc(100vh - 50px);
     }
 }
 
