@@ -91,6 +91,8 @@ let clickCounter = Number.parseInt(localStorage.getItem("clickCount") || "0");
 let powerupActive = false;
 let powerupMultiplier = 1;
 let powerupTimeout = null;
+let lastClickTime = Date.now();
+let clickSpeed = 0; // clicks per second
 // Update the counter display if there's a stored value
 if (clickCounter >= 10) {
     clickCounterElement.style.display = "block";
@@ -253,10 +255,34 @@ function activatePowerup() {
     }, 1000);
 }
 
-// Spawn powerup every 30 seconds
-setInterval(spawnPowerup, 30000);
+// Calculate time since last click and update click speed
+function updateClickSpeed() {
+    const now = Date.now();
+    const timeDiff = (now - lastClickTime) / 1000; // convert to seconds
+    clickSpeed = 1 / timeDiff; // clicks per second
+    lastClickTime = now;
+}
+
+// Dynamic powerup spawn timing
+function startPowerupSpawnTimer() {
+    const minDelay = 45000; // 45 seconds minimum
+    const maxDelay = 60000; // 60 seconds maximum
+    
+    // Faster clicking = shorter spawn time
+    const speedMultiplier = Math.max(0.1, Math.min(1, clickSpeed / 5)); // cap at 5 clicks/sec
+    const delay = maxDelay - (maxDelay - minDelay) * speedMultiplier;
+    
+    setTimeout(() => {
+        spawnPowerup();
+        startPowerupSpawnTimer(); // Schedule next spawn
+    }, delay);
+}
+
+// Start the initial spawn timer
+startPowerupSpawnTimer();
 
 document.addEventListener("click", (e) => {
+    updateClickSpeed();
     confetti({
         particleCount: 100,
         spread: 70,
