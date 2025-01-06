@@ -316,7 +316,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parcel/config-default@npm:2.13.3":
+"@parcel/config-default@npm:2.13.3, @parcel/config-default@npm:^2.13.3":
   version: 2.13.3
   resolution: "@parcel/config-default@npm:2.13.3"
   dependencies:
@@ -656,7 +656,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parcel/plugin@npm:2.13.3":
+"@parcel/plugin@npm:2.13.3, @parcel/plugin@npm:^2.0.0-beta.1":
   version: 2.13.3
   resolution: "@parcel/plugin@npm:2.13.3"
   dependencies:
@@ -2386,12 +2386,14 @@ __metadata:
   resolution: "nakazawa@workspace:."
   dependencies:
     "@biomejs/biome": "npm:^1.9.4"
+    "@parcel/config-default": "npm:^2.13.3"
     "@parcel/core": "npm:^2.13.3"
     "@parcel/packager-raw-url": "npm:2.13.3"
     "@parcel/service-worker": "npm:^2.13.3"
     "@parcel/transformer-webmanifest": "npm:2.13.3"
     canvas-confetti: "npm:^1.9.3"
     parcel: "npm:^2.13.3"
+    parcel-optimizer-ogimage: "npm:^0.1.0"
   languageName: unknown
   linkType: soft
 
@@ -2509,6 +2511,15 @@ __metadata:
   version: 1.0.1
   resolution: "package-json-from-dist@npm:1.0.1"
   checksum: 10c0/62ba2785eb655fec084a257af34dbe24292ab74516d6aecef97ef72d4897310bc6898f6c85b5cd22770eaa1ce60d55a0230e150fb6a966e3ecd6c511e23d164b
+  languageName: node
+  linkType: hard
+
+"parcel-optimizer-ogimage@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "parcel-optimizer-ogimage@npm:0.1.0"
+  dependencies:
+    "@parcel/plugin": "npm:^2.0.0-beta.1"
+  checksum: 10c0/44e0d4cae5eb29ad8d461af98ac877826e429a7d7b97d8a0cb574822d1c5f9d8f1e97932d808ff83b84120cd4817665814a028973c5a0a862a5fa5200abe5f73
   languageName: node
   linkType: hard
 
