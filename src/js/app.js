@@ -328,6 +328,12 @@ achievementsButton.addEventListener("click", () => {
 	modal.style.display = "block";
 });
 
+// Debug powerup button
+const debugPowerupButton = document.getElementById("debug-powerup");
+debugPowerupButton.addEventListener("click", () => {
+    activatePowerup();
+});
+
 resetButton.addEventListener("click", () => {
 	if (
 		confirm(
