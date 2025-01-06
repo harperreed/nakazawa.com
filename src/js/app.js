@@ -325,6 +325,27 @@ function updateClickSpeed() {
 }
 
 // Dynamic powerup spawn timing
+function spawnRandomCarrot() {
+    const carrot = document.createElement('div');
+    carrot.style.position = 'absolute';
+    carrot.style.left = `${Math.random() * (window.innerWidth - 50)}px`;
+    carrot.style.top = `${Math.random() * (window.innerHeight - 50)}px`;
+    carrot.style.width = '50px';
+    carrot.style.height = '50px';
+    carrot.style.cursor = 'pointer';
+    carrot.style.backgroundImage = 'url("images/carrot.svg")';
+    carrot.style.backgroundSize = 'contain';
+
+    carrot.onclick = () => {
+        clickCounter += 50; // Bonus points
+        carrot.remove();
+        flashMessage(clickCounter, [{clicks: clickCounter, message: "🥕 +50 Bonus Points!"}]);
+    };
+
+    document.body.appendChild(carrot);
+    setTimeout(() => carrot.remove(), 3000); // Remove after 3 seconds
+}
+
 function startPowerupSpawnTimer() {
     const minDelay = 45000; // 45 seconds minimum
     const maxDelay = 60000; // 60 seconds maximum
@@ -377,6 +398,11 @@ document.addEventListener("click", (e) => {
 
     // Check achievements
     checkAchievements(clickCounter);
+
+    // Random carrot spawn chance
+    if (Math.random() < 0.1) { // 10% chance on each click
+        spawnRandomCarrot();
+    }
 
     // Haptic feedback
     if (clickCounter % 100 === 0) {
