@@ -4,18 +4,30 @@ const CELL_WIDTH = 8 * DPR;
 const CELL_HEIGHT = 8 * DPR;
 const FLAME_COLOR_DEPTH = 24;
 const FLAME_COLOR_TABLE = [
-    [0, 'lavender'],
-    [0.1, 'yellow'],
-    [0.3, 'gold'],
-    [0.5, 'hotpink'],
-    [0.6, 'tomato'],
-    [0.8, 'darkslateblue'],
-    [1, '#222'],
+    [0, "lavender"],
+    [0.1, "yellow"],
+    [0.3, "gold"],
+    [0.5, "hotpink"],
+    [0.6, "tomato"],
+    [0.8, "darkslateblue"],
+    [1, "#222"],
 ];
 const SPREAD_FROM = [
-    'bottom', 'bottom', 'bottom', 'bottom', 'bottom',
-    'bottom', 'bottom', 'bottom', 'bottom', 'bottom',
-    'left', 'left', 'right', 'right', 'top',
+    "bottom",
+    "bottom",
+    "bottom",
+    "bottom",
+    "bottom",
+    "bottom",
+    "bottom",
+    "bottom",
+    "bottom",
+    "bottom",
+    "left",
+    "left",
+    "right",
+    "right",
+    "top",
 ];
 
 function getRandomInt(min, max) {
@@ -23,13 +35,14 @@ function getRandomInt(min, max) {
 }
 
 function createGradientArray(size, colorStops) {
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d", { alpha: true });
+    canvas.style.background = "transparent";
     canvas.width = size;
     canvas.height = 1;
 
     const gradient = ctx.createLinearGradient(0, 0, size, 0);
-    colorStops.forEach(args => gradient.addColorStop(...args));
+    colorStops.forEach((args) => gradient.addColorStop(...args));
 
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, size, 1);
@@ -85,31 +98,31 @@ class Pixel {
 export class FireCursor {
     constructor(canvas) {
         this.canvas = canvas;
-        this.ctx = canvas.getContext('2d');
+        this.ctx = canvas.getContext("2d");
         this.bounds = {
             w: window.innerWidth,
             h: window.innerHeight,
             center: {
                 x: window.innerWidth / 2,
-                y: window.innerHeight / 2
-            }
+                y: window.innerHeight / 2,
+            },
         };
         this.pointer = { position: { x: 0, y: 0 } };
         this.tick = 0;
         this.matrix = new Matrix();
         this.matrix.setup({ bounds: this.bounds });
-        
+
         this.setupEventListeners();
         this.startAnimation();
     }
 
     setupEventListeners() {
-        window.addEventListener('mousemove', (e) => {
+        window.addEventListener("mousemove", (e) => {
             this.pointer.position.x = e.clientX;
             this.pointer.position.y = e.clientY;
         });
 
-        window.addEventListener('resize', () => {
+        window.addEventListener("resize", () => {
             this.canvas.width = window.innerWidth;
             this.canvas.height = window.innerHeight;
             this.bounds.w = window.innerWidth;
@@ -127,7 +140,7 @@ export class FireCursor {
                 ctx: this.ctx,
                 pointer: this.pointer,
                 tick: this.tick,
-                bounds: this.bounds
+                bounds: this.bounds,
             });
             this.tick++;
             requestAnimationFrame(animate);
@@ -138,7 +151,10 @@ export class FireCursor {
 
 class Matrix {
     createMatrix({ bounds }) {
-        const colors = createGradientArray(FLAME_COLOR_DEPTH, FLAME_COLOR_TABLE);
+        const colors = createGradientArray(
+            FLAME_COLOR_DEPTH,
+            FLAME_COLOR_TABLE,
+        );
 
         this.rows = Math.ceil(bounds.h / CELL_HEIGHT);
         this.columns = Math.ceil(bounds.w / CELL_WIDTH);
@@ -151,9 +167,9 @@ class Matrix {
                         x * CELL_WIDTH,
                         y * CELL_HEIGHT,
                         colors,
-                        y >= this.rows - 2 ? 0 : colors.length - 1
-                    )
-            )
+                        y >= this.rows - 2 ? 0 : colors.length - 1,
+                    ),
+            ),
         );
 
         for (let row = 0; row < this.rows; row++) {
@@ -176,7 +192,7 @@ class Matrix {
     draw = ({ ctx, pointer, tick, bounds }) => {
         let { x, y } = pointer.position;
         let pointCol, pointRow;
-        
+
         if (x !== null && y !== null) {
             pointCol = Math.floor(x / CELL_WIDTH);
             pointRow = Math.floor(y / CELL_HEIGHT);
