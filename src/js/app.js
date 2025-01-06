@@ -331,7 +331,7 @@ achievementsButton.addEventListener("click", () => {
 // Debug powerup button
 const debugPowerupButton = document.getElementById("debug-powerup");
 debugPowerupButton.addEventListener("click", () => {
-    activatePowerup();
+    spawnPowerup();
 });
 
 resetButton.addEventListener("click", () => {
