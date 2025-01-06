@@ -326,20 +326,23 @@ function updateClickSpeed() {
 
 // Dynamic powerup spawn timing
 function spawnRandomCarrot() {
-    const carrot = document.createElement('div');
-    carrot.style.position = 'absolute';
+    const carrot = document.createElement("div");
+    carrot.style.position = "absolute";
     carrot.style.left = `${Math.random() * (window.innerWidth - 50)}px`;
     carrot.style.top = `${Math.random() * (window.innerHeight - 50)}px`;
-    carrot.style.width = '50px';
-    carrot.style.height = '50px';
-    carrot.style.cursor = 'pointer';
-    carrot.style.backgroundImage = 'url("images/carrot.svg")';
-    carrot.style.backgroundSize = 'contain';
+    carrot.style.width = "50px";
+    carrot.style.height = "50px";
+    carrot.style.cursor = "pointer";
+    carrot.style.backgroundImage = `url("${new URL("../images/carrot-powerup.webp", import.meta.url)}")`;
+    carrot.style.backgroundSize = "contain";
+    carrot.style.filter = "drop-shadow(3px 3px 3px rgba(0,0,0,0.5))";
 
     carrot.onclick = () => {
         clickCounter += 50; // Bonus points
         carrot.remove();
-        flashMessage(clickCounter, [{clicks: clickCounter, message: "🥕 +50 Bonus Points!"}]);
+        flashMessage(clickCounter, [
+            { clicks: clickCounter, message: "🥕 +50 Bonus Points!" },
+        ]);
     };
 
     document.body.appendChild(carrot);
@@ -400,7 +403,9 @@ document.addEventListener("click", (e) => {
     checkAchievements(clickCounter);
 
     // Random carrot spawn chance
-    if (Math.random() < 0.1) { // 10% chance on each click
+    if (Math.random() < 0.01) {
+        // 1% chance on each click
+        console.log("spawning carrot");
         spawnRandomCarrot();
     }
 
