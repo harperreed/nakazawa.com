@@ -261,6 +261,7 @@ function activatePowerup() {
             powerupActive = false;
             powerupMultiplier = 1;
             timerElement.style.display = "none";
+            mobileTimerElement.remove(); // Remove the mobile timer element completely
             document.getElementById("fire-cursor").style.display = "none";
         }
     }, 1000);
