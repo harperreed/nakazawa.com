@@ -41,6 +41,21 @@ body {
     user-select: none;
 }
 
+@media (max-width: 768px) {
+    #click-counter {
+        position: static;
+        margin: 0;
+        box-shadow: none;
+        border: none;
+        border-right: 4px solid #333;
+        padding: 10px 15px;
+        font-size: 16px;
+        flex: 1;
+        text-align: center;
+        background: transparent;
+    }
+}
+
 #achievements-table {
     position: fixed;
     bottom: 10px;
@@ -142,10 +157,15 @@ body {
 @media (max-width: 768px) {
     .control-button {
         min-width: unset;
-        width: 33.33%;
+        width: auto;
         padding: 10px;
         font-size: 10px;
         margin: 0;
+        flex: 1;
+    }
+
+    #fullscreen-button {
+        display: none;
     }
 }
 
@@ -326,6 +346,21 @@ body {
     z-index: 10;
     pointer-events: none;
     user-select: none;
+}
+
+@media (max-width: 768px) {
+    #timer {
+        position: static;
+        margin: 0;
+        box-shadow: none;
+        border: none;
+        padding: 10px 15px;
+        font-size: 16px;
+        order: -1;
+        flex: 1;
+        text-align: center;
+        background: transparent;
+    }
 }
 
 @keyframes fall {

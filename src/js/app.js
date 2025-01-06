@@ -300,11 +300,8 @@ document.addEventListener("click", (e) => {
 
     if (clickCounter >= 10) {
         clickCounterElement.style.display = "block";
-        clickCounterElement.innerText = `${clickCounter}`;
-    }
-
-    if (clickCounter >= 25) {
         document.getElementById("button-container").style.display = "flex";
+        clickCounterElement.innerText = `${clickCounter}`;
     }
 
     flashMessage(clickCounter, messages.messages);
