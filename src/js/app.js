@@ -15,6 +15,21 @@ if (savedAchievements) {
     Object.assign(achievements, JSON.parse(savedAchievements));
 }
 
+function updateAchievementsTable(clicks) {
+    const tbody = document.getElementById('achievements-body');
+    tbody.innerHTML = '';
+    
+    for (const [name, achievement] of Object.entries(achievements)) {
+        const row = document.createElement('tr');
+        const progress = Math.min(clicks / achievement.threshold * 100, 100).toFixed(0);
+        row.innerHTML = `
+            <td class="${achievement.earned ? 'earned' : 'locked'}">${achievement.message}</td>
+            <td>${progress}%</td>
+        `;
+        tbody.appendChild(row);
+    }
+}
+
 function checkAchievements(clicks) {
     let earned = false;
     for (const [name, achievement] of Object.entries(achievements)) {
@@ -27,6 +42,7 @@ function checkAchievements(clicks) {
     if (earned) {
         localStorage.setItem('achievements', JSON.stringify(achievements));
     }
+    updateAchievementsTable(clicks);
 }
 
 // Detect if the website is loaded on a desktop
@@ -45,6 +61,9 @@ if (clickCounter >= 10) {
         fullscreenButton.style.display = "block";
     }
 }
+
+// Initialize achievements table
+updateAchievementsTable(clickCounter);
 
 // Register Service Worker
 if ("serviceWorker" in navigator) {
