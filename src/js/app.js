@@ -88,12 +88,10 @@ const fullscreenButton = document.getElementById("fullscreen-button");
 
 let clickCounter = parseInt(localStorage.getItem("clickCount") || "0");
 // Update the counter display if there's a stored value
-if (clickCounter >= 10) {
+if (clickCounter >= 25) {
     clickCounterElement.style.display = "block";
     clickCounterElement.innerText = `${clickCounter}`;
-    if (isDesktop) {
-        fullscreenButton.style.display = "block";
-    }
+    document.getElementById("button-container").style.display = "flex";
 }
 
 // Initialize achievements table
@@ -182,12 +180,10 @@ document.addEventListener("click", (e) => {
 
     clickCounter++;
     localStorage.setItem("clickCount", clickCounter.toString());
-    if (clickCounter >= 10) {
+    if (clickCounter >= 25) {
         clickCounterElement.style.display = "block";
         clickCounterElement.innerText = `${clickCounter}`;
-        if (isDesktop) {
-            fullscreenButton.style.display = "block";
-        }
+        document.getElementById("button-container").style.display = "flex";
     }
 
     flashMessage(clickCounter, messages.messages);
