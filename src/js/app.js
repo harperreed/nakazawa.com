@@ -177,6 +177,36 @@ function spawnPowerup() {
     
     powerup.addEventListener('click', (e) => {
         e.stopPropagation();
+        
+        // Create large confetti explosion
+        const count = 200;
+        const defaults = {
+            origin: {
+                x: e.clientX / window.innerWidth,
+                y: e.clientY / window.innerHeight
+            },
+            spread: 360,
+            startVelocity: 45,
+            scalar: 2,
+            ticks: 100,
+            colors: ['#ff0000', '#000000'],
+            shapes: ['square', 'circle']
+        };
+
+        confetti({
+            ...defaults,
+            particleCount: count,
+            gravity: 0.8,
+        });
+
+        // Second wave for more density
+        confetti({
+            ...defaults,
+            particleCount: count,
+            gravity: 1.2,
+            scalar: 1.5
+        });
+
         activatePowerup();
         powerup.remove();
     });
