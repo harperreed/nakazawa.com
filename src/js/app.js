@@ -184,6 +184,9 @@ function spawnPowerup() {
     const powerup = document.createElement("div");
     powerup.id = "powerup";
     powerup.style.left = Math.random() * (window.innerWidth - 40) + "px";
+    powerup.style.top = "0";
+    powerup.style.position = "fixed";
+    powerup.style.animation = "fall 3s linear forwards";
 
     powerup.addEventListener("click", (e) => {
         e.stopPropagation();
@@ -221,6 +224,19 @@ function spawnPowerup() {
         powerup.remove();
     });
 
+    // Add animation keyframes
+    if (!document.querySelector('#powerup-animation')) {
+        const style = document.createElement('style');
+        style.id = 'powerup-animation';
+        style.textContent = `
+            @keyframes fall {
+                from { top: -50px; }
+                to { top: calc(100vh - 50px); }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    
     document.body.appendChild(powerup);
 
     // Remove powerup if not clicked after animation
