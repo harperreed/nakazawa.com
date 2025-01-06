@@ -252,29 +252,32 @@ achievementsButton.addEventListener("click", () => {
     const modalAchievements = document.getElementById("modal-achievements");
     modalAchievements.innerHTML = ""; // Clear existing content
     
-    // Convert achievements to array and sort by threshold
-    const achievementsArray = Object.entries(achievements)
+    // Filter and sort earned achievements
+    const earnedAchievements = Object.entries(achievements)
         .map(([name, achievement]) => ({ name, ...achievement }))
+        .filter(achievement => achievement.earned)
         .sort((a, b) => a.threshold - b.threshold);
 
-    achievementsArray.forEach(achievement => {
-        const progress = Math.min(
-            (clickCounter / achievement.threshold) * 100,
-            100
-        ).toFixed(0);
-        
-        const achievementDiv = document.createElement("div");
-        achievementDiv.style.margin = "10px 0";
-        achievementDiv.style.padding = "10px";
-        achievementDiv.style.borderBottom = "2px solid #333";
-        achievementDiv.innerHTML = `
-            <div class="${achievement.earned ? "earned" : "locked"}">
-                ${achievement.message}
-                <div style="margin-top: 5px;">Progress: ${progress}%</div>
-            </div>
-        `;
-        modalAchievements.appendChild(achievementDiv);
-    });
+    if (earnedAchievements.length === 0) {
+        const noAchievementsDiv = document.createElement("div");
+        noAchievementsDiv.style.textAlign = "center";
+        noAchievementsDiv.style.padding = "20px";
+        noAchievementsDiv.innerText = "No achievements earned yet. Keep clicking!";
+        modalAchievements.appendChild(noAchievementsDiv);
+    } else {
+        earnedAchievements.forEach(achievement => {
+            const achievementDiv = document.createElement("div");
+            achievementDiv.style.margin = "10px 0";
+            achievementDiv.style.padding = "10px";
+            achievementDiv.style.borderBottom = "2px solid #333";
+            achievementDiv.innerHTML = `
+                <div class="earned">
+                    ${achievement.message}
+                </div>
+            `;
+            modalAchievements.appendChild(achievementDiv);
+        });
+    }
     
     modal.style.display = "block";
 });
