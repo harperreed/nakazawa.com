@@ -24,7 +24,7 @@ function updateAchievementsTable(clicks) {
 
     // Find the last earned achievement and next two unearned
     let lastEarned = null;
-    let nextUnearned = [];
+    const nextUnearned = [];
 
     for (const achievement of achievementsArray) {
         if (achievement.earned) {
