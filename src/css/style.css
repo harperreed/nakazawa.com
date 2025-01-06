@@ -53,6 +53,7 @@ body {
     font-size: 12px;
     color: #333;
     border-collapse: collapse;
+    user-select: none;
 }
 
 #achievements-table th,
@@ -193,4 +194,3 @@ body {
     display: none;
     user-select: none;
 }
-

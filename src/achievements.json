@@ -5,6 +5,26 @@
             "earned": false,
             "message": "🎯 Beginner Bunny"
         },
+        "CarrotSnatcher": {
+            "threshold": 100,
+            "earned": false,
+            "message": "🥕 Vegetable Bandit"
+        },
+        "BunnyBerserker": {
+            "threshold": 200,
+            "earned": false,
+            "message": "😡 Rabid Rampage"
+        },
+        "HopPunk": {
+            "threshold": 300,
+            "earned": false,
+            "message": "🎸 Anarchist Cottontail"
+        },
+        "BunnyNinja": {
+            "threshold": 400,
+            "earned": false,
+            "message": "🥷 Silent but Deadly Floof"
+        },
         "Expert": {
             "threshold": 500,
             "earned": false,
@@ -14,6 +34,56 @@
             "threshold": 1000,
             "earned": false,
             "message": "👑 Carrot King"
+        },
+        "Carrotpocalypse": {
+            "threshold": 2000,
+            "earned": false,
+            "message": "🥕 Destroyer of Vegetable Gardens"
+        },
+        "BunnyOverlord": {
+            "threshold": 3000,
+            "earned": false,
+            "message": "😈 Supreme Leader of the Warren"
+        },
+        "ChaosHare": {
+            "threshold": 4000,
+            "earned": false,
+            "message": "🌪️ Agent of Bunny Chaos"
+        },
+        "CarrotCultist": {
+            "threshold": 5000,
+            "earned": false,
+            "message": "⛪ High Priest of the Carrot Cult"
+        },
+        "BunnyberryPie": {
+            "threshold": 6000,
+            "earned": false,
+            "message": "🥧 Hallucinogenic Pie Master"
+        },
+        "RabbitHole": {
+            "threshold": 7000,
+            "earned": false,
+            "message": "🕳️ Quantum Tunnel Digger"
+        },
+        "MoonRabbit": {
+            "threshold": 8000,
+            "earned": false,
+            "message": "🌙 Lunar Jade Pounder"
+        },
+        "BunnyDoom": {
+            "threshold": 9000,
+            "earned": false,
+            "message": "💀 Harbinger of the Bunpocalypse"
+        },
+        "CarrotNuke": {
+            "threshold": 10000,
+            "earned": false,
+            "message": "☢️ Thermonuclear Carrot Wielder"
+        },
+        "BunnyMatrix": {
+            "threshold": 15000,
+            "earned": false,
+            "message": "🤖 Glitch in the Warren Matrix"
         }
     }
 }
