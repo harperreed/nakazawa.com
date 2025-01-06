@@ -7,15 +7,15 @@ import achievementsData from "../achievements.json";
 const achievements = achievementsData.achievements;
 
 // Load saved achievements
-const savedAchievements = localStorage.getItem('achievements');
+const savedAchievements = localStorage.getItem("achievements");
 if (savedAchievements) {
     Object.assign(achievements, JSON.parse(savedAchievements));
 }
 
 function updateAchievementsTable(clicks) {
-    const table = document.getElementById('achievements-table');
-    const tbody = document.getElementById('achievements-body');
-    tbody.innerHTML = '';
+    const table = document.getElementById("achievements-table");
+    const tbody = document.getElementById("achievements-body");
+    tbody.innerHTML = "";
 
     // Convert achievements to array and sort by threshold
     const achievementsArray = Object.entries(achievements)
@@ -25,7 +25,7 @@ function updateAchievementsTable(clicks) {
     // Find the last earned achievement and next two unearned
     let lastEarned = null;
     let nextUnearned = [];
-    
+
     for (const achievement of achievementsArray) {
         if (achievement.earned) {
             lastEarned = achievement;
@@ -36,13 +36,18 @@ function updateAchievementsTable(clicks) {
 
     // Show only these three achievements
     let hasEarned = false;
-    const achievementsToShow = [lastEarned, ...nextUnearned].filter(a => a !== null);
-    
+    const achievementsToShow = [lastEarned, ...nextUnearned].filter(
+        (a) => a !== null,
+    );
+
     for (const achievement of achievementsToShow) {
-        const row = document.createElement('tr');
-        const progress = Math.min(clicks / achievement.threshold * 100, 100).toFixed(0);
+        const row = document.createElement("tr");
+        const progress = Math.min(
+            (clicks / achievement.threshold) * 100,
+            100,
+        ).toFixed(0);
         row.innerHTML = `
-            <td class="${achievement.earned ? 'earned' : 'locked'}">${achievement.message}</td>
+            <td class="${achievement.earned ? "earned" : "locked"}">${achievement.message}</td>
             <td>${progress}%</td>
         `;
         tbody.appendChild(row);
@@ -50,9 +55,9 @@ function updateAchievementsTable(clicks) {
             hasEarned = true;
         }
     }
-    
+
     // Only show table if at least one achievement is earned
-    table.style.display = hasEarned ? 'table' : 'none';
+    table.style.display = hasEarned ? "table" : "none";
 }
 
 function checkAchievements(clicks) {
@@ -61,11 +66,16 @@ function checkAchievements(clicks) {
         if (!achievement.earned && clicks >= achievement.threshold) {
             achievement.earned = true;
             earned = true;
-            flashMessage(clicks, [{ clicks, message: `Achievement Unlocked: ${achievement.message}` }]);
+            flashMessage(clicks, [
+                {
+                    clicks,
+                    message: `Achievement Unlocked: ${achievement.message}`,
+                },
+            ]);
         }
     }
     if (earned) {
-        localStorage.setItem('achievements', JSON.stringify(achievements));
+        localStorage.setItem("achievements", JSON.stringify(achievements));
     }
     updateAchievementsTable(clicks);
 }
@@ -73,15 +83,14 @@ function checkAchievements(clicks) {
 // Detect if the website is loaded on a desktop
 const isDesktop = window.innerWidth > 1024;
 
-
 const clickCounterElement = document.getElementById("click-counter");
 const fullscreenButton = document.getElementById("fullscreen-button");
 
-let clickCounter = parseInt(localStorage.getItem('clickCount') || '0');
+let clickCounter = parseInt(localStorage.getItem("clickCount") || "0");
 // Update the counter display if there's a stored value
 if (clickCounter >= 10) {
     clickCounterElement.style.display = "block";
-    clickCounterElement.innerText = `🎉: ${clickCounter}`;
+    clickCounterElement.innerText = `${clickCounter}`;
     if (isDesktop) {
         fullscreenButton.style.display = "block";
     }
@@ -105,7 +114,6 @@ if ("serviceWorker" in navigator) {
             });
     });
 }
-
 
 // Initialize confetti canvas
 const myCanvas = document.createElement("canvas");
@@ -173,17 +181,17 @@ document.addEventListener("click", (e) => {
     });
 
     clickCounter++;
-    localStorage.setItem('clickCount', clickCounter.toString());
+    localStorage.setItem("clickCount", clickCounter.toString());
     if (clickCounter >= 10) {
         clickCounterElement.style.display = "block";
-        clickCounterElement.innerText = `🎉: ${clickCounter}`;
+        clickCounterElement.innerText = `${clickCounter}`;
         if (isDesktop) {
             fullscreenButton.style.display = "block";
         }
     }
 
     flashMessage(clickCounter, messages.messages);
-    
+
     // Check achievements
     checkAchievements(clickCounter);
 
