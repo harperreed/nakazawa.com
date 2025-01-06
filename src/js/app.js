@@ -87,6 +87,9 @@ const clickCounterElement = document.getElementById("click-counter");
 const fullscreenButton = document.getElementById("fullscreen-button");
 
 let clickCounter = Number.parseInt(localStorage.getItem("clickCount") || "0");
+let powerupActive = false;
+let powerupMultiplier = 1;
+let powerupTimeout = null;
 // Update the counter display if there's a stored value
 if (clickCounter >= 10) {
 	clickCounterElement.style.display = "block";
@@ -167,6 +170,49 @@ function changeBackgroundImage() {
 }
 
 // Handle clicks for confetti
+function spawnPowerup() {
+    const powerup = document.createElement('div');
+    powerup.id = 'powerup';
+    powerup.style.left = Math.random() * (window.innerWidth - 40) + 'px';
+    
+    powerup.addEventListener('click', (e) => {
+        e.stopPropagation();
+        activatePowerup();
+        powerup.remove();
+    });
+
+    document.body.appendChild(powerup);
+
+    // Remove powerup if not clicked after animation
+    setTimeout(() => powerup.remove(), 3000);
+}
+
+function activatePowerup() {
+    powerupActive = true;
+    powerupMultiplier = 2;
+    
+    const timerElement = document.getElementById('timer');
+    timerElement.style.display = 'block';
+    
+    let timeLeft = 30;
+    
+    clearInterval(powerupTimeout);
+    powerupTimeout = setInterval(() => {
+        timeLeft--;
+        timerElement.textContent = `Powerup: ${timeLeft}s`;
+        
+        if (timeLeft <= 0) {
+            clearInterval(powerupTimeout);
+            powerupActive = false;
+            powerupMultiplier = 1;
+            timerElement.style.display = 'none';
+        }
+    }, 1000);
+}
+
+// Spawn powerup every 30 seconds
+setInterval(spawnPowerup, 30000);
+
 document.addEventListener("click", (e) => {
 	confetti({
 		particleCount: 100,
@@ -180,7 +226,7 @@ document.addEventListener("click", (e) => {
 		},
 	});
 
-	clickCounter++;
+	clickCounter += powerupMultiplier;
 	localStorage.setItem("clickCount", clickCounter.toString());
 
 	if (clickCounter >= 10) {

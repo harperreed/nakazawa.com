@@ -281,3 +281,42 @@ body {
 	align-items: center;
 	pointer-events: none;
 }
+
+#powerup {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url("../images/carrot.svg") no-repeat center/contain;
+    cursor: pointer;
+    transition: transform 0.2s;
+    animation: fall 3s linear;
+    pointer-events: auto;
+}
+
+#powerup:hover {
+    transform: scale(1.1);
+}
+
+#timer {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border: 4px solid #333;
+    border-style: double;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 4px 4px 0px #333;
+    display: none;
+    z-index: 1000;
+}
+
+@keyframes fall {
+    from {
+        top: -50px;
+    }
+    to {
+        top: 100vh;
+    }
+}
