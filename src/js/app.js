@@ -1,13 +1,10 @@
 import confetti from "canvas-confetti";
 import { flashMessage } from "./flashMessage.js";
 import messages from "../messages.json";
+import achievementsData from "../achievements.json";
 
 // Achievement System
-const achievements = {
-    "Beginner": { threshold: 50, earned: false, message: "🎯 Beginner Bunny" },
-    "Expert": { threshold: 500, earned: false, message: "🌟 Expert Hopper" },
-    "Master": { threshold: 1000, earned: false, message: "👑 Carrot King" }
-};
+const achievements = achievementsData.achievements;
 
 // Load saved achievements
 const savedAchievements = localStorage.getItem('achievements');

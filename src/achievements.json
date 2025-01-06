@@ -1,0 +1,19 @@
+{
+    "achievements": {
+        "Beginner": {
+            "threshold": 50,
+            "earned": false,
+            "message": "🎯 Beginner Bunny"
+        },
+        "Expert": {
+            "threshold": 500,
+            "earned": false,
+            "message": "🌟 Expert Hopper"
+        },
+        "Master": {
+            "threshold": 1000,
+            "earned": false,
+            "message": "👑 Carrot King"
+        }
+    }
+}
