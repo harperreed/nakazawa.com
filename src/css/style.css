@@ -219,15 +219,17 @@ body {
 }
 
 /* Styles for the flash message */
-#flash-message {
+.flash-message {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
     background-color: rgba(255, 255, 255, 0.9);
     color: #333;
     text-align: center;
     padding: 15px;
+    margin-bottom: 10px;
     font-size: 20px;
     border: 4px solid #333;
     border-style: double;
@@ -235,4 +237,16 @@ body {
     z-index: 1000;
     display: none;
     user-select: none;
+}
+
+#flash-messages-container {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
 }
