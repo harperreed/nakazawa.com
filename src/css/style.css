@@ -11,7 +11,7 @@ body {
 }
 
 body {
-    background-image: url("../images/bunnies.gif");
+    background-image: url("../images/bunnies.3.gif");
     background-repeat: repeat;
     cursor:
         url("../images/carrot.png") 16 16,
@@ -25,7 +25,8 @@ body {
     font-style: normal;
 }
 
-#click-counter, #mobile-counter {
+#click-counter,
+#mobile-counter {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -49,7 +50,7 @@ body {
     #click-counter {
         display: none !important;
     }
-    
+
     #mobile-counter {
         display: block !important;
         position: static;
@@ -118,7 +119,6 @@ body {
 #achievements-table .locked {
     color: #999;
 }
-
 
 #button-container {
     position: fixed;
@@ -268,23 +268,23 @@ body {
 
 /* New background images */
 .bg-image-1 {
-    background-image: url("../images/image1.jpg");
+    background-image: url("../images/bunnies.1.gif");
 }
 
 .bg-image-2 {
-    background-image: url("../images/image2.jpg");
+    background-image: url("../images/bunnies.2.gif");
 }
 
 .bg-image-3 {
-    background-image: url("../images/image2.jpg");
+    background-image: url("../images/bunnies.3.gif");
 }
 
 .bg-image-4 {
-    background-image: url("../images/image2.jpg");
+    background-image: url("../images/bunnies.4.gif");
 }
 
 .bg-image-5 {
-    background-image: url("../images/image2.jpg");
+    background-image: url("../images/bunnies.5.gif");
 }
 
 /* Styles for the flash message */
@@ -339,7 +339,8 @@ body {
     transform: scale(1.1);
 }
 
-#timer, #mobile-timer {
+#timer,
+#mobile-timer {
     position: fixed;
     top: 10px;
     left: 10px;
@@ -364,7 +365,7 @@ body {
     #timer {
         display: none !important;
     }
-    
+
     #mobile-timer {
         display: block;
         position: static;
