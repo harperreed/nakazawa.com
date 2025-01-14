@@ -436,11 +436,11 @@ document.addEventListener("click", (e) => {
         blendBackgroundColor();
     }
 
-    if (clickCounter >= 500) {
+    if (clickCounter >= 20) {
         console.log(
             `Click count ${clickCounter} >= 5 - changing background image`,
         );
-        // changeBackgroundImage();
+        changeBackgroundImage();
     }
 });
 
