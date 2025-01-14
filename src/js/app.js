@@ -184,11 +184,11 @@ function blendBackgroundColor() {
 // Function to change the background to various images after 500 clicks
 function changeBackgroundImage() {
     const images = [
-        "url('image1.jpg')",
-        "url('image2.jpg')",
-        "url('image3.jpg')",
-        "url('image4.jpg')",
-        "url('image5.jpg')",
+        `url("${new URL("../images/bunnies.1.gif", import.meta.url)}")`,
+        `url("${new URL("../images/bunnies.2.gif", import.meta.url)}")`,
+        `url("${new URL("../images/bunnies.3.gif", import.meta.url)}")`,
+        `url("${new URL("../images/bunnies.4.gif", import.meta.url)}")`,
+        `url("${new URL("../images/bunnies.5.gif", import.meta.url)}")`,
     ];
     const imageIndex = Math.floor((clickCounter - 500) / 25) % images.length;
     document.body.style.backgroundImage = images[imageIndex];
