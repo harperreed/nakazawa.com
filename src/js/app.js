@@ -1,7 +1,7 @@
 import confetti from "canvas-confetti";
 import achievementsData from "../achievements.json";
 import messages from "../messages.json";
-import i18n from './i18n';
+import i18n, { i18nInstance } from './i18n';
 import { flashMessage } from "./flashMessage.js";
 import { FireCursor } from "./fireCursor.js";
 
@@ -366,6 +366,17 @@ function startPowerupSpawnTimer() {
 
 // Start the initial spawn timer
 startPowerupSpawnTimer();
+
+// Initialize translations for static content
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        element.textContent = i18n.t(key);
+    });
+});
+
+// Wait for i18next to initialize
+await i18nInstance;
 
 document.addEventListener("click", (e) => {
     updateClickSpeed();
