@@ -6,9 +6,9 @@
 				"earned": false,
 				"message": "🎯 Beginner Bunny"
 			},
-		"CarrotSnatcher": {
-			"threshold": 100,
-			"earned": false,
+			"CarrotSnatcher": {
+				"threshold": 100,
+				"earned": false,
 			"message": "🥕 Vegetable Bandit"
 		},
 		"BunnyBerserker": {
