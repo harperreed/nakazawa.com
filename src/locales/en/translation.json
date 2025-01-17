@@ -6,6 +6,10 @@
         "achievements": "Achievements",
         "reset": "Reset"
     },
+    "messages": {
+        "prophecy": "The ancient clicking prophecy begins to unfold...",
+        "cosmic": "The cosmic clicksters would be proud of your progress!"
+    },
     "achievements": {
         "title": "Achievements",
         "noAchievements": "No achievements earned yet. Keep clicking!",

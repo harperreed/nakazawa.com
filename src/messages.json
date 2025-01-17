@@ -2,10 +2,12 @@
 	"messages": [
 		{
 			"clicks": 13,
+			"messageKey": "messages.prophecy",
 			"message": "The ancient clicking prophecy begins to unfold..."
 		},
 		{
 			"clicks": 42,
+			"messageKey": "messages.cosmic",
 			"message": "The cosmic clicksters would be proud of your progress!"
 		},
 		{

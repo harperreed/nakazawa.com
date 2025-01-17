@@ -89,6 +89,7 @@ function checkAchievements(clicks) {
                     message: i18n.t('achievements.unlocked', { 
                         message: i18n.t(achievement.messageKey)
                     }),
+                    messageKey: message.messageKey,
                 },
             ]);
         }
