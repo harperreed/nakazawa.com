@@ -510,7 +510,7 @@ resetButton.addEventListener("click", () => {
         localStorage.clear();
         clickCounter = 0;
         achievementManager.reset();
-        clickCounterElement.style.display = "none";
+        clickCounterElement.classList.remove('counter-visible');
         updateAchievementsTable(0);
         location.reload(); // Refresh the page to reset everything
     }
@@ -522,7 +522,7 @@ closeBtn.addEventListener("click", () => {
 
 window.addEventListener("click", (event) => {
     if (event.target === modal) {
-        modal.style.display = "none";
+        modal.classList.remove('modal-visible');
     }
 });
 
