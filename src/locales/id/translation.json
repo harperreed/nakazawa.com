@@ -1,0 +1,40 @@
+{
+    "title": "nakazawa 🐇🥕🐰",
+    "description": "🐇🥕🐰",
+    "buttons": {
+        "fullscreen": "Layar Penuh",
+        "achievements": "Prestasi",
+        "reset": "Atur Ulang",
+        "language": "Bahasa"
+    },
+    "achievements": {
+        "title": "Prestasi",
+        "noAchievements": "Belum ada prestasi yang diraih. Terus klik!",
+        "unlocked": "Prestasi Terbuka: {{message}}",
+        "progress": "{{progress}}%",
+        "beginner": "🎯 Kelinci Pemula",
+        "carrotSnatcher": "🥕 Pencuri Sayuran",
+        "bunnyBerserker": "😡 Amukan Kelinci",
+        "hopPunk": "🎸 Kelinci Anarkis",
+        "bunnyNinja": "🥷 Kelinci Ninja Mematikan",
+        "expert": "🌟 Pelompat Ahli",
+        "master": "👑 Raja Wortel",
+        "carrotpocalypse": "🥕 Penghancur Kebun",
+        "bunnyOverlord": "😈 Penguasa Tertinggi Kelinci",
+        "chaosHare": "🌪️ Agen Kekacauan",
+        "carrotCultist": "⛪ Pendeta Tinggi Kultus Wortel",
+        "bunnyberryPie": "🥧 Ahli Pai Halusinasi",
+        "rabbitHole": "🕳️ Penggali Terowongan Kuantum",
+        "moonRabbit": "🌙 Kelinci Bulan",
+        "bunnyDoom": "💀 Pembawa Kiamat Kelinci",
+        "carrotNuke": "☢️ Pemegang Wortel Nuklir",
+        "bunnyMatrix": "🤖 Glitch dalam Matrix Kelinci"
+    },
+    "powerups": {
+        "bonusPoints": "🥕 +50 Poin Bonus!",
+        "clickStreak": "🔥 {{count}} Klik Beruntun!"
+    },
+    "reset": {
+        "confirm": "Apakah Anda yakin ingin mengatur ulang semua kemajuan? Ini tidak dapat dibatalkan."
+    }
+}
