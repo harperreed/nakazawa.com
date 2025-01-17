@@ -52,22 +52,27 @@
 		},
 		{
 			"clicks": 275,
+			"messageKey": "messages.primordial",
 			"message": "Your clicking awakens primordial forces!"
 		},
 		{
 			"clicks": 299,
+			"messageKey": "messages.void",
 			"message": "The clicking void gazes back at you..."
 		},
 		{
 			"clicks": 315,
+			"messageKey": "messages.runes",
 			"message": "Ancient click runes glow with your power!"
 		},
 		{
 			"clicks": 333,
+			"messageKey": "messages.beast",
 			"message": "THREE THREE THREE - THE NUMBER OF THE CLICK BEAST"
 		},
 		{
 			"clicks": 350,
+			"messageKey": "messages.prophets",
 			"message": "The Click Prophets sing of your coming!"
 		},
 		{

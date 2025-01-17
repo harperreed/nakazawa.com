@@ -16,7 +16,12 @@
         "demons": "BEHOLD! The Click Demons arise from their slumber!",
         "veil": "Your clicks pierce the veil of reality!",
         "spirits": "The Click Spirits dance to your rhythm...",
-        "council": "The Grand Click Council has noticed your dedication"
+        "council": "The Grand Click Council has noticed your dedication",
+        "primordial": "Your clicking awakens primordial forces!",
+        "void": "The clicking void gazes back at you...",
+        "runes": "Ancient click runes glow with your power!",
+        "beast": "THREE THREE THREE - THE NUMBER OF THE CLICK BEAST",
+        "prophets": "The Click Prophets sing of your coming!"
     },
     "achievements": {
         "title": "Achievements",
