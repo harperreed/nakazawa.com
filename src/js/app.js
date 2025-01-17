@@ -379,8 +379,9 @@ async function initializeApp() {
     await i18nInstance;
 
     // Initialize translations for static content
+    const translationElements = document.querySelectorAll('[data-i18n]');
     const updatePageTranslations = () => {
-        document.querySelectorAll('[data-i18n]').forEach(element => {
+        translationElements.forEach(element => {
             const key = element.getAttribute('data-i18n');
             element.textContent = i18n.t(key);
         });
