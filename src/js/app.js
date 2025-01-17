@@ -386,8 +386,8 @@ document.addEventListener("click", (e) => {
 
     // Show counter at 10 clicks
     if (clickCounter >= 10) {
-        clickCounterElement.classList.add('counter-visible');
-        mobileCounterElement.classList.add('counter-visible');
+        clickCounterElement.style.display = "block";
+        mobileCounterElement.style.display = "block";
     }
 
     // Show menu at 20 clicks

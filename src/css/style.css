@@ -39,7 +39,6 @@ body {
     box-shadow: 4px 4px 0px #333;
     animation: fadeIn 1s ease-in-out;
     user-select: none;
-    display: none;
 }
 
 #mobile-counter {
