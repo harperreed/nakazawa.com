@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap&text=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!%20");
 
 :root {
     --game-font: "Press Start 2P";
@@ -11,7 +11,10 @@ body {
     padding: 0;
     font-family:
         var(--game-font),
-        san serif;
+        "Press Start 2P",
+        DotGothic16,
+        monospace,
+        sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -166,7 +169,7 @@ body {
     image-rendering: pixelated;
     transition: all 0.1s ease;
     user-select: none;
-    font-family: "Press Start 2P", serif;
+    font-family: var(--game-font), "Press Start 2P", DotGothic16, monospace, sans-serif;
     font-weight: 400;
     font-style: normal;
     min-width: 200px;

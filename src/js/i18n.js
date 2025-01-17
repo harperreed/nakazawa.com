@@ -56,22 +56,7 @@ class I18n {
     }
 
     getFontFamily() {
-        return this._currentLang === 'ja' ? 'DotGothic16' : 'Press Start 2P';
-    }
-
-    setLanguage(lang) {
-        if (!this._translations[lang]) {
-            console.error(`Language "${lang}" not supported`);
-            return false;
-        }
-        
-        this._currentLang = lang;
-        localStorage.setItem("language", lang);
-        
-        // Update font family when language changes
-        document.documentElement.style.setProperty('--game-font', this.getFontFamily());
-        
-        return true;
+        return this._currentLang === 'ja' ? 'DotGothic16, sans-serif' : '"Press Start 2P", monospace';
     }
 }
 
