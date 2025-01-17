@@ -1,8 +1,39 @@
 import confetti from "canvas-confetti";
 import achievementsData from "../achievements.json";
 import messages from "../messages.json";
+import translations from "../translations.json";
 import { flashMessage } from "./flashMessage.js";
 import { FireCursor } from "./fireCursor.js";
+
+// Language handling
+let currentLang = localStorage.getItem('language') || 'en';
+const languageSelect = document.getElementById('language-select');
+languageSelect.value = currentLang;
+
+languageSelect.addEventListener('change', (e) => {
+    currentLang = e.target.value;
+    localStorage.setItem('language', currentLang);
+    updateUIText();
+});
+
+function getText(key) {
+    return translations[currentLang].ui[key];
+}
+
+function updateUIText() {
+    document.getElementById('fullscreen-button').textContent = getText('fullscreen');
+    document.getElementById('achievements-button').textContent = getText('achievements');
+    document.getElementById('reset-button').textContent = getText('reset');
+    
+    // Update table headers
+    const headers = document.querySelector('#achievements-table thead tr');
+    headers.innerHTML = `
+        <th>${getText('achievements')}</th>
+        <th>${getText('progress')}</th>
+    `;
+    
+    updateAchievementsTable(clickCounter);
+}
 
 // Achievement System
 const achievements = achievementsData.achievements;
@@ -476,8 +507,7 @@ achievementsButton.addEventListener("click", () => {
         const noAchievementsDiv = document.createElement("div");
         noAchievementsDiv.style.textAlign = "center";
         noAchievementsDiv.style.padding = "20px";
-        noAchievementsDiv.innerText =
-            "No achievements earned yet. Keep clicking!";
+        noAchievementsDiv.innerText = getText('noAchievements');
         modalAchievements.appendChild(noAchievementsDiv);
     } else {
         earnedAchievements.forEach((achievement) => {
@@ -506,11 +536,7 @@ if (debugPowerupButton) {
 }
 
 resetButton.addEventListener("click", () => {
-    if (
-        confirm(
-            "Are you sure you want to reset all progress? This cannot be undone.",
-        )
-    ) {
+    if (confirm(getText('resetConfirm'))) {
         localStorage.clear();
         clickCounter = 0;
         Object.keys(achievements).forEach((key) => {

@@ -1,0 +1,22 @@
+{
+    "en": {
+        "ui": {
+            "fullscreen": "Fullscreen",
+            "achievements": "Achievements",
+            "reset": "Reset",
+            "resetConfirm": "Are you sure you want to reset all progress? This cannot be undone.",
+            "noAchievements": "No achievements earned yet. Keep clicking!",
+            "progress": "Progress"
+        }
+    },
+    "ja": {
+        "ui": {
+            "fullscreen": "全画面",
+            "achievements": "実績",
+            "reset": "リセット",
+            "resetConfirm": "本当に進行状況をリセットしますか？この操作は取り消せません。",
+            "noAchievements": "まだ実績は獲得していません。クリックを続けましょう！",
+            "progress": "進捗"
+        }
+    }
+}
