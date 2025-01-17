@@ -443,7 +443,11 @@ document.addEventListener("click", (e) => {
         document.getElementById("button-container").style.display = "flex";
     }
 
-    flashMessage(clickCounter, messages[currentLang].messages);
+    const currentMessages = messages.messages.map(msg => ({
+        clicks: msg.clicks,
+        message: msg[`message_${currentLang}`]
+    }));
+    flashMessage(clickCounter, currentMessages);
 
     // Check achievements
     checkAchievements(clickCounter);

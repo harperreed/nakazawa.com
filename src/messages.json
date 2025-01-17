@@ -1,10 +1,10 @@
 {
-    "en": {
-        "messages": [
-            {
-                "clicks": 13,
-                "message": "The ancient clicking prophecy begins to unfold..."
-            },
+    "messages": [
+        {
+            "clicks": 13,
+            "message_en": "The ancient clicking prophecy begins to unfold...",
+            "message_jp": "古代のクリック予言が展開し始める..."
+        },
             {
                 "clicks": 42,
                 "message": "The cosmic clicksters would be proud of your progress!"
