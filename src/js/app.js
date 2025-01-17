@@ -6,18 +6,21 @@ import { flashMessage } from "./flashMessage.js";
 import { FireCursor } from "./fireCursor.js";
 
 // Language handling
-let currentLang = localStorage.getItem('language') || 'en';
-console.log('Initial language loaded from localStorage:', currentLang);
-const languageSelect = document.getElementById('language-select');
+let currentLang = localStorage.getItem("language") || "en";
+console.log("Initial language loaded from localStorage:", currentLang);
+const languageSelect = document.getElementById("language-select");
 languageSelect.value = currentLang;
-console.log('Language select value set to:', languageSelect.value);
+console.log("Language select value set to:", languageSelect.value);
 
-languageSelect.addEventListener('change', (e) => {
+languageSelect.addEventListener("change", (e) => {
     const previousLang = currentLang;
     currentLang = e.target.value;
     console.log(`Language changed from ${previousLang} to ${currentLang}`);
-    localStorage.setItem('language', currentLang);
-    console.log('New language saved to localStorage:', localStorage.getItem('language'));
+    localStorage.setItem("language", currentLang);
+    console.log(
+        "New language saved to localStorage:",
+        localStorage.getItem("language"),
+    );
     initializeAchievements();
     updateUIText();
     updateAchievementsTable(clickCounter);
@@ -26,24 +29,28 @@ languageSelect.addEventListener('change', (e) => {
 function getText(key) {
     const text = translations[currentLang]?.ui?.[key];
     if (!text) {
-        console.warn(`Missing translation for key "${key}" in language "${currentLang}"`);
+        console.warn(
+            `Missing translation for key "${key}" in language "${currentLang}"`,
+        );
         return translations.en.ui[key] || key;
     }
     return text;
 }
 
 function updateUIText() {
-    document.getElementById('fullscreen-button').textContent = getText('fullscreen');
-    document.getElementById('achievements-button').textContent = getText('achievements');
-    document.getElementById('reset-button').textContent = getText('reset');
-    
+    document.getElementById("fullscreen-button").textContent =
+        getText("fullscreen");
+    document.getElementById("achievements-button").textContent =
+        getText("achievements");
+    document.getElementById("reset-button").textContent = getText("reset");
+
     // Update table headers
-    const headers = document.querySelector('#achievements-table thead tr');
+    const headers = document.querySelector("#achievements-table thead tr");
     headers.innerHTML = `
-        <th>${getText('achievements')}</th>
-        <th>${getText('progress')}</th>
+        <th>${getText("achievements")}</th>
+        <th>${getText("progress")}</th>
     `;
-    
+
     updateAchievementsTable(clickCounter);
 }
 
@@ -52,13 +59,16 @@ let achievements = {};
 
 function initializeAchievements() {
     if (!achievementsData || !achievementsData.achievements) {
-        console.error('Achievement data not properly loaded:', achievementsData);
+        console.error(
+            "Achievement data not properly loaded:",
+            achievementsData,
+        );
         achievements = {};
         return;
     }
-    
-    achievements = {...achievementsData.achievements};
-    
+
+    achievements = { ...achievementsData.achievements };
+
     // Load saved achievements
     const savedAchievements = localStorage.getItem("achievements");
     if (savedAchievements) {
@@ -453,9 +463,9 @@ document.addEventListener("click", (e) => {
         document.getElementById("button-container").style.display = "flex";
     }
 
-    const currentMessages = messages.messages.map(msg => ({
+    const currentMessages = messages.messages.map((msg) => ({
         clicks: msg.clicks,
-        message: msg[`message_${currentLang}`]
+        message: msg[`message_${currentLang}`],
     }));
     flashMessage(clickCounter, currentMessages);
 
@@ -536,7 +546,7 @@ achievementsButton.addEventListener("click", () => {
         const noAchievementsDiv = document.createElement("div");
         noAchievementsDiv.style.textAlign = "center";
         noAchievementsDiv.style.padding = "20px";
-        noAchievementsDiv.innerText = getText('noAchievements');
+        noAchievementsDiv.innerText = getText("noAchievements");
         modalAchievements.appendChild(noAchievementsDiv);
     } else {
         earnedAchievements.forEach((achievement) => {
@@ -544,7 +554,9 @@ achievementsButton.addEventListener("click", () => {
             achievementDiv.style.margin = "10px 0";
             achievementDiv.style.padding = "10px";
             achievementDiv.style.borderBottom = "2px solid #333";
-            const message = achievement[`message_${currentLang}`] || achievement.message;
+            console.log(achievement[`message_${currentLang}`]);
+            const message =
+                achievement[`message_${currentLang}`] || achievement.message;
             achievementDiv.innerHTML = `
                 <div class="earned">
                     ${message}
@@ -566,7 +578,7 @@ if (debugPowerupButton) {
 }
 
 resetButton.addEventListener("click", () => {
-    if (confirm(getText('resetConfirm'))) {
+    if (confirm(getText("resetConfirm"))) {
         localStorage.clear();
         clickCounter = 0;
         Object.keys(achievements).forEach((key) => {
