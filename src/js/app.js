@@ -1,47 +1,30 @@
 import confetti from "canvas-confetti";
 import messages from "../messages.json";
-import translations from "../translations.json";
 import { flashMessage } from "./flashMessage.js";
 import { FireCursor } from "./fireCursor.js";
 import { achievementManager } from "./achievements.js";
+import { i18n } from "./i18n.js";
 
 // Language handling
-let currentLang = localStorage.getItem("language") || "en";
-console.log("Initial language loaded from localStorage:", currentLang);
 const languageSelect = document.getElementById("language-select");
-languageSelect.value = currentLang;
-console.log("Language select value set to:", languageSelect.value);
+languageSelect.value = i18n.currentLang;
 
 languageSelect.addEventListener("change", (e) => {
-    const previousLang = currentLang;
-    currentLang = e.target.value;
-    console.log(`Language changed from ${previousLang} to ${currentLang}`);
-    localStorage.setItem("language", currentLang);
-    console.log(
-        "New language saved to localStorage:",
-        localStorage.getItem("language"),
-    );
-    updateUIText();
-    updateAchievementsTable(clickCounter);
-});
-
-function getText(key) {
-    const text = translations[currentLang]?.ui?.[key];
-    if (!text) {
-        console.warn(
-            `Missing translation for key "${key}" in language "${currentLang}"`,
-        );
-        return translations.en.ui[key] || key;
+    const previousLang = i18n.currentLang;
+    if (i18n.setLanguage(e.target.value)) {
+        console.log(`Language changed from ${previousLang} to ${i18n.currentLang}`);
+        updateUIText();
+        updateAchievementsTable(clickCounter);
     }
-    return text;
-}
+});
 
 function updateUIText() {
     document.getElementById("fullscreen-button").textContent =
-        getText("fullscreen");
+        i18n.getText("fullscreen", "ui");
     document.getElementById("achievements-button").textContent =
-        getText("achievements");
-    document.getElementById("reset-button").textContent = getText("reset");
+        i18n.getText("achievements", "ui");
+    document.getElementById("reset-button").textContent = 
+        i18n.getText("reset", "ui");
 
     // Update achievements table with new language
     updateAchievementsTable(clickCounter);
@@ -333,7 +316,7 @@ function updateClickSpeed() {
             flashMessage(clickCounter, [
                 {
                     clicks: clickCounter,
-                    message: getText("clickStreak").replace("{0}", streakCount),
+                    message: i18n.getText("clickStreak", "ui").replace("{0}", streakCount),
                 },
             ]);
         }
@@ -361,7 +344,7 @@ function spawnRandomCarrot() {
         clickCounter += 50; // Bonus points
         carrot.remove();
         flashMessage(clickCounter, [
-            { clicks: clickCounter, message: getText("bonusPoints") },
+            { clicks: clickCounter, message: i18n.getText("bonusPoints", "ui") },
         ]);
     };
 
@@ -500,7 +483,7 @@ achievementsButton.addEventListener("click", () => {
         const noAchievementsDiv = document.createElement("div");
         noAchievementsDiv.style.textAlign = "center";
         noAchievementsDiv.style.padding = "20px";
-        noAchievementsDiv.innerText = getText("noAchievements");
+        noAchievementsDiv.innerText = i18n.getText("noAchievements", "ui");
         modalAchievements.appendChild(noAchievementsDiv);
     } else {
         earnedAchievements.forEach((achievement) => {
@@ -532,7 +515,7 @@ if (debugPowerupButton) {
 }
 
 resetButton.addEventListener("click", () => {
-    if (confirm(getText("resetConfirm"))) {
+    if (confirm(i18n.getText("resetConfirm", "ui"))) {
         localStorage.clear();
         clickCounter = 0;
         achievementManager.reset();
