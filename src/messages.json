@@ -167,14 +167,10 @@
             },
             {
                 "clicks": 10000,
-                "message": "YOU HAVE ASCENDED TO CLICK GODHOOD"
+                "message_en": "YOU HAVE ASCENDED TO CLICK GODHOOD",
+                "message_jp": "あなたはクリック神性へと昇華した"
             }
         ]
-    },
-    "ja": {
-        "messages": [
-            {
-                "clicks": 13,
                 "message": "古代のクリック予言が展開し始める..."
             },
             {
