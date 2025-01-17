@@ -347,7 +347,7 @@ function spawnRandomCarrot() {
         flashMessage(clickCounter, [
             { 
                 clicks: clickCounter, 
-                message: i18n.t('powerups.bonusPoints')
+                messageKey: 'powerups.bonusPoints'
             },
         ]);
     };
