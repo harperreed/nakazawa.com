@@ -1,9 +1,10 @@
 {
-	"messages": [
-		{
-			"clicks": 13,
-			"message": "The ancient clicking prophecy begins to unfold..."
-		},
+	"en": {
+		"messages": [
+			{
+				"clicks": 13,
+				"message": "The ancient clicking prophecy begins to unfold..."
+			},
 		{
 			"clicks": 42,
 			"message": "The cosmic clicksters would be proud of your progress!"
@@ -168,5 +169,177 @@
 			"clicks": 10000,
 			"message": "YOU HAVE ASCENDED TO CLICK GODHOOD"
 		}
-	]
+	],
+	"ja": {
+		"messages": [
+			{
+				"clicks": 13,
+				"message": "古代のクリック予言が展開し始める..."
+			},
+			{
+				"clicks": 42,
+				"message": "宇宙のクリッカーたちがあなたの進歩を誇りに思うでしょう！"
+			},
+			{
+				"clicks": 67,
+				"message": "クリックが星界を響き渡る..."
+			},
+			{
+				"clicks": 87,
+				"message": "待って...聞こえた？クリックが私に語りかけている..."
+			},
+			{
+				"clicks": 110,
+				"message": "あなたのクリックが古代の力と共鳴する！"
+			},
+			{
+				"clicks": 133,
+				"message": "クリックの賢者たちがあなたの可能性を囁いている..."
+			},
+			{
+				"clicks": 156,
+				"message": "見よ！クリックの悪魔たちが目覚めた！"
+			},
+			{
+				"clicks": 189,
+				"message": "あなたのクリックが現実の帳を貫く！"
+			},
+			{
+				"clicks": 215,
+				"message": "クリックの精霊たちがあなたのリズムに合わせて踊る..."
+			},
+			{
+				"clicks": 238,
+				"message": "クリック大評議会があなたの献身に気付いた"
+			},
+			{
+				"clicks": 275,
+				"message": "あなたのクリックが原始の力を目覚めさせる！"
+			},
+			{
+				"clicks": 299,
+				"message": "クリックの虚無があなたを見返している..."
+			},
+			{
+				"clicks": 315,
+				"message": "古代のクリックルーンがあなたの力で輝く！"
+			},
+			{
+				"clicks": 333,
+				"message": "三三三 - クリック獣の数字"
+			},
+			{
+				"clicks": 350,
+				"message": "クリックの預言者たちがあなたの到来を歌う！"
+			},
+			{
+				"clicks": 375,
+				"message": "あなたのクリックが次元を超えて響く..."
+			},
+			{
+				"clicks": 420,
+				"message": "あなたのクリックがクリック次元へのポータルを開いた！"
+			},
+			{
+				"clicks": 567,
+				"message": "古代のクリックの神々がさらなる生贄を求める"
+			},
+			{
+				"clicks": 777,
+				"message": "大当たり！クリックカジノが新しいチャンピオンを歓迎する！"
+			},
+			{
+				"clicks": 888,
+				"message": "あなたのクリック力は無敵だ！"
+			},
+			{
+				"clicks": 999,
+				"message": "現実そのものがあなたのクリックの意志に屈する！"
+			},
+			{
+				"clicks": 1337,
+				"message": "あなたはエリートクリックマスターとなった"
+			},
+			{
+				"clicks": 1500,
+				"message": "あなたのクリック力は1500を超えた！"
+			},
+			{
+				"clicks": 1666,
+				"message": "クリックの悪魔たちがあなたの力の前に頭を垂れる"
+			},
+			{
+				"clicks": 1777,
+				"message": "幸運のクリックがあなたの血管を流れる"
+			},
+			{
+				"clicks": 1888,
+				"message": "クリック王朝があなたの覇権を認める"
+			},
+			{
+				"clicks": 2000,
+				"message": "純粋な力の2000クリック！"
+			},
+			{
+				"clicks": 2222,
+				"message": "クリック四重奏の予言が成就した"
+			},
+			{
+				"clicks": 2500,
+				"message": "あなたのクリックは人知を超越する"
+			},
+			{
+				"clicks": 2750,
+				"message": "クリック星座があなたを称えて整列する"
+			},
+			{
+				"clicks": 3000,
+				"message": "運命の3000クリック"
+			},
+			{
+				"clicks": 3333,
+				"message": "トリプルクリックトライフォースが目覚める！"
+			},
+			{
+				"clicks": 3777,
+				"message": "幸運は粘り強いクリッカーに味方する"
+			},
+			{
+				"clicks": 4000,
+				"message": "あなたのクリック力が新次元に到達する"
+			},
+			{
+				"clicks": 4444,
+				"message": "クアドラプルクリックカルテットが調和する"
+			},
+			{
+				"clicks": 4999,
+				"message": "クリック神性の閾値に立つ"
+			},
+			{
+				"clicks": 5000,
+				"message": "究極の力の5000クリック！"
+			},
+			{
+				"clicks": 5555,
+				"message": "五本指クリックフォースがあなたの指揮下に"
+			},
+			{
+				"clicks": 6666,
+				"message": "クリック冥界があなたを支配者として戴冠する"
+			},
+			{
+				"clicks": 7777,
+				"message": "最大ジャックポットクリック達成"
+			},
+			{
+				"clicks": 8888,
+				"message": "無限のクリック力！"
+			},
+			{
+				"clicks": 10000,
+				"message": "あなたはクリック神性へと昇華した"
+			}
+		]
+	}
 }

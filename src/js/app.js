@@ -36,7 +36,7 @@ function updateUIText() {
 }
 
 // Achievement System
-const achievements = achievementsData.achievements;
+const achievements = achievementsData[currentLang].achievements;
 
 // Load saved achievements
 const savedAchievements = localStorage.getItem("achievements");
@@ -428,7 +428,7 @@ document.addEventListener("click", (e) => {
         document.getElementById("button-container").style.display = "flex";
     }
 
-    flashMessage(clickCounter, messages.messages);
+    flashMessage(clickCounter, messages[currentLang].messages);
 
     // Check achievements
     checkAchievements(clickCounter);
