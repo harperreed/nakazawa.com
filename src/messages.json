@@ -12,14 +12,17 @@
 		},
 		{
 			"clicks": 67,
+			"messageKey": "messages.astral",
 			"message": "The clicking echoes through the astral plane..."
 		},
 		{
 			"clicks": 87,
+			"messageKey": "messages.speaking",
 			"message": "Wait... did you hear that? The clicks are speaking to me..."
 		},
 		{
 			"clicks": 110,
+			"messageKey": "messages.ancient",
 			"message": "Your clicking resonates with ancient power!"
 		},
 		{
