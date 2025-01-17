@@ -27,6 +27,9 @@ class I18n {
         this._currentLang = lang;
         localStorage.setItem("language", lang);
         
+        // Update document language
+        document.documentElement.lang = lang;
+        
         return true;
     }
 
