@@ -469,7 +469,7 @@ achievementsButton.addEventListener("click", () => {
     modalAchievements.innerHTML = ""; // Clear existing content
 
     // Filter and sort earned achievements
-    const earnedAchievements = Object.entries(achievements)
+    const earnedAchievements = Object.entries(achievementManager.achievements)
         .map(([name, achievement]) => ({ name, ...achievement }))
         .filter((achievement) => achievement.earned)
         .sort((a, b) => a.threshold - b.threshold);
@@ -494,7 +494,7 @@ achievementsButton.addEventListener("click", () => {
         });
     }
 
-    modal.classList.add('modal-visible');
+    modal.style.display = 'block';
 });
 
 // Debug powerup button
@@ -517,12 +517,12 @@ resetButton.addEventListener("click", () => {
 });
 
 closeBtn.addEventListener("click", () => {
-    modal.classList.remove('modal-visible');
+    modal.style.display = 'none';
 });
 
 window.addEventListener("click", (event) => {
     if (event.target === modal) {
-        modal.classList.remove('modal-visible');
+        modal.style.display = 'none';
     }
 });
 
