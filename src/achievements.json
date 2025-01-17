@@ -9,7 +9,8 @@
             "CarrotSnatcher": {
                 "threshold": 100,
                 "earned": false,
-                "message": "🥕 Vegetable Bandit"
+                "message_en": "🥕 Vegetable Bandit",
+                "message_jp": "🥕 野菜泥棒"
             },
             "BunnyBerserker": {
                 "threshold": 200,
@@ -85,95 +86,6 @@
                 "threshold": 15000,
                 "earned": false,
                 "message": "🤖 Glitch in the Warren Matrix"
-            }
-        }
-    },
-    "ja": {
-        "achievements": {
-            "Beginner": {
-                "threshold": 50,
-                "earned": false,
-                "message": "🎯 見習いウサギ"
-            },
-            "CarrotSnatcher": {
-                "threshold": 100,
-                "earned": false,
-                "message": "🥕 野菜泥棒"
-            },
-            "BunnyBerserker": {
-                "threshold": 200,
-                "earned": false,
-                "message": "😡 狂乱の暴走"
-            },
-            "HopPunk": {
-                "threshold": 300,
-                "earned": false,
-                "message": "🎸 アナーキーな綿尾"
-            },
-            "BunnyNinja": {
-                "threshold": 400,
-                "earned": false,
-                "message": "🥷 静かなる致命的モフモフ"
-            },
-            "Expert": {
-                "threshold": 500,
-                "earned": false,
-                "message": "🌟 エキスパートホッパー"
-            },
-            "Master": {
-                "threshold": 1000,
-                "earned": false,
-                "message": "👑 ニンジン王"
-            },
-            "Carrotpocalypse": {
-                "threshold": 2000,
-                "earned": false,
-                "message": "🥕 菜園の破壊者"
-            },
-            "BunnyOverlord": {
-                "threshold": 3000,
-                "earned": false,
-                "message": "😈 ウサギの巣の覇王"
-            },
-            "ChaosHare": {
-                "threshold": 4000,
-                "earned": false,
-                "message": "🌪️ ウサギ混沌の使者"
-            },
-            "CarrotCultist": {
-                "threshold": 5000,
-                "earned": false,
-                "message": "⛪ ニンジン教団の大司祭"
-            },
-            "BunnyberryPie": {
-                "threshold": 6000,
-                "earned": false,
-                "message": "🥧 幻覚パイの達人"
-            },
-            "RabbitHole": {
-                "threshold": 7000,
-                "earned": false,
-                "message": "🕳️ 量子トンネルの掘削者"
-            },
-            "MoonRabbit": {
-                "threshold": 8000,
-                "earned": false,
-                "message": "🌙 月の玉兎"
-            },
-            "BunnyDoom": {
-                "threshold": 9000,
-                "earned": false,
-                "message": "💀 ウサギ黙示録の前触れ"
-            },
-            "CarrotNuke": {
-                "threshold": 10000,
-                "earned": false,
-                "message": "☢️ 熱核ニンジンの使い手"
-            },
-            "BunnyMatrix": {
-                "threshold": 15000,
-                "earned": false,
-                "message": "🤖 ウサギマトリックスの異常"
             }
         }
     }
