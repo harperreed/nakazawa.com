@@ -88,7 +88,7 @@ function checkAchievements(clicks) {
                     clicks,
                     messageKey: 'achievements.unlocked',
                     translationVars: {
-                        achievement: i18n.t(achievement.messageKey)
+                        message: i18n.t(achievement.messageKey)
                     }
                 },
             ]);
