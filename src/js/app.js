@@ -367,16 +367,20 @@ function startPowerupSpawnTimer() {
 // Start the initial spawn timer
 startPowerupSpawnTimer();
 
-// Initialize translations for static content
-document.addEventListener('DOMContentLoaded', () => {
+// Initialize translations and setup
+async function initializeApp() {
+    // Wait for i18next to initialize
+    await i18nInstance;
+
+    // Initialize translations for static content
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         element.textContent = i18n.t(key);
     });
-});
+}
 
-// Wait for i18next to initialize
-await i18nInstance;
+// Start initialization
+initializeApp().catch(console.error);
 
 document.addEventListener("click", (e) => {
     updateClickSpeed();
