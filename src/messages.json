@@ -177,22 +177,27 @@
 		},
 		{
 			"clicks": 4999,
+			"messageKey": "messages.threshold",
 			"message": "Standing at the threshold of click divinity"
 		},
 		{
 			"clicks": 5000,
+			"messageKey": "messages.ultimate",
 			"message": "FIVE THOUSAND CLICKS OF ULTIMATE POWER!"
 		},
 		{
 			"clicks": 5555,
+			"messageKey": "messages.force",
 			"message": "The Five Fingered Click Force is yours to command"
 		},
 		{
 			"clicks": 6666,
+			"messageKey": "messages.underworld",
 			"message": "The Click Underworld crowns you their ruler"
 		},
 		{
 			"clicks": 7777,
+			"messageKey": "messages.maxJackpot",
 			"message": "MAXIMUM JACKPOT CLICKING ACHIEVED"
 		},
 		{
