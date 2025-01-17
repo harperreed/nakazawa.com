@@ -201,10 +201,9 @@ function changeBackgroundImage() {
 function spawnPowerup() {
     const powerup = document.createElement("div");
     powerup.id = "powerup";
-    powerup.style.left = Math.random() * (window.innerWidth - 40) + "px";
-    powerup.style.top = "0";
-    powerup.style.position = "fixed";
-    powerup.style.animation = "fall 3s linear forwards";
+    powerup.classList.add('powerup-position', 'powerup-falling');
+    powerup.style.left = `${Math.random() * (window.innerWidth - 40)}px`;
+    powerup.style.top = '0';
 
     powerup.addEventListener("click", (e) => {
         e.stopPropagation();

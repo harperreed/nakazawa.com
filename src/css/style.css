@@ -325,14 +325,21 @@ body {
 }
 
 #powerup {
-    position: absolute;
+    position: fixed;
     width: 60px;
     height: 60px;
     background: url("../images/egg.webp") no-repeat center/contain;
     cursor: pointer;
     transition: transform 0.2s;
-    animation: fall 5s linear;
     pointer-events: auto;
+}
+
+.powerup-falling {
+    animation: fall 3s linear forwards;
+}
+
+.powerup-position {
+    position: fixed;
 }
 
 #powerup:hover {
