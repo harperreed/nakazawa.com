@@ -1,11 +1,11 @@
 {
-    "en": {
-        "achievements": {
-            "Beginner": {
-                "threshold": 50,
-                "earned": false,
-                "message": "🎯 Beginner Bunny"
-            },
+    "achievements": {
+        "Beginner": {
+            "threshold": 50,
+            "earned": false,
+            "message_en": "🎯 Beginner Bunny",
+            "message_jp": "🎯 見習いウサギ"
+        },
             "CarrotSnatcher": {
                 "threshold": 100,
                 "earned": false,
