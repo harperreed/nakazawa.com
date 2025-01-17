@@ -9,7 +9,9 @@ export function flashMessage(clickCount, messages) {
 	if (messageObj) {
 		const messageElement = document.createElement("div");
 		messageElement.className = "flash-message";
-		messageElement.innerText = i18n.t(messageObj.messageKey);
+		messageElement.innerText = messageObj.translationVars 
+		    ? i18n.t(messageObj.messageKey, messageObj.translationVars)
+		    : i18n.t(messageObj.messageKey);
 		container.appendChild(messageElement);
 
 		// Adjust positions of existing messages

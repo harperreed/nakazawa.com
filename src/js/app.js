@@ -86,10 +86,10 @@ function checkAchievements(clicks) {
             flashMessage(clicks, [
                 {
                     clicks,
-                    message: i18n.t('achievements.unlocked', { 
-                        message: i18n.t(achievement.messageKey)
-                    }),
-                    messageKey: achievement.messageKey,
+                    messageKey: 'achievements.unlocked',
+                    translationVars: {
+                        achievement: i18n.t(achievement.messageKey)
+                    }
                 },
             ]);
         }
