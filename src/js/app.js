@@ -443,7 +443,7 @@ document.addEventListener("click", (e) => {
     // Random carrot spawn chance
     if (Math.random() < 0.01) {
         // 1% chance on each click
-        console.log("spawning carrot");
+        console.log(i18n.t('powerups.bonusPoints'));
         spawnRandomCarrot();
     }
 
@@ -455,7 +455,7 @@ document.addEventListener("click", (e) => {
         vibrationPattern("evenBigger"); // Even bigger vibration
         // Display flash message
         console.log(
-            `Flash message displayed: You've reached ${clickCounter} clicks!`,
+            `Flash message displayed: ${i18n.t('powerups.clickStreak', { count: clickCounter })}`,
         ); // Debug logging
     } else if (clickCounter % 10 === 0) {
         console.log(
@@ -543,11 +543,7 @@ if (debugPowerupButton) {
 }
 
 resetButton.addEventListener("click", () => {
-    if (
-        confirm(
-            i18n.t('reset.confirm')
-        )
-    ) {
+    if (confirm(i18n.t('reset.confirm'))) {
         localStorage.clear();
         clickCounter = 0;
         Object.keys(achievements).forEach((key) => {
