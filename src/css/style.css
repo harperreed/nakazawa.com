@@ -130,6 +130,10 @@ body {
     z-index: 1000;
 }
 
+#button-container.button-container-visible {
+    display: flex;
+}
+
 @media (max-width: 768px) {
     #button-container {
         flex-direction: row;

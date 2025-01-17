@@ -392,7 +392,7 @@ document.addEventListener("click", (e) => {
 
     // Show menu at 20 clicks
     if (clickCounter >= 20) {
-        document.getElementById("button-container").classList.add('button-container-visible');
+        document.getElementById("button-container").style.display = "flex";
     }
 
     const currentMessages = messages.messages.map((msg) => ({
