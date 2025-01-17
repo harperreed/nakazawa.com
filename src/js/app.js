@@ -1,9 +1,9 @@
 import confetti from "canvas-confetti";
-import achievementsData from "../achievements.json";
 import messages from "../messages.json";
 import translations from "../translations.json";
 import { flashMessage } from "./flashMessage.js";
 import { FireCursor } from "./fireCursor.js";
+import { achievementManager } from "./achievements.js";
 
 // Language handling
 let currentLang = localStorage.getItem("language") || "en";
@@ -60,30 +60,10 @@ function updateAchievementsTable(clicks) {
     const tbody = document.getElementById("achievements-body");
     tbody.innerHTML = "";
 
-    // Convert achievements to array and sort by threshold
-    const achievementsArray = Object.entries(achievements)
-        .map(([name, achievement]) => ({ name, ...achievement }))
-        .sort((a, b) => a.threshold - b.threshold);
-
-    // Find the last earned achievement and next two unearned
-    let lastEarned = null;
-    const nextUnearned = [];
-
-    for (const achievement of achievementsArray) {
-        if (achievement.earned) {
-            lastEarned = achievement;
-        } else if (nextUnearned.length < 2) {
-            nextUnearned.push(achievement);
-        }
-    }
-
-    // Show different achievements based on screen size
-    let hasEarned = false;
     const isMobile = window.innerWidth <= 768;
-    const achievementsToShow = isMobile
-        ? nextUnearned.slice(0, 1) // Show only next achievement on mobile
-        : [lastEarned, ...nextUnearned].filter((a) => a !== null); // Show last earned + next two on desktop
-
+    const achievementsToShow = achievementManager.getDisplayAchievements(clicks, isMobile);
+    
+    let hasEarned = false;
     for (const achievement of achievementsToShow) {
         const row = document.createElement("tr");
         const progress = Math.min(
@@ -91,7 +71,7 @@ function updateAchievementsTable(clicks) {
             100,
         ).toFixed(0);
         row.innerHTML = `
-            <td class="${achievement.earned ? "earned" : "locked"}">${achievement[`message_${currentLang}`] || achievement.message}</td>
+            <td class="${achievement.earned ? "earned" : "locked"}">${achievementManager.getAchievementMessage(achievement)}</td>
             <td>${progress}%</td>
         `;
         tbody.appendChild(row);
