@@ -31,7 +31,12 @@
         "elite": "YOU HAVE BECOME THE ELITE CLICK MASTER",
         "power": "Your clicking power level is over 1500!",
         "devils": "The Click Devils bow before your might",
-        "lucky": "Lucky clicks flow through your veins"
+        "lucky": "Lucky clicks flow through your veins",
+        "dynasty": "The Click Dynasty recognizes your supremacy",
+        "twoThousand": "Two thousand clicks of pure power!",
+        "quartet": "The prophecy of the Click Quartet is fulfilled",
+        "transcend": "Your clicking transcends mortal understanding",
+        "constellation": "The Click Constellation aligns in your honor"
     },
     "achievements": {
         "title": "Achievements",
