@@ -1,0 +1,22 @@
+{
+    "title": "nakazawa 🐇🥕🐰",
+    "description": "🐇🥕🐰",
+    "buttons": {
+        "fullscreen": "Fullscreen",
+        "achievements": "Achievements",
+        "reset": "Reset"
+    },
+    "achievements": {
+        "title": "Achievements",
+        "noAchievements": "No achievements earned yet. Keep clicking!",
+        "unlocked": "Achievement Unlocked: {{message}}",
+        "progress": "{{progress}}%"
+    },
+    "powerups": {
+        "bonusPoints": "🥕 +50 Bonus Points!",
+        "clickStreak": "🔥 {{count}} Click Streak!"
+    },
+    "reset": {
+        "confirm": "Are you sure you want to reset all progress? This cannot be undone."
+    }
+}

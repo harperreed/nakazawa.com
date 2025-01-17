@@ -1,6 +1,7 @@
 import confetti from "canvas-confetti";
 import achievementsData from "../achievements.json";
 import messages from "../messages.json";
+import i18n from './i18n';
 import { flashMessage } from "./flashMessage.js";
 import { FireCursor } from "./fireCursor.js";
 
@@ -85,7 +86,7 @@ function checkAchievements(clicks) {
             flashMessage(clicks, [
                 {
                     clicks,
-                    message: `Achievement Unlocked: ${achievement.message}`,
+                    message: i18n.t('achievements.unlocked', { message: achievement.message }),
                 },
             ]);
         }
@@ -476,8 +477,7 @@ achievementsButton.addEventListener("click", () => {
         const noAchievementsDiv = document.createElement("div");
         noAchievementsDiv.style.textAlign = "center";
         noAchievementsDiv.style.padding = "20px";
-        noAchievementsDiv.innerText =
-            "No achievements earned yet. Keep clicking!";
+        noAchievementsDiv.innerText = i18n.t('achievements.noAchievements');
         modalAchievements.appendChild(noAchievementsDiv);
     } else {
         earnedAchievements.forEach((achievement) => {
@@ -508,7 +508,7 @@ if (debugPowerupButton) {
 resetButton.addEventListener("click", () => {
     if (
         confirm(
-            "Are you sure you want to reset all progress? This cannot be undone.",
+            i18n.t('reset.confirm')
         )
     ) {
         localStorage.clear();
