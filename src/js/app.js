@@ -474,6 +474,12 @@ achievementsButton.addEventListener("click", () => {
         .filter((achievement) => achievement.earned)
         .sort((a, b) => a.threshold - b.threshold);
 
+    // Add header
+    const headerDiv = document.createElement("div");
+    headerDiv.classList.add('achievements-header');
+    headerDiv.innerText = i18n.getText("earnedAchievements", "ui");
+    modalAchievements.appendChild(headerDiv);
+
     if (earnedAchievements.length === 0) {
         const noAchievementsDiv = document.createElement("div");
         noAchievementsDiv.classList.add('no-achievements');
