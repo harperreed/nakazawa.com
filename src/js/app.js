@@ -50,8 +50,8 @@ function updateAchievementsTable(clicks) {
             100,
         ).toFixed(0);
         row.innerHTML = `
-            <td class="${achievement.earned ? "earned" : "locked"}">${achievement.message}</td>
-            <td>${progress}%</td>
+            <td class="${achievement.earned ? "earned" : "locked"}">${i18n.t(achievement.messageKey)}</td>
+            <td>${i18n.t('achievements.progress', { progress })}</td>
         `;
         tbody.appendChild(row);
         if (achievement.earned) {
