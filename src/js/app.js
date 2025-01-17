@@ -54,30 +54,6 @@ function updateUIText() {
     updateAchievementsTable(clickCounter);
 }
 
-// Achievement System
-let achievements = {};
-
-function initializeAchievements() {
-    if (!achievementsData || !achievementsData.achievements) {
-        console.error(
-            "Achievement data not properly loaded:",
-            achievementsData,
-        );
-        achievements = {};
-        return;
-    }
-
-    achievements = { ...achievementsData.achievements };
-
-    // Load saved achievements
-    const savedAchievements = localStorage.getItem("achievements");
-    if (savedAchievements) {
-        Object.assign(achievements, JSON.parse(savedAchievements));
-    }
-}
-
-// Initialize achievements with current language
-initializeAchievements();
 
 function updateAchievementsTable(clicks) {
     const table = document.getElementById("achievements-table");
@@ -142,24 +118,18 @@ function screenShake() {
 }
 
 function checkAchievements(clicks) {
-    let earned = false;
-    for (const [name, achievement] of Object.entries(achievements)) {
-        if (!achievement.earned && clicks >= achievement.threshold) {
-            achievement.earned = true;
-            earned = true;
-            screenShake();
-            flashMessage(clicks, [
-                {
-                    clicks,
-                    message: `Achievement Unlocked: ${achievement.message}`,
-                },
-            ]);
-        }
-    }
+    const earned = achievementManager.checkAchievements(clicks, (achievement) => {
+        screenShake();
+        flashMessage(clicks, [
+            {
+                clicks,
+                message: `Achievement Unlocked: ${achievementManager.getAchievementMessage(achievement)}`,
+            },
+        ]);
+    });
     if (earned) {
-        localStorage.setItem("achievements", JSON.stringify(achievements));
+        updateAchievementsTable(clicks);
     }
-    updateAchievementsTable(clicks);
 }
 
 // Detect if the website is loaded on a desktop
@@ -581,9 +551,7 @@ resetButton.addEventListener("click", () => {
     if (confirm(getText("resetConfirm"))) {
         localStorage.clear();
         clickCounter = 0;
-        Object.keys(achievements).forEach((key) => {
-            achievements[key].earned = false;
-        });
+        achievementManager.reset();
         clickCounterElement.style.display = "none";
         updateAchievementsTable(0);
         location.reload(); // Refresh the page to reset everything
