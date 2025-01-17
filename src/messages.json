@@ -77,22 +77,27 @@
 		},
 		{
 			"clicks": 375,
+			"messageKey": "messages.dimensions",
 			"message": "Your clicks echo through the dimensions..."
 		},
 		{
 			"clicks": 420,
+			"messageKey": "messages.portal",
 			"message": "Your clicks have opened a portal to the Click Dimension!"
 		},
 		{
 			"clicks": 567,
+			"messageKey": "messages.sacrifice",
 			"message": "The ancient Click Gods demand MORE SACRIFICE"
 		},
 		{
 			"clicks": 777,
+			"messageKey": "messages.jackpot",
 			"message": "JACKPOT! The Click Casino welcomes its newest champion!"
 		},
 		{
 			"clicks": 888,
+			"messageKey": "messages.unmatched",
 			"message": "你的点击力量无人能及! (Your click power is unmatched!)"
 		},
 		{

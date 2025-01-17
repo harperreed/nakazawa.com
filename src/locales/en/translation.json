@@ -21,7 +21,12 @@
         "void": "The clicking void gazes back at you...",
         "runes": "Ancient click runes glow with your power!",
         "beast": "THREE THREE THREE - THE NUMBER OF THE CLICK BEAST",
-        "prophets": "The Click Prophets sing of your coming!"
+        "prophets": "The Click Prophets sing of your coming!",
+        "dimensions": "Your clicks echo through the dimensions...",
+        "portal": "Your clicks have opened a portal to the Click Dimension!",
+        "sacrifice": "The ancient Click Gods demand MORE SACRIFICE",
+        "jackpot": "JACKPOT! The Click Casino welcomes its newest champion!",
+        "unmatched": "你的点击力量无人能及! (Your click power is unmatched!)"
     },
     "achievements": {
         "title": "Achievements",
