@@ -21,7 +21,6 @@ languageSelect.addEventListener("change", (e) => {
         "New language saved to localStorage:",
         localStorage.getItem("language"),
     );
-    initializeAchievements();
     updateUIText();
     updateAchievementsTable(clickCounter);
 });
