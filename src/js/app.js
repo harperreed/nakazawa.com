@@ -90,7 +90,7 @@ function checkAchievements(clicks) {
         flashMessage(clicks, [
             {
                 clicks,
-                message: `${getText("achievementUnlocked")} ${achievementManager.getAchievementMessage(achievement)}`,
+                message: `${i18n.getText("achievementUnlocked", "ui")} ${achievementManager.getAchievementMessage(achievement)}`,
             },
         ]);
     });
