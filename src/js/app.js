@@ -7,19 +7,29 @@ import { FireCursor } from "./fireCursor.js";
 
 // Language handling
 let currentLang = localStorage.getItem('language') || 'en';
+console.log('Initial language loaded from localStorage:', currentLang);
 const languageSelect = document.getElementById('language-select');
 languageSelect.value = currentLang;
+console.log('Language select value set to:', languageSelect.value);
 
 languageSelect.addEventListener('change', (e) => {
+    const previousLang = currentLang;
     currentLang = e.target.value;
+    console.log(`Language changed from ${previousLang} to ${currentLang}`);
     localStorage.setItem('language', currentLang);
+    console.log('New language saved to localStorage:', localStorage.getItem('language'));
     initializeAchievements();
     updateUIText();
     updateAchievementsTable(clickCounter);
 });
 
 function getText(key) {
-    return translations[currentLang].ui[key];
+    const text = translations[currentLang]?.ui?.[key];
+    if (!text) {
+        console.warn(`Missing translation for key "${key}" in language "${currentLang}"`);
+        return translations.en.ui[key] || key;
+    }
+    return text;
 }
 
 function updateUIText() {
