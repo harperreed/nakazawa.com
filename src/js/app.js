@@ -12,30 +12,37 @@ languageSelect.value = i18n.currentLang;
 languageSelect.addEventListener("change", (e) => {
     const previousLang = i18n.currentLang;
     if (i18n.setLanguage(e.target.value)) {
-        console.log(`Language changed from ${previousLang} to ${i18n.currentLang}`);
+        console.log(
+            `Language changed from ${previousLang} to ${i18n.currentLang}`,
+        );
         updateUIText();
         updateAchievementsTable(clickCounter);
     }
 });
 
 function updateUIText() {
-    document.getElementById("fullscreen-button").textContent =
-        i18n.getText("fullscreen", "ui");
-    document.getElementById("achievements-button").textContent =
-        i18n.getText("achievements", "ui");
-    document.getElementById("reset-button").textContent = 
-        i18n.getText("reset", "ui");
+    document.getElementById("fullscreen-button").textContent = i18n.getText(
+        "fullscreen",
+        "ui",
+    );
+    document.getElementById("achievements-button").textContent = i18n.getText(
+        "achievements",
+        "ui",
+    );
+    document.getElementById("reset-button").textContent = i18n.getText(
+        "reset",
+        "ui",
+    );
 
     // Update achievements table with new language
     updateAchievementsTable(clickCounter);
 }
 
-
 function updateAchievementsTable(clicks) {
     const table = document.getElementById("achievements-table");
     const thead = table.querySelector("thead");
     const tbody = document.getElementById("achievements-body");
-    
+
     // Update headers
     thead.innerHTML = `
         <tr>
@@ -43,13 +50,16 @@ function updateAchievementsTable(clicks) {
             <th>${i18n.getText("achievementProgress", "ui")}</th>
         </tr>
     `;
-    
+
     // Update achievements
     tbody.innerHTML = "";
 
     const isMobile = window.innerWidth <= 768;
-    const achievementsToShow = achievementManager.getDisplayAchievements(clicks, isMobile);
-    
+    const achievementsToShow = achievementManager.getDisplayAchievements(
+        clicks,
+        isMobile,
+    );
+
     let hasEarned = false;
     for (const achievement of achievementsToShow) {
         const row = document.createElement("tr");
@@ -75,27 +85,30 @@ function updateAchievementsTable(clicks) {
 }
 
 function screenShake() {
-    document.body.classList.add('screen-shake');
+    document.body.classList.add("screen-shake");
     document.body.style.transform = "translate(5px, 5px)";
     setTimeout(() => {
         document.body.style.transform = "translate(-5px, -5px)";
         setTimeout(() => {
             document.body.style.transform = "translate(0, 0)";
-            document.body.classList.remove('screen-shake');
+            document.body.classList.remove("screen-shake");
         }, 50);
     }, 50);
 }
 
 function checkAchievements(clicks) {
-    const earned = achievementManager.checkAchievements(clicks, (achievement) => {
-        screenShake();
-        flashMessage(clicks, [
-            {
-                clicks,
-                message: `${i18n.getText("achievementUnlocked", "ui")} ${achievementManager.getAchievementMessage(achievement)}`,
-            },
-        ]);
-    });
+    const earned = achievementManager.checkAchievements(
+        clicks,
+        (achievement) => {
+            screenShake();
+            flashMessage(clicks, [
+                {
+                    clicks,
+                    message: `${i18n.getText("achievementUnlocked", "ui")} ${achievementManager.getAchievementMessage(achievement)}`,
+                },
+            ]);
+        },
+    );
     if (earned) {
         updateAchievementsTable(clicks);
     }
@@ -182,7 +195,7 @@ function blendBackgroundColor() {
     const currentColor = colors[currentColorIndex];
     const nextColor = colors[nextColorIndex];
 
-    document.body.classList.add('background-transition');
+    document.body.classList.add("background-transition");
     document.body.style.backgroundColor = nextColor;
 }
 
@@ -203,9 +216,9 @@ function changeBackgroundImage() {
 function spawnPowerup() {
     const powerup = document.createElement("div");
     powerup.id = "powerup";
-    powerup.classList.add('powerup-position', 'powerup-falling');
+    powerup.classList.add("powerup-position", "powerup-falling");
     powerup.style.left = `${Math.random() * (window.innerWidth - 40)}px`;
-    powerup.style.top = '0';
+    powerup.style.top = "0";
 
     powerup.addEventListener("click", (e) => {
         e.stopPropagation();
@@ -272,7 +285,7 @@ function activatePowerup() {
     const mobileTimerElement = document.createElement("div");
     mobileTimerElement.id = "mobile-timer";
     document.getElementById("button-container").prepend(mobileTimerElement);
-    timerElement.classList.add('timer-visible');
+    timerElement.classList.add("timer-visible");
 
     // Initialize fire cursor if not already created
     if (!fireCursor) {
@@ -281,7 +294,7 @@ function activatePowerup() {
         canvas.height = window.innerHeight;
         fireCursor = new FireCursor(canvas);
     }
-    document.getElementById("fire-cursor").classList.add('fire-cursor-visible');
+    document.getElementById("fire-cursor").classList.add("fire-cursor-visible");
 
     let timeLeft = 30;
 
@@ -295,9 +308,11 @@ function activatePowerup() {
             clearInterval(powerupTimeout);
             powerupActive = false;
             powerupMultiplier = 1;
-            timerElement.classList.remove('timer-visible');
+            timerElement.classList.remove("timer-visible");
             mobileTimerElement.remove(); // Remove the mobile timer element completely
-            document.getElementById("fire-cursor").classList.remove('fire-cursor-visible');
+            document
+                .getElementById("fire-cursor")
+                .classList.remove("fire-cursor-visible");
         }
     }, 1000);
 }
@@ -317,7 +332,9 @@ function updateClickSpeed() {
             flashMessage(clickCounter, [
                 {
                     clicks: clickCounter,
-                    message: i18n.getText("clickStreak", "ui").replace("{0}", streakCount),
+                    message: i18n
+                        .getText("clickStreak", "ui")
+                        .replace("{0}", streakCount),
                 },
             ]);
         }
@@ -331,7 +348,7 @@ function updateClickSpeed() {
 // Dynamic powerup spawn timing
 function spawnRandomCarrot() {
     const carrot = document.createElement("div");
-    carrot.classList.add('random-carrot');
+    carrot.classList.add("random-carrot");
     carrot.style.left = `${Math.random() * (window.innerWidth - 50)}px`;
     carrot.style.top = `${Math.random() * (window.innerHeight - 50)}px`;
 
@@ -339,7 +356,10 @@ function spawnRandomCarrot() {
         clickCounter += 50; // Bonus points
         carrot.remove();
         flashMessage(clickCounter, [
-            { clicks: clickCounter, message: i18n.getText("bonusPoints", "ui") },
+            {
+                clicks: clickCounter,
+                message: i18n.getText("bonusPoints", "ui"),
+            },
         ]);
     };
 
@@ -475,22 +495,23 @@ achievementsButton.addEventListener("click", () => {
         .sort((a, b) => a.threshold - b.threshold);
 
     // Add header
-    const headerDiv = document.createElement("div");
-    headerDiv.classList.add('achievements-header');
+    const headerDiv = document.createElement("h2");
+    headerDiv.classList.add("achievements-header");
     headerDiv.innerText = i18n.getText("earnedAchievements", "ui");
     modalAchievements.appendChild(headerDiv);
 
     if (earnedAchievements.length === 0) {
         const noAchievementsDiv = document.createElement("div");
-        noAchievementsDiv.classList.add('no-achievements');
+        noAchievementsDiv.classList.add("no-achievements");
         noAchievementsDiv.innerText = i18n.getText("noAchievements", "ui");
         modalAchievements.appendChild(noAchievementsDiv);
     } else {
         earnedAchievements.forEach((achievement) => {
             const achievementDiv = document.createElement("div");
-            achievementDiv.classList.add('achievement-item');
+            achievementDiv.classList.add("achievement-item");
             console.log(achievement[`message_${i18n.currentLang}`]);
-            const message = achievementManager.getAchievementMessage(achievement);
+            const message =
+                achievementManager.getAchievementMessage(achievement);
             achievementDiv.innerHTML = `
                 <div class="earned">
                     ${message}
@@ -500,7 +521,7 @@ achievementsButton.addEventListener("click", () => {
         });
     }
 
-    modal.style.display = 'block';
+    modal.style.display = "block";
 });
 
 // Debug powerup button
@@ -516,19 +537,19 @@ resetButton.addEventListener("click", () => {
         localStorage.clear();
         clickCounter = 0;
         achievementManager.reset();
-        clickCounterElement.classList.remove('counter-visible');
+        clickCounterElement.classList.remove("counter-visible");
         updateAchievementsTable(0);
         location.reload(); // Refresh the page to reset everything
     }
 });
 
 closeBtn.addEventListener("click", () => {
-    modal.style.display = 'none';
+    modal.style.display = "none";
 });
 
 window.addEventListener("click", (event) => {
     if (event.target === modal) {
-        modal.style.display = 'none';
+        modal.style.display = "none";
     }
 });
 
