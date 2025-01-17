@@ -345,7 +345,10 @@ function spawnRandomCarrot() {
         clickCounter += 50; // Bonus points
         carrot.remove();
         flashMessage(clickCounter, [
-            { clicks: clickCounter, message: "🥕 +50 Bonus Points!" },
+            { 
+                clicks: clickCounter, 
+                message: i18n.t('powerups.bonusPoints')
+            },
         ]);
     };
 
