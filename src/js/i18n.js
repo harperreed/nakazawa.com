@@ -34,7 +34,10 @@ const i18nInstance = i18n
   .use(LanguageDetector)
   .init({
     debug: true,
-    fallbackLng: 'en',
+    fallbackLng: {
+      'zh-TW': ['zh'],
+      'default': ['en']
+    },
     resources: {
       en: { translation: enTranslation },
       ja: { translation: jaTranslation },
