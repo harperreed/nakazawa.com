@@ -1,214 +1,172 @@
 {
-	"messages": [
-		{
-			"clicks": 13,
-			"messageKey": "messages.prophecy",
-			"message": "The ancient clicking prophecy begins to unfold..."
-		},
-		{
-			"clicks": 42,
-			"messageKey": "messages.cosmic",
-			"message": "The cosmic clicksters would be proud of your progress!"
-		},
-		{
-			"clicks": 67,
-			"messageKey": "messages.astral",
-			"message": "The clicking echoes through the astral plane..."
-		},
-		{
-			"clicks": 87,
-			"messageKey": "messages.speaking",
-			"message": "Wait... did you hear that? The clicks are speaking to me..."
-		},
-		{
-			"clicks": 110,
-			"messageKey": "messages.ancient",
-			"message": "Your clicking resonates with ancient power!"
-		},
-		{
-			"clicks": 133,
-			"messageKey": "messages.sages",
-			"message": "The Click Sages whisper of your potential..."
-		},
-		{
-			"clicks": 156,
-			"messageKey": "messages.demons",
-			"message": "BEHOLD! The Click Demons arise from their slumber!"
-		},
-		{
-			"clicks": 189,
-			"messageKey": "messages.veil",
-			"message": "Your clicks pierce the veil of reality!"
-		},
-		{
-			"clicks": 215,
-			"messageKey": "messages.spirits",
-			"message": "The Click Spirits dance to your rhythm..."
-		},
-		{
-			"clicks": 238,
-			"messageKey": "messages.council",
-			"message": "The Grand Click Council has noticed your dedication"
-		},
-		{
-			"clicks": 275,
-			"messageKey": "messages.primordial",
-			"message": "Your clicking awakens primordial forces!"
-		},
-		{
-			"clicks": 299,
-			"messageKey": "messages.void",
-			"message": "The clicking void gazes back at you..."
-		},
-		{
-			"clicks": 315,
-			"messageKey": "messages.runes",
-			"message": "Ancient click runes glow with your power!"
-		},
-		{
-			"clicks": 333,
-			"messageKey": "messages.beast",
-			"message": "THREE THREE THREE - THE NUMBER OF THE CLICK BEAST"
-		},
-		{
-			"clicks": 350,
-			"messageKey": "messages.prophets",
-			"message": "The Click Prophets sing of your coming!"
-		},
-		{
-			"clicks": 375,
-			"messageKey": "messages.dimensions",
-			"message": "Your clicks echo through the dimensions..."
-		},
-		{
-			"clicks": 420,
-			"messageKey": "messages.portal",
-			"message": "Your clicks have opened a portal to the Click Dimension!"
-		},
-		{
-			"clicks": 567,
-			"messageKey": "messages.sacrifice",
-			"message": "The ancient Click Gods demand MORE SACRIFICE"
-		},
-		{
-			"clicks": 777,
-			"messageKey": "messages.jackpot",
-			"message": "JACKPOT! The Click Casino welcomes its newest champion!"
-		},
-		{
-			"clicks": 888,
-			"messageKey": "messages.unmatched",
-			"message": "你的点击力量无人能及! (Your click power is unmatched!)"
-		},
-		{
-			"clicks": 999,
-			"messageKey": "messages.reality",
-			"message": "Reality itself bends to your clicking will!"
-		},
-		{
-			"clicks": 1337,
-			"messageKey": "messages.elite",
-			"message": "YOU HAVE BECOME THE ELITE CLICK MASTER"
-		},
-		{
-			"clicks": 1500,
-			"messageKey": "messages.power",
-			"message": "Your clicking power level is over 1500!"
-		},
-		{
-			"clicks": 1666,
-			"messageKey": "messages.devils",
-			"message": "The Click Devils bow before your might"
-		},
-		{
-			"clicks": 1777,
-			"messageKey": "messages.lucky",
-			"message": "Lucky clicks flow through your veins"
-		},
-		{
-			"clicks": 1888,
-			"messageKey": "messages.dynasty",
-			"message": "The Click Dynasty recognizes your supremacy"
-		},
-		{
-			"clicks": 2000,
-			"messageKey": "messages.twoThousand",
-			"message": "Two thousand clicks of pure power!"
-		},
-		{
-			"clicks": 2222,
-			"messageKey": "messages.quartet",
-			"message": "The prophecy of the Click Quartet is fulfilled"
-		},
-		{
-			"clicks": 2500,
-			"messageKey": "messages.transcend",
-			"message": "Your clicking transcends mortal understanding"
-		},
-		{
-			"clicks": 2750,
-			"messageKey": "messages.constellation",
-			"message": "The Click Constellation aligns in your honor"
-		},
-		{
-			"clicks": 3000,
-			"messageKey": "messages.destiny",
-			"message": "THREE THOUSAND CLICKS OF DESTINY"
-		},
-		{
-			"clicks": 3333,
-			"messageKey": "messages.triforce",
-			"message": "The Triple Click Triforce awakens!"
-		},
-		{
-			"clicks": 3777,
-			"messageKey": "messages.fortune",
-			"message": "Fortune favors the persistent clicker"
-		},
-		{
-			"clicks": 4000,
-			"messageKey": "messages.newDimensions",
-			"message": "Your clicking power reaches new dimensions"
-		},
-		{
-			"clicks": 4444,
-			"messageKey": "messages.quartet",
-			"message": "The Quadruple Click Quartet harmonizes"
-		},
-		{
-			"clicks": 4999,
-			"messageKey": "messages.threshold",
-			"message": "Standing at the threshold of click divinity"
-		},
-		{
-			"clicks": 5000,
-			"messageKey": "messages.ultimate",
-			"message": "FIVE THOUSAND CLICKS OF ULTIMATE POWER!"
-		},
-		{
-			"clicks": 5555,
-			"messageKey": "messages.force",
-			"message": "The Five Fingered Click Force is yours to command"
-		},
-		{
-			"clicks": 6666,
-			"messageKey": "messages.underworld",
-			"message": "The Click Underworld crowns you their ruler"
-		},
-		{
-			"clicks": 7777,
-			"messageKey": "messages.maxJackpot",
-			"message": "MAXIMUM JACKPOT CLICKING ACHIEVED"
-		},
-		{
-			"clicks": 8888,
-			"messageKey": "messages.infinite",
-			"message": "无限点击力量! (INFINITE CLICKING POWER!)"
-		},
-		{
-			"clicks": 10000,
-			"messageKey": "messages.godhood",
-			"message": "YOU HAVE ASCENDED TO CLICK GODHOOD"
-		}
-	]
+    "messages": [
+        {
+            "clicks": 13,
+            "messageKey": "messages.prophecy"
+        },
+        {
+            "clicks": 42,
+            "messageKey": "messages.cosmic"
+        },
+        {
+            "clicks": 67,
+            "messageKey": "messages.astral"
+        },
+        {
+            "clicks": 87,
+            "messageKey": "messages.speaking"
+        },
+        {
+            "clicks": 110,
+            "messageKey": "messages.ancient"
+        },
+        {
+            "clicks": 133,
+            "messageKey": "messages.sages"
+        },
+        {
+            "clicks": 156,
+            "messageKey": "messages.demons"
+        },
+        {
+            "clicks": 189,
+            "messageKey": "messages.veil"
+        },
+        {
+            "clicks": 215,
+            "messageKey": "messages.spirits"
+        },
+        {
+            "clicks": 238,
+            "messageKey": "messages.council"
+        },
+        {
+            "clicks": 275,
+            "messageKey": "messages.primordial"
+        },
+        {
+            "clicks": 299,
+            "messageKey": "messages.void"
+        },
+        {
+            "clicks": 315,
+            "messageKey": "messages.runes"
+        },
+        {
+            "clicks": 333,
+            "messageKey": "messages.beast"
+        },
+        {
+            "clicks": 350,
+            "messageKey": "messages.prophets"
+        },
+        {
+            "clicks": 375,
+            "messageKey": "messages.dimensions"
+        },
+        {
+            "clicks": 420,
+            "messageKey": "messages.portal"
+        },
+        {
+            "clicks": 567,
+            "messageKey": "messages.sacrifice"
+        },
+        {
+            "clicks": 777,
+            "messageKey": "messages.jackpot"
+        },
+        {
+            "clicks": 888,
+            "messageKey": "messages.unmatched"
+        },
+        {
+            "clicks": 999,
+            "messageKey": "messages.reality"
+        },
+        {
+            "clicks": 1337,
+            "messageKey": "messages.elite"
+        },
+        {
+            "clicks": 1500,
+            "messageKey": "messages.power"
+        },
+        {
+            "clicks": 1666,
+            "messageKey": "messages.devils"
+        },
+        {
+            "clicks": 1777,
+            "messageKey": "messages.lucky"
+        },
+        {
+            "clicks": 1888,
+            "messageKey": "messages.dynasty"
+        },
+        {
+            "clicks": 2000,
+            "messageKey": "messages.twoThousand"
+        },
+        {
+            "clicks": 2222,
+            "messageKey": "messages.quartet"
+        },
+        {
+            "clicks": 2500,
+            "messageKey": "messages.transcend"
+        },
+        {
+            "clicks": 2750,
+            "messageKey": "messages.constellation"
+        },
+        {
+            "clicks": 3000,
+            "messageKey": "messages.destiny"
+        },
+        {
+            "clicks": 3333,
+            "messageKey": "messages.triforce"
+        },
+        {
+            "clicks": 3777,
+            "messageKey": "messages.fortune"
+        },
+        {
+            "clicks": 4000,
+            "messageKey": "messages.newDimensions"
+        },
+        {
+            "clicks": 4444,
+            "messageKey": "messages.quartet"
+        },
+        {
+            "clicks": 4999,
+            "messageKey": "messages.threshold"
+        },
+        {
+            "clicks": 5000,
+            "messageKey": "messages.ultimate"
+        },
+        {
+            "clicks": 5555,
+            "messageKey": "messages.force"
+        },
+        {
+            "clicks": 6666,
+            "messageKey": "messages.underworld"
+        },
+        {
+            "clicks": 7777,
+            "messageKey": "messages.maxJackpot"
+        },
+        {
+            "clicks": 8888,
+            "messageKey": "messages.infinite"
+        },
+        {
+            "clicks": 10000,
+            "messageKey": "messages.godhood"
+        }
+    ]
 }
