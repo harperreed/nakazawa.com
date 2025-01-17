@@ -534,9 +534,10 @@ achievementsButton.addEventListener("click", () => {
             achievementDiv.style.margin = "10px 0";
             achievementDiv.style.padding = "10px";
             achievementDiv.style.borderBottom = "2px solid #333";
+            const message = achievement[`message_${currentLang}`] || achievement.message;
             achievementDiv.innerHTML = `
                 <div class="earned">
-                    ${achievement[`message_${currentLang}`]}
+                    ${message}
                 </div>
             `;
             modalAchievements.appendChild(achievementDiv);
