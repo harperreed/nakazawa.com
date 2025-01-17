@@ -95,7 +95,7 @@ function updateAchievementsTable(clicks) {
             100,
         ).toFixed(0);
         row.innerHTML = `
-            <td class="${achievement.earned ? "earned" : "locked"}">${achievement.message}</td>
+            <td class="${achievement.earned ? "earned" : "locked"}">${achievement[`message_${currentLang}`] || achievement.message}</td>
             <td>${progress}%</td>
         `;
         tbody.appendChild(row);
