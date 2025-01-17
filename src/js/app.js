@@ -13,7 +13,9 @@ languageSelect.value = currentLang;
 languageSelect.addEventListener('change', (e) => {
     currentLang = e.target.value;
     localStorage.setItem('language', currentLang);
+    initializeAchievements();
     updateUIText();
+    updateAchievementsTable(clickCounter);
 });
 
 function getText(key) {
@@ -36,13 +38,20 @@ function updateUIText() {
 }
 
 // Achievement System
-const achievements = achievementsData[currentLang].achievements;
+let achievements = {};
 
-// Load saved achievements
-const savedAchievements = localStorage.getItem("achievements");
-if (savedAchievements) {
-    Object.assign(achievements, JSON.parse(savedAchievements));
+function initializeAchievements() {
+    achievements = {...achievementsData[currentLang].achievements};
+    
+    // Load saved achievements
+    const savedAchievements = localStorage.getItem("achievements");
+    if (savedAchievements) {
+        Object.assign(achievements, JSON.parse(savedAchievements));
+    }
 }
+
+// Initialize achievements with current language
+initializeAchievements();
 
 function updateAchievementsTable(clicks) {
     const table = document.getElementById("achievements-table");
