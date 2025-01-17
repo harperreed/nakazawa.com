@@ -26,7 +26,12 @@
         "portal": "Your clicks have opened a portal to the Click Dimension!",
         "sacrifice": "The ancient Click Gods demand MORE SACRIFICE",
         "jackpot": "JACKPOT! The Click Casino welcomes its newest champion!",
-        "unmatched": "你的点击力量无人能及! (Your click power is unmatched!)"
+        "unmatched": "你的点击力量无人能及! (Your click power is unmatched!)",
+        "reality": "Reality itself bends to your clicking will!",
+        "elite": "YOU HAVE BECOME THE ELITE CLICK MASTER",
+        "power": "Your clicking power level is over 1500!",
+        "devils": "The Click Devils bow before your might",
+        "lucky": "Lucky clicks flow through your veins"
     },
     "achievements": {
         "title": "Achievements",

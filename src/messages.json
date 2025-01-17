@@ -102,22 +102,27 @@
 		},
 		{
 			"clicks": 999,
+			"messageKey": "messages.reality",
 			"message": "Reality itself bends to your clicking will!"
 		},
 		{
 			"clicks": 1337,
+			"messageKey": "messages.elite",
 			"message": "YOU HAVE BECOME THE ELITE CLICK MASTER"
 		},
 		{
 			"clicks": 1500,
+			"messageKey": "messages.power",
 			"message": "Your clicking power level is over 1500!"
 		},
 		{
 			"clicks": 1666,
+			"messageKey": "messages.devils",
 			"message": "The Click Devils bow before your might"
 		},
 		{
 			"clicks": 1777,
+			"messageKey": "messages.lucky",
 			"message": "Lucky clicks flow through your veins"
 		},
 		{
