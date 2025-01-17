@@ -23,8 +23,20 @@ class AchievementManager {
     }
 
     getAchievementMessage(achievement) {
+        // Try current language
         const messageKey = `message_${i18n.currentLang}`;
-        return achievement[messageKey] || achievement.message_en || achievement.message;
+        const message = achievement[messageKey];
+        if (message) return message;
+
+        // Try English
+        if (achievement.message_en) return achievement.message_en;
+        
+        // Fallback to default message
+        if (achievement.message) return achievement.message;
+        
+        // Last resort
+        console.error('No valid message found for achievement:', achievement);
+        return 'Achievement Unlocked!';
     }
 
     getDisplayAchievements(clicks, isMobile = false) {
