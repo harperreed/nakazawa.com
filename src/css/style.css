@@ -19,6 +19,10 @@
         U+0100-017F; /* Latin Extended-A */
 }
 
+:root {
+    --game-font: "Press Start 2P", sans-serif;
+}
+
 html,
 body {
     height: 100%;
@@ -26,13 +30,13 @@ body {
     padding: 0;
     font-weight: 400;
     font-style: normal;
-    font-family: "GameFont", sans-serif;
+    font-family: var(--game-font);
 }
 
 body {
     background-image: url("../images/bunnies.gif");
     background-repeat: repeat;
-    font-family: "GameFont", sans-serif;
+    font-family: var(--game-font);
     cursor:
         url("../images/carrot.png") 16 16,
         auto;

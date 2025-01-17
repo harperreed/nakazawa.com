@@ -27,8 +27,9 @@ class I18n {
         this._currentLang = lang;
         localStorage.setItem("language", lang);
         
-        // Update document language
+        // Update document language and font
         document.documentElement.lang = lang;
+        this.updateDocumentFont();
         
         return true;
     }
@@ -59,11 +60,15 @@ class I18n {
     }
 
     getFontFamily() {
-        return this._currentLang === 'ja' ? 'DotGothic16, sans-serif' : '"Press Start 2P", monospace';
+        return this._currentLang === 'ja' ? 'DotGothic16, sans-serif' : '"Press Start 2P", sans-serif';
+    }
+
+    updateDocumentFont() {
+        document.documentElement.style.setProperty('--game-font', this.getFontFamily());
     }
 }
 
 export const i18n = new I18n();
 
 // Set initial font on load
-document.documentElement.style.setProperty('--game-font', i18n.getFontFamily());
+i18n.updateDocumentFont();
