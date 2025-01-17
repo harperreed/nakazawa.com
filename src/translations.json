@@ -9,7 +9,9 @@
             "progress": "Progress",
             "achievementUnlocked": "Achievement Unlocked:",
             "clickStreak": "🔥 {0} Click Streak!",
-            "bonusPoints": "🥕 +50 Bonus Points!"
+            "bonusPoints": "🥕 +50 Bonus Points!",
+            "achievementName": "Achievement",
+            "achievementProgress": "Progress"
         }
     },
     "ja": {
@@ -22,7 +24,9 @@
             "progress": "進捗",
             "achievementUnlocked": "実績解除：",
             "clickStreak": "🔥 {0}連続クリック！",
-            "bonusPoints": "🥕 +50ボーナスポイント！"
+            "bonusPoints": "🥕 +50ボーナスポイント！",
+            "achievementName": "実績名",
+            "achievementProgress": "達成度"
         }
     }
 }

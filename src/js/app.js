@@ -46,8 +46,8 @@ function updateUIText() {
     // Update table headers
     const headers = document.querySelector("#achievements-table thead tr");
     headers.innerHTML = `
-        <th>${getText("achievements")}</th>
-        <th>${getText("progress")}</th>
+        <th>${getText("achievementName")}</th>
+        <th>${getText("achievementProgress")}</th>
     `;
 
     updateAchievementsTable(clickCounter);
