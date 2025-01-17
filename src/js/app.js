@@ -182,7 +182,7 @@ function blendBackgroundColor() {
     const currentColor = colors[currentColorIndex];
     const nextColor = colors[nextColorIndex];
 
-    document.body.style.transition = "background-color 1s ease-in-out";
+    document.body.classList.add('background-transition');
     document.body.style.backgroundColor = nextColor;
 }
 
@@ -272,7 +272,7 @@ function activatePowerup() {
     const mobileTimerElement = document.createElement("div");
     mobileTimerElement.id = "mobile-timer";
     document.getElementById("button-container").prepend(mobileTimerElement);
-    timerElement.style.display = "block";
+    timerElement.classList.add('timer-visible');
 
     // Initialize fire cursor if not already created
     if (!fireCursor) {
@@ -281,7 +281,7 @@ function activatePowerup() {
         canvas.height = window.innerHeight;
         fireCursor = new FireCursor(canvas);
     }
-    document.getElementById("fire-cursor").style.display = "block";
+    document.getElementById("fire-cursor").classList.add('fire-cursor-visible');
 
     let timeLeft = 30;
 
@@ -295,9 +295,9 @@ function activatePowerup() {
             clearInterval(powerupTimeout);
             powerupActive = false;
             powerupMultiplier = 1;
-            timerElement.style.display = "none";
+            timerElement.classList.remove('timer-visible');
             mobileTimerElement.remove(); // Remove the mobile timer element completely
-            document.getElementById("fire-cursor").style.display = "none";
+            document.getElementById("fire-cursor").classList.remove('fire-cursor-visible');
         }
     }, 1000);
 }
@@ -386,13 +386,13 @@ document.addEventListener("click", (e) => {
 
     // Show counter at 10 clicks
     if (clickCounter >= 10) {
-        clickCounterElement.style.display = "block";
-        mobileCounterElement.style.display = "block";
+        clickCounterElement.classList.add('counter-visible');
+        mobileCounterElement.classList.add('counter-visible');
     }
 
     // Show menu at 20 clicks
     if (clickCounter >= 20) {
-        document.getElementById("button-container").style.display = "flex";
+        document.getElementById("button-container").classList.add('button-container-visible');
     }
 
     const currentMessages = messages.messages.map((msg) => ({
@@ -494,7 +494,7 @@ achievementsButton.addEventListener("click", () => {
         });
     }
 
-    modal.style.display = "block";
+    modal.classList.add('modal-visible');
 });
 
 // Debug powerup button
@@ -517,7 +517,7 @@ resetButton.addEventListener("click", () => {
 });
 
 closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
+    modal.classList.remove('modal-visible');
 });
 
 window.addEventListener("click", (event) => {

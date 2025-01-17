@@ -429,3 +429,27 @@ body {
 .screen-shake {
     transition: transform 0.1s;
 }
+
+.modal-visible {
+    display: block;
+}
+
+.background-transition {
+    transition: background-color 1s ease-in-out;
+}
+
+.counter-visible {
+    display: block;
+}
+
+.button-container-visible {
+    display: flex;
+}
+
+.timer-visible {
+    display: block;
+}
+
+.fire-cursor-visible {
+    display: block;
+}
