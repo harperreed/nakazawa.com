@@ -202,10 +202,12 @@
 		},
 		{
 			"clicks": 8888,
+			"messageKey": "messages.infinite",
 			"message": "无限点击力量! (INFINITE CLICKING POWER!)"
 		},
 		{
 			"clicks": 10000,
+			"messageKey": "messages.godhood",
 			"message": "YOU HAVE ASCENDED TO CLICK GODHOOD"
 		}
 	]

@@ -46,7 +46,9 @@
         "ultimate": "FIVE THOUSAND CLICKS OF ULTIMATE POWER!",
         "force": "The Five Fingered Click Force is yours to command",
         "underworld": "The Click Underworld crowns you their ruler",
-        "maxJackpot": "MAXIMUM JACKPOT CLICKING ACHIEVED"
+        "maxJackpot": "MAXIMUM JACKPOT CLICKING ACHIEVED",
+        "infinite": "无限点击力量! (INFINITE CLICKING POWER!)",
+        "godhood": "YOU HAVE ASCENDED TO CLICK GODHOOD"
     },
     "achievements": {
         "title": "Achievements",
