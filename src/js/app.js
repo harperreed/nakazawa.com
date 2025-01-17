@@ -86,7 +86,9 @@ function checkAchievements(clicks) {
             flashMessage(clicks, [
                 {
                     clicks,
-                    message: i18n.t('achievements.unlocked', { message: achievement.message }),
+                    message: i18n.t('achievements.unlocked', { 
+                        message: i18n.t(achievement.messageKey)
+                    }),
                 },
             ]);
         }
@@ -502,7 +504,7 @@ achievementsButton.addEventListener("click", () => {
             achievementDiv.style.borderBottom = "2px solid #333";
             achievementDiv.innerHTML = `
                 <div class="earned">
-                    ${achievement.message}
+                    ${i18n.t(achievement.messageKey)}
                 </div>
             `;
             modalAchievements.appendChild(achievementDiv);
