@@ -27,22 +27,27 @@
 		},
 		{
 			"clicks": 133,
+			"messageKey": "messages.sages",
 			"message": "The Click Sages whisper of your potential..."
 		},
 		{
 			"clicks": 156,
+			"messageKey": "messages.demons",
 			"message": "BEHOLD! The Click Demons arise from their slumber!"
 		},
 		{
 			"clicks": 189,
+			"messageKey": "messages.veil",
 			"message": "Your clicks pierce the veil of reality!"
 		},
 		{
 			"clicks": 215,
+			"messageKey": "messages.spirits",
 			"message": "The Click Spirits dance to your rhythm..."
 		},
 		{
 			"clicks": 238,
+			"messageKey": "messages.council",
 			"message": "The Grand Click Council has noticed your dedication"
 		},
 		{

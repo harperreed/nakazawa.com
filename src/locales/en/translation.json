@@ -8,7 +8,15 @@
     },
     "messages": {
         "prophecy": "The ancient clicking prophecy begins to unfold...",
-        "cosmic": "The cosmic clicksters would be proud of your progress!"
+        "cosmic": "The cosmic clicksters would be proud of your progress!",
+        "astral": "The clicking echoes through the astral plane...",
+        "speaking": "Wait... did you hear that? The clicks are speaking to me...",
+        "ancient": "Your clicking resonates with ancient power!",
+        "sages": "The Click Sages whisper of your potential...",
+        "demons": "BEHOLD! The Click Demons arise from their slumber!",
+        "veil": "Your clicks pierce the veil of reality!",
+        "spirits": "The Click Spirits dance to your rhythm...",
+        "council": "The Grand Click Council has noticed your dedication"
     },
     "achievements": {
         "title": "Achievements",
