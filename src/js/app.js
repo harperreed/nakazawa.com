@@ -41,6 +41,12 @@ function updateUIText() {
 let achievements = {};
 
 function initializeAchievements() {
+    if (!achievementsData || !achievementsData[currentLang] || !achievementsData[currentLang].achievements) {
+        console.error('Achievement data not properly loaded:', achievementsData);
+        achievements = {};
+        return;
+    }
+    
     achievements = {...achievementsData[currentLang].achievements};
     
     // Load saved achievements
