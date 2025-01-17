@@ -375,9 +375,25 @@ async function initializeApp() {
     await i18nInstance;
 
     // Initialize translations for static content
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        element.textContent = i18n.t(key);
+    const updatePageTranslations = () => {
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            element.textContent = i18n.t(key);
+        });
+    };
+
+    // Set initial translations
+    updatePageTranslations();
+
+    // Handle language changes
+    const languageSelect = document.getElementById('language-select');
+    languageSelect.value = i18n.language || 'en';
+    
+    languageSelect.addEventListener('change', async (event) => {
+        await i18n.changeLanguage(event.target.value);
+        updatePageTranslations();
+        // Update any dynamic content that needs translation
+        updateAchievementsTable(clickCounter);
     });
 }
 

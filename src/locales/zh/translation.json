@@ -1,0 +1,40 @@
+{
+    "title": "中泽 🐇🥕🐰",
+    "description": "🐇🥕🐰",
+    "buttons": {
+        "fullscreen": "全屏",
+        "achievements": "成就",
+        "reset": "重置",
+        "language": "语言"
+    },
+    "achievements": {
+        "title": "成就",
+        "noAchievements": "还没有获得任何成就。继续点击！",
+        "unlocked": "解锁成就：{{message}}",
+        "progress": "{{progress}}%",
+        "beginner": "🎯 新手兔子",
+        "carrotSnatcher": "🥕 蔬菜大盗",
+        "bunnyBerserker": "😡 狂暴兔子",
+        "hopPunk": "🎸 朋克兔子",
+        "bunnyNinja": "🥷 无声致命毛球",
+        "expert": "🌟 跳跃专家",
+        "master": "👑 胡萝卜之王",
+        "carrotpocalypse": "🥕 菜园毁灭者",
+        "bunnyOverlord": "😈 兔子洞霸主",
+        "chaosHare": "🌪️ 混沌特工",
+        "carrotCultist": "⛪ 胡萝卜教大祭司",
+        "bunnyberryPie": "🥧 幻觉派大师",
+        "rabbitHole": "🕳️ 量子隧道挖掘机",
+        "moonRabbit": "🌙 月兔捣药",
+        "bunnyDoom": "💀 兔子末日使者",
+        "carrotNuke": "☢️ 核胡萝卜持有者",
+        "bunnyMatrix": "🤖 兔子矩阵故障"
+    },
+    "powerups": {
+        "bonusPoints": "🥕 +50 奖励分数！",
+        "clickStreak": "🔥 {{count}}连击！"
+    },
+    "reset": {
+        "confirm": "确定要重置所有进度吗？此操作无法撤消。"
+    }
+}

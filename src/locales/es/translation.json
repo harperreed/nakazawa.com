@@ -1,0 +1,40 @@
+{
+    "title": "nakazawa 🐇🥕🐰",
+    "description": "🐇🥕🐰",
+    "buttons": {
+        "fullscreen": "Pantalla completa",
+        "achievements": "Logros",
+        "reset": "Reiniciar",
+        "language": "Idioma"
+    },
+    "achievements": {
+        "title": "Logros",
+        "noAchievements": "Aún no hay logros conseguidos. ¡Sigue haciendo clic!",
+        "unlocked": "¡Logro desbloqueado: {{message}}",
+        "progress": "{{progress}}%",
+        "beginner": "🎯 Conejito Principiante",
+        "carrotSnatcher": "🥕 Ladrón de Vegetales",
+        "bunnyBerserker": "😡 Furia Desatada",
+        "hopPunk": "🎸 Conejito Anarquista",
+        "bunnyNinja": "🥷 Silencioso pero Mortal",
+        "expert": "🌟 Saltarín Experto",
+        "master": "👑 Rey Zanahoria",
+        "carrotpocalypse": "🥕 Destructor de Huertos",
+        "bunnyOverlord": "😈 Líder Supremo de la Madriguera",
+        "chaosHare": "🌪️ Agente del Caos",
+        "carrotCultist": "⛪ Sumo Sacerdote del Culto a la Zanahoria",
+        "bunnyberryPie": "🥧 Maestro del Pastel Alucinógeno",
+        "rabbitHole": "🕳️ Excavador de Túneles Cuánticos",
+        "moonRabbit": "🌙 Conejo Lunar",
+        "bunnyDoom": "💀 Heraldo del Conejocalipsis",
+        "carrotNuke": "☢️ Portador de la Zanahoria Nuclear",
+        "bunnyMatrix": "🤖 Fallo en la Matriz Conejil"
+    },
+    "powerups": {
+        "bonusPoints": "🥕 ¡+50 Puntos Extra!",
+        "clickStreak": "🔥 ¡{{count}} Clics Seguidos!"
+    },
+    "reset": {
+        "confirm": "¿Estás seguro de que quieres reiniciar todo el progreso? Esta acción no se puede deshacer."
+    }
+}
