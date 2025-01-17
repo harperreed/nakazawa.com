@@ -6,7 +6,10 @@
             "reset": "Reset",
             "resetConfirm": "Are you sure you want to reset all progress? This cannot be undone.",
             "noAchievements": "No achievements earned yet. Keep clicking!",
-            "progress": "Progress"
+            "progress": "Progress",
+            "achievementUnlocked": "Achievement Unlocked:",
+            "clickStreak": "🔥 {0} Click Streak!",
+            "bonusPoints": "🥕 +50 Bonus Points!"
         }
     },
     "ja": {
@@ -16,7 +19,10 @@
             "reset": "リセット",
             "resetConfirm": "本当に進行状況をリセットしますか？この操作は取り消せません。",
             "noAchievements": "まだ実績は獲得していません。クリックを続けましょう！",
-            "progress": "進捗"
+            "progress": "進捗",
+            "achievementUnlocked": "実績解除：",
+            "clickStreak": "🔥 {0}連続クリック！",
+            "bonusPoints": "🥕 +50ボーナスポイント！"
         }
     }
 }

@@ -102,7 +102,7 @@ function checkAchievements(clicks) {
         flashMessage(clicks, [
             {
                 clicks,
-                message: `Achievement Unlocked: ${achievementManager.getAchievementMessage(achievement)}`,
+                message: `${getText("achievementUnlocked")} ${achievementManager.getAchievementMessage(achievement)}`,
             },
         ]);
     });
@@ -328,7 +328,7 @@ function updateClickSpeed() {
             flashMessage(clickCounter, [
                 {
                     clicks: clickCounter,
-                    message: `🔥 ${streakCount} Click Streak!`,
+                    message: getText("clickStreak").replace("{0}", streakCount),
                 },
             ]);
         }
@@ -356,7 +356,7 @@ function spawnRandomCarrot() {
         clickCounter += 50; // Bonus points
         carrot.remove();
         flashMessage(clickCounter, [
-            { clicks: clickCounter, message: "🥕 +50 Bonus Points!" },
+            { clicks: clickCounter, message: getText("bonusPoints") },
         ]);
     };
 
