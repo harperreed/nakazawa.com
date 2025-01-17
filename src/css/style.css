@@ -1,24 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap");
 
-/* For Japanese specific characters */
-@font-face {
-    font-family: "GameFont";
-    src: local("DotGothic16");
-    unicode-range:
-        U+3000-30FF, /* Japanese-style punctuation */ 
-        U+FF00-FFEF, /* Full-width Latin characters */ 
-        U+4E00-9FAF; /* CJK unified ideographs */
-}
-
-/* For Latin/English characters */
-@font-face {
-    font-family: "GameFont";
-    src: local("Press Start 2P");
-    unicode-range:
-        U+0000-00FF, /* Basic Latin + Latin Supplement */ 
-        U+0100-017F; /* Latin Extended-A */
-}
-
 :root {
     --game-font: "Press Start 2P", sans-serif;
 }
@@ -148,6 +129,7 @@ body {
     bottom: 10px;
     right: 10px;
     display: none;
+    font-family: var(--game-font);
     flex-direction: column;
     gap: 10px;
     z-index: 1000;
@@ -161,6 +143,7 @@ body {
     #button-container {
         flex-direction: row;
         justify-content: space-around;
+        font-family: var(--game-font);
         top: 0;
         bottom: auto;
         right: 0;
@@ -185,6 +168,7 @@ body {
     user-select: none;
     font-weight: 400;
     font-style: normal;
+    font-family: var(--game-font);
     min-width: 200px;
 }
 
