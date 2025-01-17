@@ -6,87 +6,101 @@
             "message_en": "🎯 Beginner Bunny",
             "message_jp": "🎯 見習いウサギ"
         },
-            "CarrotSnatcher": {
-                "threshold": 100,
-                "earned": false,
-                "message_en": "🥕 Vegetable Bandit",
-                "message_jp": "🥕 野菜泥棒"
-            },
-            "BunnyBerserker": {
-                "threshold": 200,
-                "earned": false,
-                "message": "😡 Rabid Rampage"
-            },
-            "HopPunk": {
-                "threshold": 300,
-                "earned": false,
-                "message": "🎸 Anarchist Cottontail"
-            },
-            "BunnyNinja": {
-                "threshold": 400,
-                "earned": false,
-                "message": "🥷 Silent but Deadly Floof"
-            },
-            "Expert": {
-                "threshold": 500,
-                "earned": false,
-                "message": "🌟 Expert Hopper"
-            },
-            "Master": {
-                "threshold": 1000,
-                "earned": false,
-                "message": "👑 Carrot King"
-            },
-            "Carrotpocalypse": {
-                "threshold": 2000,
-                "earned": false,
-                "message": "🥕 Destroyer of Vegetable Gardens"
-            },
-            "BunnyOverlord": {
-                "threshold": 3000,
-                "earned": false,
-                "message": "😈 Supreme Leader of the Warren"
-            },
-            "ChaosHare": {
-                "threshold": 4000,
-                "earned": false,
-                "message": "🌪️ Agent of Bunny Chaos"
-            },
-            "CarrotCultist": {
-                "threshold": 5000,
-                "earned": false,
-                "message": "⛪ High Priest of the Carrot Cult"
-            },
-            "BunnyberryPie": {
-                "threshold": 6000,
-                "earned": false,
-                "message": "🥧 Hallucinogenic Pie Master"
-            },
-            "RabbitHole": {
-                "threshold": 7000,
-                "earned": false,
-                "message": "🕳️ Quantum Tunnel Digger"
-            },
-            "MoonRabbit": {
-                "threshold": 8000,
-                "earned": false,
-                "message": "🌙 Lunar Jade Pounder"
-            },
-            "BunnyDoom": {
-                "threshold": 9000,
-                "earned": false,
-                "message": "💀 Harbinger of the Bunpocalypse"
-            },
-            "CarrotNuke": {
-                "threshold": 10000,
-                "earned": false,
-                "message": "☢️ Thermonuclear Carrot Wielder"
-            },
-            "BunnyMatrix": {
-                "threshold": 15000,
-                "earned": false,
-                "message": "🤖 Glitch in the Warren Matrix"
-            }
+        "CarrotSnatcher": {
+            "threshold": 100,
+            "earned": false,
+            "message_en": "🥕 Vegetable Bandit",
+            "message_jp": "🥕 野菜泥棒"
+        },
+        "BunnyBerserker": {
+            "threshold": 200,
+            "earned": false,
+            "message_en": "😡 Rabid Rampage",
+            "message_jp": "😡 狂暴なうさぎ"
+        },
+        "HopPunk": {
+            "threshold": 300,
+            "earned": false,
+            "message_en": "🎸 Anarchist Cottontail",
+            "message_jp": "🎸 アナーキストな野うさぎ"
+        },
+        "BunnyNinja": {
+            "threshold": 400,
+            "earned": false,
+            "message_en": "🥷 Silent but Deadly Floof",
+            "message_jp": "🥷 静かなる致命的もふもふ"
+        },
+        "Expert": {
+            "threshold": 500,
+            "earned": false,
+            "message_en": "🌟 Expert Hopper",
+            "message_jp": "🌟 ホッピングの達人"
+        },
+        "Master": {
+            "threshold": 1000,
+            "earned": false,
+            "message_en": "👑 Carrot King",
+            "message_jp": "👑 ニンジンの王様"
+        },
+        "Carrotpocalypse": {
+            "threshold": 2000,
+            "earned": false,
+            "message_en": "🥕 Destroyer of Vegetable Gardens",
+            "message_jp": "🥕 菜園の破壊者"
+        },
+        "BunnyOverlord": {
+            "threshold": 3000,
+            "earned": false,
+            "message_en": "😈 Supreme Leader of the Warren",
+            "message_jp": "😈 ウサギの巣の最高指導者"
+        },
+        "ChaosHare": {
+            "threshold": 4000,
+            "earned": false,
+            "message_en": "🌪️ Agent of Bunny Chaos",
+            "message_jp": "🌪️ うさぎカオスの使者"
+        },
+        "CarrotCultist": {
+            "threshold": 5000,
+            "earned": false,
+            "message_en": "⛪ High Priest of the Carrot Cult",
+            "message_jp": "⛪ ニンジン教団の大祭司"
+        },
+        "BunnyberryPie": {
+            "threshold": 6000,
+            "earned": false,
+            "message_en": "🥧 Hallucinogenic Pie Master",
+            "message_jp": "🥧 幻覚パイの達人"
+        },
+        "RabbitHole": {
+            "threshold": 7000,
+            "earned": false,
+            "message_en": "🕳️ Quantum Tunnel Digger",
+            "message_jp": "🕳️ 量子トンネルの掘り手"
+        },
+        "MoonRabbit": {
+            "threshold": 8000,
+            "earned": false,
+            "message_en": "🌙 Lunar Jade Pounder",
+            "message_jp": "🌙 月の玉兎"
+        },
+        "BunnyDoom": {
+            "threshold": 9000,
+            "earned": false,
+            "message_en": "💀 Harbinger of the Bunpocalypse",
+            "message_jp": "💀 うさぎ黙示録の前触れ"
+        },
+        "CarrotNuke": {
+            "threshold": 10000,
+            "earned": false,
+            "message_en": "☢️ Thermonuclear Carrot Wielder",
+            "message_jp": "☢️ 熱核ニンジンの使い手"
+        },
+        "BunnyMatrix": {
+            "threshold": 15000,
+            "earned": false,
+            "message_en": "🤖 Glitch in the Warren Matrix",
+            "message_jp": "🤖 ウォーレン・マトリックスの異常"
         }
     }
 }

@@ -12,331 +12,203 @@
             },
             {
                 "clicks": 67,
-                "message": "The clicking echoes through the astral plane..."
+                "message_en": "The clicking echoes through the astral plane...",
+                "message_jp": "クリックが星界を響き渡る..."
             },
             {
                 "clicks": 87,
-                "message": "Wait... did you hear that? The clicks are speaking to me..."
+                "message_en": "Wait... did you hear that? The clicks are speaking to me...",
+                "message_jp": "待って...聞こえた？クリックが私に語りかけている..."
             },
             {
                 "clicks": 110,
-                "message": "Your clicking resonates with ancient power!"
+                "message_en": "Your clicking resonates with ancient power!",
+                "message_jp": "あなたのクリックが古代の力と共鳴する！"
             },
             {
                 "clicks": 133,
-                "message": "The Click Sages whisper of your potential..."
+                "message_en": "The Click Sages whisper of your potential...",
+                "message_jp": "クリックの賢者たちがあなたの可能性を囁いている..."
             },
             {
                 "clicks": 156,
-                "message": "BEHOLD! The Click Demons arise from their slumber!"
+                "message_en": "BEHOLD! The Click Demons arise from their slumber!",
+                "message_jp": "見よ！クリックの悪魔たちが目覚めた！"
             },
             {
                 "clicks": 189,
-                "message": "Your clicks pierce the veil of reality!"
+                "message_en": "Your clicks pierce the veil of reality!",
+                "message_jp": "あなたのクリックが現実のベールを貫く！"
             },
             {
                 "clicks": 215,
-                "message": "The Click Spirits dance to your rhythm..."
+                "message_en": "The Click Spirits dance to your rhythm...",
+                "message_jp": "クリックの精霊たちがあなたのリズムに合わせて踊る..."
             },
             {
                 "clicks": 238,
-                "message": "The Grand Click Council has noticed your dedication"
+                "message_en": "The Grand Click Council has noticed your dedication",
+                "message_jp": "偉大なるクリック評議会があなたの献身に気付いた"
             },
             {
                 "clicks": 275,
-                "message": "Your clicking awakens primordial forces!"
+                "message_en": "Your clicking awakens primordial forces!",
+                "message_jp": "あなたのクリックが原始の力を目覚めさせる！"
             },
             {
                 "clicks": 299,
-                "message": "The clicking void gazes back at you..."
+                "message_en": "The clicking void gazes back at you...",
+                "message_jp": "クリックの虚無があなたを見返している..."
             },
             {
                 "clicks": 315,
-                "message": "Ancient click runes glow with your power!"
+                "message_en": "Ancient click runes glow with your power!",
+                "message_jp": "古代のクリックルーンがあなたの力で輝く！"
             },
             {
                 "clicks": 333,
-                "message": "THREE THREE THREE - THE NUMBER OF THE CLICK BEAST"
+                "message_en": "THREE THREE THREE - THE NUMBER OF THE CLICK BEAST",
+                "message_jp": "三三三 - クリック獣の数字"
             },
             {
                 "clicks": 350,
-                "message": "The Click Prophets sing of your coming!"
+                "message_en": "The Click Prophets sing of your coming!",
+                "message_jp": "クリックの預言者たちがあなたの到来を歌う！"
             },
             {
                 "clicks": 375,
-                "message": "Your clicks echo through the dimensions..."
+                "message_en": "Your clicks echo through the dimensions...",
+                "message_jp": "あなたのクリックが次元を超えて響き渡る..."
             },
             {
                 "clicks": 420,
-                "message": "Your clicks have opened a portal to the Click Dimension!"
+                "message_en": "Your clicks have opened a portal to the Click Dimension!",
+                "message_jp": "あなたのクリックがクリック次元へのポータルを開いた！"
             },
             {
                 "clicks": 567,
-                "message": "The ancient Click Gods demand MORE SACRIFICE"
+                "message_en": "The ancient Click Gods demand MORE SACRIFICE",
+                "message_jp": "古代のクリックの神々がさらなる犠牲を求める"
             },
             {
                 "clicks": 777,
-                "message": "JACKPOT! The Click Casino welcomes its newest champion!"
+                "message_en": "JACKPOT! The Click Casino welcomes its newest champion!",
+                "message_jp": "ジャックポット！クリックカジノが新チャンピオンを歓迎する！"
             },
             {
                 "clicks": 888,
-                "message": "你的点击力量无人能及! (Your click power is unmatched!)"
+                "message_en": "你的点击力量无人能及! (Your click power is unmatched!)",
+                "message_jp": "あなたのクリックパワーは無敵だ！"
             },
             {
                 "clicks": 999,
-                "message": "Reality itself bends to your clicking will!"
+                "message_en": "Reality itself bends to your clicking will!",
+                "message_jp": "現実そのものがあなたのクリックの意志に屈する！"
             },
             {
                 "clicks": 1337,
-                "message": "YOU HAVE BECOME THE ELITE CLICK MASTER"
+                "message_en": "YOU HAVE BECOME THE ELITE CLICK MASTER",
+                "message_jp": "あなたはエリートクリックマスターとなった"
             },
             {
                 "clicks": 1500,
-                "message": "Your clicking power level is over 1500!"
+                "message_en": "Your clicking power level is over 1500!",
+                "message_jp": "あなたのクリックパワーレベルは1500を超えた！"
             },
             {
                 "clicks": 1666,
-                "message": "The Click Devils bow before your might"
+                "message_en": "The Click Devils bow before your might",
+                "message_jp": "クリックの悪魔たちがあなたの力の前に頭を垂れる"
             },
             {
                 "clicks": 1777,
-                "message": "Lucky clicks flow through your veins"
+                "message_en": "Lucky clicks flow through your veins",
+                "message_jp": "幸運のクリックがあなたの血管を流れる"
             },
             {
                 "clicks": 1888,
-                "message": "The Click Dynasty recognizes your supremacy"
+                "message_en": "The Click Dynasty recognizes your supremacy",
+                "message_jp": "クリック王朝があなたの覇権を認める"
             },
             {
                 "clicks": 2000,
-                "message": "Two thousand clicks of pure power!"
+                "message_en": "Two thousand clicks of pure power!",
+                "message_jp": "純粋なる力の2000クリック！"
             },
             {
                 "clicks": 2222,
-                "message": "The prophecy of the Click Quartet is fulfilled"
+                "message_en": "The prophecy of the Click Quartet is fulfilled",
+                "message_jp": "クリック四重奏の預言が成就した"
             },
             {
                 "clicks": 2500,
-                "message": "Your clicking transcends mortal understanding"
+                "message_en": "Your clicking transcends mortal understanding",
+                "message_jp": "あなたのクリックは人知を超越する"
             },
             {
                 "clicks": 2750,
-                "message": "The Click Constellation aligns in your honor"
+                "message_en": "The Click Constellation aligns in your honor",
+                "message_jp": "クリック星座があなたの栄誉のために並ぶ"
             },
             {
                 "clicks": 3000,
-                "message": "THREE THOUSAND CLICKS OF DESTINY"
+                "message_en": "THREE THOUSAND CLICKS OF DESTINY",
+                "message_jp": "運命の3000クリック"
             },
             {
                 "clicks": 3333,
-                "message": "The Triple Click Triforce awakens!"
+                "message_en": "The Triple Click Triforce awakens!",
+                "message_jp": "トリプルクリックトライフォースが目覚める！"
             },
             {
                 "clicks": 3777,
-                "message": "Fortune favors the persistent clicker"
+                "message_en": "Fortune favors the persistent clicker",
+                "message_jp": "幸運は粘り強いクリッカーに味方する"
             },
             {
                 "clicks": 4000,
-                "message": "Your clicking power reaches new dimensions"
+                "message_en": "Your clicking power reaches new dimensions",
+                "message_jp": "あなたのクリックパワーが新次元に到達する"
             },
             {
                 "clicks": 4444,
-                "message": "The Quadruple Click Quartet harmonizes"
+                "message_en": "The Quadruple Click Quartet harmonizes",
+                "message_jp": "クアドラプルクリックカルテットが調和する"
             },
             {
                 "clicks": 4999,
-                "message": "Standing at the threshold of click divinity"
+                "message_en": "Standing at the threshold of click divinity",
+                "message_jp": "クリック神性の閾値に立つ"
             },
             {
                 "clicks": 5000,
-                "message": "FIVE THOUSAND CLICKS OF ULTIMATE POWER!"
+                "message_en": "FIVE THOUSAND CLICKS OF ULTIMATE POWER!",
+                "message_jp": "究極の力の5000クリック！"
             },
             {
                 "clicks": 5555,
-                "message": "The Five Fingered Click Force is yours to command"
+                "message_en": "The Five Fingered Click Force is yours to command",
+                "message_jp": "五本指クリックフォースがあなたの指揮下に"
             },
             {
                 "clicks": 6666,
-                "message": "The Click Underworld crowns you their ruler"
+                "message_en": "The Click Underworld crowns you their ruler",
+                "message_jp": "クリック冥界があなたを支配者として戴冠する"
             },
             {
                 "clicks": 7777,
-                "message": "MAXIMUM JACKPOT CLICKING ACHIEVED"
+                "message_en": "MAXIMUM JACKPOT CLICKING ACHIEVED",
+                "message_jp": "最大ジャックポットクリック達成"
             },
             {
                 "clicks": 8888,
-                "message": "无限点击力量! (INFINITE CLICKING POWER!)"
+                "message_en": "无限点击力量! (INFINITE CLICKING POWER!)",
+                "message_jp": "無限のクリックパワー！"
             },
             {
                 "clicks": 10000,
                 "message_en": "YOU HAVE ASCENDED TO CLICK GODHOOD",
                 "message_jp": "あなたはクリック神性へと昇華した"
-            }
-        ]
-                "message": "古代のクリック予言が展開し始める..."
-            },
-            {
-                "clicks": 42,
-                "message": "宇宙のクリッカーたちがあなたの進歩を誇りに思うでしょう！"
-            },
-            {
-                "clicks": 67,
-                "message": "クリックが星界を響き渡る..."
-            },
-            {
-                "clicks": 87,
-                "message": "待って...聞こえた？クリックが私に語りかけている..."
-            },
-            {
-                "clicks": 110,
-                "message": "あなたのクリックが古代の力と共鳴する！"
-            },
-            {
-                "clicks": 133,
-                "message": "クリックの賢者たちがあなたの可能性を囁いている..."
-            },
-            {
-                "clicks": 156,
-                "message": "見よ！クリックの悪魔たちが目覚めた！"
-            },
-            {
-                "clicks": 189,
-                "message": "あなたのクリックが現実の帳を貫く！"
-            },
-            {
-                "clicks": 215,
-                "message": "クリックの精霊たちがあなたのリズムに合わせて踊る..."
-            },
-            {
-                "clicks": 238,
-                "message": "クリック大評議会があなたの献身に気付いた"
-            },
-            {
-                "clicks": 275,
-                "message": "あなたのクリックが原始の力を目覚めさせる！"
-            },
-            {
-                "clicks": 299,
-                "message": "クリックの虚無があなたを見返している..."
-            },
-            {
-                "clicks": 315,
-                "message": "古代のクリックルーンがあなたの力で輝く！"
-            },
-            {
-                "clicks": 333,
-                "message": "三三三 - クリック獣の数字"
-            },
-            {
-                "clicks": 350,
-                "message": "クリックの預言者たちがあなたの到来を歌う！"
-            },
-            {
-                "clicks": 375,
-                "message": "あなたのクリックが次元を超えて響く..."
-            },
-            {
-                "clicks": 420,
-                "message": "あなたのクリックがクリック次元へのポータルを開いた！"
-            },
-            {
-                "clicks": 567,
-                "message": "古代のクリックの神々がさらなる生贄を求める"
-            },
-            {
-                "clicks": 777,
-                "message": "大当たり！クリックカジノが新しいチャンピオンを歓迎する！"
-            },
-            {
-                "clicks": 888,
-                "message": "あなたのクリック力は無敵だ！"
-            },
-            {
-                "clicks": 999,
-                "message": "現実そのものがあなたのクリックの意志に屈する！"
-            },
-            {
-                "clicks": 1337,
-                "message": "あなたはエリートクリックマスターとなった"
-            },
-            {
-                "clicks": 1500,
-                "message": "あなたのクリック力は1500を超えた！"
-            },
-            {
-                "clicks": 1666,
-                "message": "クリックの悪魔たちがあなたの力の前に頭を垂れる"
-            },
-            {
-                "clicks": 1777,
-                "message": "幸運のクリックがあなたの血管を流れる"
-            },
-            {
-                "clicks": 1888,
-                "message": "クリック王朝があなたの覇権を認める"
-            },
-            {
-                "clicks": 2000,
-                "message": "純粋な力の2000クリック！"
-            },
-            {
-                "clicks": 2222,
-                "message": "クリック四重奏の予言が成就した"
-            },
-            {
-                "clicks": 2500,
-                "message": "あなたのクリックは人知を超越する"
-            },
-            {
-                "clicks": 2750,
-                "message": "クリック星座があなたを称えて整列する"
-            },
-            {
-                "clicks": 3000,
-                "message": "運命の3000クリック"
-            },
-            {
-                "clicks": 3333,
-                "message": "トリプルクリックトライフォースが目覚める！"
-            },
-            {
-                "clicks": 3777,
-                "message": "幸運は粘り強いクリッカーに味方する"
-            },
-            {
-                "clicks": 4000,
-                "message": "あなたのクリック力が新次元に到達する"
-            },
-            {
-                "clicks": 4444,
-                "message": "クアドラプルクリックカルテットが調和する"
-            },
-            {
-                "clicks": 4999,
-                "message": "クリック神性の閾値に立つ"
-            },
-            {
-                "clicks": 5000,
-                "message": "究極の力の5000クリック！"
-            },
-            {
-                "clicks": 5555,
-                "message": "五本指クリックフォースがあなたの指揮下に"
-            },
-            {
-                "clicks": 6666,
-                "message": "クリック冥界があなたを支配者として戴冠する"
-            },
-            {
-                "clicks": 7777,
-                "message": "最大ジャックポットクリック達成"
-            },
-            {
-                "clicks": 8888,
-                "message": "無限のクリック力！"
-            },
-            {
-                "clicks": 10000,
-                "message": "あなたはクリック神性へと昇華した"
             }
         ]
     }
