@@ -75,11 +75,13 @@ function updateAchievementsTable(clicks) {
 }
 
 function screenShake() {
+    document.body.classList.add('screen-shake');
     document.body.style.transform = "translate(5px, 5px)";
     setTimeout(() => {
         document.body.style.transform = "translate(-5px, -5px)";
         setTimeout(() => {
             document.body.style.transform = "translate(0, 0)";
+            document.body.classList.remove('screen-shake');
         }, 50);
     }, 50);
 }
@@ -329,15 +331,9 @@ function updateClickSpeed() {
 // Dynamic powerup spawn timing
 function spawnRandomCarrot() {
     const carrot = document.createElement("div");
-    carrot.style.position = "absolute";
+    carrot.classList.add('random-carrot');
     carrot.style.left = `${Math.random() * (window.innerWidth - 50)}px`;
     carrot.style.top = `${Math.random() * (window.innerHeight - 50)}px`;
-    carrot.style.width = "50px";
-    carrot.style.height = "50px";
-    carrot.style.cursor = "pointer";
-    carrot.style.backgroundImage = `url("${new URL("../images/carrot-powerup.webp", import.meta.url)}")`;
-    carrot.style.backgroundSize = "contain";
-    carrot.style.filter = "drop-shadow(3px 3px 3px rgba(0,0,0,0.5))";
 
     carrot.onclick = () => {
         clickCounter += 50; // Bonus points
@@ -480,16 +476,13 @@ achievementsButton.addEventListener("click", () => {
 
     if (earnedAchievements.length === 0) {
         const noAchievementsDiv = document.createElement("div");
-        noAchievementsDiv.style.textAlign = "center";
-        noAchievementsDiv.style.padding = "20px";
+        noAchievementsDiv.classList.add('no-achievements');
         noAchievementsDiv.innerText = i18n.getText("noAchievements", "ui");
         modalAchievements.appendChild(noAchievementsDiv);
     } else {
         earnedAchievements.forEach((achievement) => {
             const achievementDiv = document.createElement("div");
-            achievementDiv.style.margin = "10px 0";
-            achievementDiv.style.padding = "10px";
-            achievementDiv.style.borderBottom = "2px solid #333";
+            achievementDiv.classList.add('achievement-item');
             console.log(achievement[`message_${i18n.currentLang}`]);
             const message = achievementManager.getAchievementMessage(achievement);
             achievementDiv.innerHTML = `
