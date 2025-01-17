@@ -41,13 +41,13 @@ function updateUIText() {
 let achievements = {};
 
 function initializeAchievements() {
-    if (!achievementsData || !achievementsData[currentLang] || !achievementsData[currentLang].achievements) {
+    if (!achievementsData || !achievementsData.achievements) {
         console.error('Achievement data not properly loaded:', achievementsData);
         achievements = {};
         return;
     }
     
-    achievements = {...achievementsData[currentLang].achievements};
+    achievements = {...achievementsData.achievements};
     
     // Load saved achievements
     const savedAchievements = localStorage.getItem("achievements");
@@ -536,7 +536,7 @@ achievementsButton.addEventListener("click", () => {
             achievementDiv.style.borderBottom = "2px solid #333";
             achievementDiv.innerHTML = `
                 <div class="earned">
-                    ${achievement.message}
+                    ${achievement[`message_${currentLang}`]}
                 </div>
             `;
             modalAchievements.appendChild(achievementDiv);
