@@ -43,20 +43,25 @@ function updateUIText() {
         getText("achievements");
     document.getElementById("reset-button").textContent = getText("reset");
 
-    // Update table headers
-    const headers = document.querySelector("#achievements-table thead tr");
-    headers.innerHTML = `
-        <th>${getText("achievementName")}</th>
-        <th>${getText("achievementProgress")}</th>
-    `;
-
+    // Update achievements table with new language
     updateAchievementsTable(clickCounter);
 }
 
 
 function updateAchievementsTable(clicks) {
     const table = document.getElementById("achievements-table");
+    const thead = table.querySelector("thead");
     const tbody = document.getElementById("achievements-body");
+    
+    // Update headers
+    thead.innerHTML = `
+        <tr>
+            <th>${i18n.getText("achievementName", "ui")}</th>
+            <th>${i18n.getText("achievementProgress", "ui")}</th>
+        </tr>
+    `;
+    
+    // Update achievements
     tbody.innerHTML = "";
 
     const isMobile = window.innerWidth <= 768;

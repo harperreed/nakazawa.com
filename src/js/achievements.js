@@ -36,7 +36,7 @@ class AchievementManager {
         
         // Last resort
         console.error('No valid message found for achievement:', achievement);
-        return 'Achievement Unlocked!';
+        return i18n.getText("achievementUnlocked", "ui");
     }
 
     getDisplayAchievements(clicks, isMobile = false) {
