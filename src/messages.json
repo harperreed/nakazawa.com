@@ -152,22 +152,27 @@
 		},
 		{
 			"clicks": 3000,
+			"messageKey": "messages.destiny",
 			"message": "THREE THOUSAND CLICKS OF DESTINY"
 		},
 		{
 			"clicks": 3333,
+			"messageKey": "messages.triforce",
 			"message": "The Triple Click Triforce awakens!"
 		},
 		{
 			"clicks": 3777,
+			"messageKey": "messages.fortune",
 			"message": "Fortune favors the persistent clicker"
 		},
 		{
 			"clicks": 4000,
+			"messageKey": "messages.newDimensions",
 			"message": "Your clicking power reaches new dimensions"
 		},
 		{
 			"clicks": 4444,
+			"messageKey": "messages.quartet",
 			"message": "The Quadruple Click Quartet harmonizes"
 		},
 		{
