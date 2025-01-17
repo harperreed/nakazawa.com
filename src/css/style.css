@@ -2,12 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
 
+:root {
+    --game-font: "Press Start 2P";
+}
+
 html,
 body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Press Start 2P", serif;
+    font-family: var(--game-font), serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -22,7 +26,7 @@ body {
     min-height: 100vh;
     max-width: 100vw;
     overflow: hidden;
-    font-family: "Press Start 2P", serif;
+    font-family: var(--game-font), serif;
     font-weight: 400;
     font-style: normal;
 }

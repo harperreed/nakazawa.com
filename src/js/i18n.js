@@ -54,6 +54,28 @@ class I18n {
     getSupportedLanguages() {
         return Object.keys(this._translations);
     }
+
+    getFontFamily() {
+        return this._currentLang === 'ja' ? 'DotGothic16' : 'Press Start 2P';
+    }
+
+    setLanguage(lang) {
+        if (!this._translations[lang]) {
+            console.error(`Language "${lang}" not supported`);
+            return false;
+        }
+        
+        this._currentLang = lang;
+        localStorage.setItem("language", lang);
+        
+        // Update font family when language changes
+        document.documentElement.style.setProperty('--game-font', this.getFontFamily());
+        
+        return true;
+    }
 }
 
 export const i18n = new I18n();
+
+// Set initial font on load
+document.documentElement.style.setProperty('--game-font', i18n.getFontFamily());
