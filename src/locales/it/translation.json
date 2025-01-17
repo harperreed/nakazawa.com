@@ -1,0 +1,40 @@
+{
+    "title": "nakazawa 🐇🥕🐰",
+    "description": "🐇🥕🐰",
+    "buttons": {
+        "fullscreen": "Schermo intero",
+        "achievements": "Obiettivi",
+        "reset": "Azzera",
+        "language": "Lingua"
+    },
+    "achievements": {
+        "title": "Obiettivi",
+        "noAchievements": "Nessun obiettivo sbloccato. Continua a cliccare!",
+        "unlocked": "Obiettivo Sbloccato: {{message}}",
+        "progress": "{{progress}}%",
+        "beginner": "🎯 Coniglio Principiante",
+        "carrotSnatcher": "🥕 Ladro di Verdure",
+        "bunnyBerserker": "😡 Coniglio Furioso",
+        "hopPunk": "🎸 Coniglio Anarchico",
+        "bunnyNinja": "🥷 Silenzioso ma Letale",
+        "expert": "🌟 Saltatore Esperto",
+        "master": "👑 Re delle Carote",
+        "carrotpocalypse": "🥕 Distruttore di Orti",
+        "bunnyOverlord": "😈 Signore Supremo della Tana",
+        "chaosHare": "🌪️ Agente del Caos",
+        "carrotCultist": "⛪ Sommo Sacerdote del Culto della Carota",
+        "bunnyberryPie": "🥧 Maestro della Torta Allucinogena",
+        "rabbitHole": "🕳️ Scavatore di Tunnel Quantici",
+        "moonRabbit": "🌙 Coniglio Lunare",
+        "bunnyDoom": "💀 Araldo del Coniglipocalisse",
+        "carrotNuke": "☢️ Portatore della Carota Nucleare",
+        "bunnyMatrix": "🤖 Glitch nella Matrice dei Conigli"
+    },
+    "powerups": {
+        "bonusPoints": "🥕 +50 Punti Bonus!",
+        "clickStreak": "🔥 {{count}} Click Consecutivi!"
+    },
+    "reset": {
+        "confirm": "Sei sicuro di voler azzerare tutti i progressi? Questa azione non può essere annullata."
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "title": "中澤 🐇🥕🐰",
+    "description": "🐇🥕🐰",
+    "buttons": {
+        "fullscreen": "全螢幕",
+        "achievements": "成就",
+        "reset": "重置",
+        "language": "語言"
+    },
+    "achievements": {
+        "title": "成就",
+        "noAchievements": "還沒有獲得任何成就。繼續點擊！",
+        "unlocked": "解鎖成就：{{message}}",
+        "progress": "{{progress}}%",
+        "beginner": "🎯 新手兔子",
+        "carrotSnatcher": "🥕 蔬菜大盜",
+        "bunnyBerserker": "😡 狂暴兔子",
+        "hopPunk": "🎸 龐克兔子",
+        "bunnyNinja": "🥷 無聲致命毛球",
+        "expert": "🌟 跳躍專家",
+        "master": "👑 胡蘿蔔之王",
+        "carrotpocalypse": "🥕 菜園毀滅者",
+        "bunnyOverlord": "😈 兔子洞霸主",
+        "chaosHare": "🌪️ 混沌特工",
+        "carrotCultist": "⛪ 胡蘿蔔教大祭司",
+        "bunnyberryPie": "🥧 幻覺派大師",
+        "rabbitHole": "🕳️ 量子隧道挖掘機",
+        "moonRabbit": "🌙 月兔搗藥",
+        "bunnyDoom": "💀 兔子末日使者",
+        "carrotNuke": "☢️ 核胡蘿蔔持有者",
+        "bunnyMatrix": "🤖 兔子矩陣故障"
+    },
+    "powerups": {
+        "bonusPoints": "🥕 +50 獎勵分數！",
+        "clickStreak": "🔥 {{count}}連擊！"
+    },
+    "reset": {
+        "confirm": "確定要重置所有進度嗎？此操作無法撤消。"
+    }
+}

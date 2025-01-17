@@ -1,0 +1,40 @@
+{
+    "title": "nakazawa 🐇🥕🐰",
+    "description": "🐇🥕🐰",
+    "buttons": {
+        "fullscreen": "Vollbild",
+        "achievements": "Erfolge",
+        "reset": "Zurücksetzen",
+        "language": "Sprache"
+    },
+    "achievements": {
+        "title": "Erfolge",
+        "noAchievements": "Noch keine Erfolge erzielt. Klicke weiter!",
+        "unlocked": "Erfolg freigeschaltet: {{message}}",
+        "progress": "{{progress}}%",
+        "beginner": "🎯 Anfänger-Häschen",
+        "carrotSnatcher": "🥕 Gemüsedieb",
+        "bunnyBerserker": "😡 Rasender Hase",
+        "hopPunk": "🎸 Anarchisten-Hase",
+        "bunnyNinja": "🥷 Leise aber Tödlich",
+        "expert": "🌟 Experten-Hüpfer",
+        "master": "👑 Karotten-König",
+        "carrotpocalypse": "🥕 Garten-Zerstörer",
+        "bunnyOverlord": "😈 Oberster Herrscher des Baus",
+        "chaosHare": "🌪️ Agent des Chaos",
+        "carrotCultist": "⛪ Hohepriester des Karotten-Kults",
+        "bunnyberryPie": "🥧 Halluzinogener Kuchenmeister",
+        "rabbitHole": "🕳️ Quantentunnel-Gräber",
+        "moonRabbit": "🌙 Mondhase",
+        "bunnyDoom": "💀 Vorbote der Hasen-Apokalypse",
+        "carrotNuke": "☢️ Träger der Nuklear-Karotte",
+        "bunnyMatrix": "🤖 Störung in der Hasen-Matrix"
+    },
+    "powerups": {
+        "bonusPoints": "🥕 +50 Bonuspunkte!",
+        "clickStreak": "🔥 {{count}} Klick-Serie!"
+    },
+    "reset": {
+        "confirm": "Bist du sicher, dass du den gesamten Fortschritt zurücksetzen möchtest? Dies kann nicht rückgängig gemacht werden."
+    }
+}

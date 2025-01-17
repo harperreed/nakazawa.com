@@ -1,0 +1,40 @@
+{
+    "title": "nakazawa 🐇🥕🐰",
+    "description": "🐇🥕🐰",
+    "buttons": {
+        "fullscreen": "Plein écran",
+        "achievements": "Succès",
+        "reset": "Réinitialiser",
+        "language": "Langue"
+    },
+    "achievements": {
+        "title": "Succès",
+        "noAchievements": "Aucun succès débloqué. Continuez à cliquer !",
+        "unlocked": "Succès débloqué : {{message}}",
+        "progress": "{{progress}}%",
+        "beginner": "🎯 Lapin Débutant",
+        "carrotSnatcher": "🥕 Voleur de Légumes",
+        "bunnyBerserker": "😡 Lapin Enragé",
+        "hopPunk": "🎸 Lapin Anarchiste",
+        "bunnyNinja": "🥷 Silencieux mais Mortel",
+        "expert": "🌟 Sauteur Expert",
+        "master": "👑 Roi des Carottes",
+        "carrotpocalypse": "🥕 Destructeur de Potagers",
+        "bunnyOverlord": "😈 Seigneur Suprême du Terrier",
+        "chaosHare": "🌪️ Agent du Chaos",
+        "carrotCultist": "⛪ Grand Prêtre du Culte de la Carotte",
+        "bunnyberryPie": "🥧 Maître de la Tarte Hallucinogène",
+        "rabbitHole": "🕳️ Creuseur de Tunnels Quantiques",
+        "moonRabbit": "🌙 Lapin Lunaire",
+        "bunnyDoom": "💀 Héraut du Lapocalypse",
+        "carrotNuke": "☢️ Porteur de la Carotte Nucléaire",
+        "bunnyMatrix": "🤖 Bug dans la Matrice Lapine"
+    },
+    "powerups": {
+        "bonusPoints": "🥕 +50 Points Bonus !",
+        "clickStreak": "🔥 {{count}} Clics d'Affilée !"
+    },
+    "reset": {
+        "confirm": "Êtes-vous sûr de vouloir réinitialiser toute la progression ? Cette action est irréversible."
+    }
+}

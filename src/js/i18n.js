@@ -7,6 +7,12 @@ import zhTranslation from '../locales/zh/translation.json';
 import idTranslation from '../locales/id/translation.json';
 import koTranslation from '../locales/ko/translation.json';
 import hiTranslation from '../locales/hi/translation.json';
+import ptTranslation from '../locales/pt/translation.json';
+import deTranslation from '../locales/de/translation.json';
+import frTranslation from '../locales/fr/translation.json';
+import plTranslation from '../locales/pl/translation.json';
+import zhTWTranslation from '../locales/zh-TW/translation.json';
+import itTranslation from '../locales/it/translation.json';
 
 export const languages = {
   en: { nativeName: 'English' },
@@ -15,7 +21,13 @@ export const languages = {
   zh: { nativeName: '中文' },
   id: { nativeName: 'Bahasa Indonesia' },
   ko: { nativeName: '한국어' },
-  hi: { nativeName: 'हिन्दी' }
+  hi: { nativeName: 'हिन्दी' },
+  pt: { nativeName: 'Português' },
+  de: { nativeName: 'Deutsch' },
+  fr: { nativeName: 'Français' },
+  pl: { nativeName: 'Polski' },
+  'zh-TW': { nativeName: '繁體中文' },
+  it: { nativeName: 'Italiano' }
 };
 
 const i18nInstance = i18n
@@ -30,7 +42,13 @@ const i18nInstance = i18n
       zh: { translation: zhTranslation },
       id: { translation: idTranslation },
       ko: { translation: koTranslation },
-      hi: { translation: hiTranslation }
+      hi: { translation: hiTranslation },
+      pt: { translation: ptTranslation },
+      de: { translation: deTranslation },
+      fr: { translation: frTranslation },
+      pl: { translation: plTranslation },
+      'zh-TW': { translation: zhTWTranslation },
+      it: { translation: itTranslation }
     },
     interpolation: {
       escapeValue: false

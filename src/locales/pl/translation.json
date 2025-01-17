@@ -1,0 +1,40 @@
+{
+    "title": "nakazawa 🐇🥕🐰",
+    "description": "🐇🥕🐰",
+    "buttons": {
+        "fullscreen": "Pełny ekran",
+        "achievements": "Osiągnięcia",
+        "reset": "Reset",
+        "language": "Język"
+    },
+    "achievements": {
+        "title": "Osiągnięcia",
+        "noAchievements": "Brak osiągnięć. Klikaj dalej!",
+        "unlocked": "Odblokowano osiągnięcie: {{message}}",
+        "progress": "{{progress}}%",
+        "beginner": "🎯 Królik Początkujący",
+        "carrotSnatcher": "🥕 Złodziej Warzyw",
+        "bunnyBerserker": "😡 Wściekły Królik",
+        "hopPunk": "🎸 Królik Anarchista",
+        "bunnyNinja": "🥷 Cichy ale Śmiertelny",
+        "expert": "🌟 Ekspert Skoków",
+        "master": "👑 Król Marchewek",
+        "carrotpocalypse": "🥕 Niszczyciel Ogrodów",
+        "bunnyOverlord": "😈 Najwyższy Władca Króliczej Nory",
+        "chaosHare": "🌪️ Agent Chaosu",
+        "carrotCultist": "⛪ Najwyższy Kapłan Kultu Marchewki",
+        "bunnyberryPie": "🥧 Mistrz Halucynogennych Ciast",
+        "rabbitHole": "🕳️ Kopacz Kwantowych Tuneli",
+        "moonRabbit": "🌙 Księżycowy Królik",
+        "bunnyDoom": "💀 Zwiastun Króliczej Apokalipsy",
+        "carrotNuke": "☢️ Posiadacz Nuklearnej Marchewki",
+        "bunnyMatrix": "🤖 Błąd w Króliczym Matriksie"
+    },
+    "powerups": {
+        "bonusPoints": "🥕 +50 Punktów Bonusowych!",
+        "clickStreak": "🔥 {{count}} Kliknięć pod Rząd!"
+    },
+    "reset": {
+        "confirm": "Czy na pewno chcesz zresetować cały postęp? Tej operacji nie można cofnąć."
+    }
+}
