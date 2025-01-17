@@ -402,7 +402,7 @@ document.addEventListener("click", (e) => {
 
     const currentMessages = messages.messages.map((msg) => ({
         clicks: msg.clicks,
-        message: msg[`message_${currentLang}`],
+        message: msg[`message_${i18n.currentLang}`] || msg.message_en,
     }));
     flashMessage(clickCounter, currentMessages);
 
@@ -491,9 +491,8 @@ achievementsButton.addEventListener("click", () => {
             achievementDiv.style.margin = "10px 0";
             achievementDiv.style.padding = "10px";
             achievementDiv.style.borderBottom = "2px solid #333";
-            console.log(achievement[`message_${currentLang}`]);
-            const message =
-                achievement[`message_${currentLang}`] || achievement.message;
+            console.log(achievement[`message_${i18n.currentLang}`]);
+            const message = achievementManager.getAchievementMessage(achievement);
             achievementDiv.innerHTML = `
                 <div class="earned">
                     ${message}
