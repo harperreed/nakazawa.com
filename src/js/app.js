@@ -8,41 +8,10 @@ import { VisualEffects } from "./VisualEffects.js";
 
 const achievementManager = new AchievementManager(achievementsData);
 const visualEffects = new VisualEffects();
+const powerupManager = new PowerupManager();
 
 
-function screenShake() {
-    document.body.style.transform = "translate(5px, 5px)";
-    setTimeout(() => {
-        document.body.style.transform = "translate(-5px, -5px)";
-        setTimeout(() => {
-            document.body.style.transform = "translate(0, 0)";
-        }, 50);
-    }, 50);
-}
 
-function checkAchievements(clicks) {
-    let earned = false;
-    for (const [name, achievement] of Object.entries(achievements)) {
-        if (!achievement.earned && clicks >= achievement.threshold) {
-            achievement.earned = true;
-            earned = true;
-            screenShake();
-            flashMessage(clicks, [
-                {
-                    clicks,
-                    messageKey: 'achievements.unlocked',
-                    translationVars: {
-                        message: i18n.t(achievement.messageKey)
-                    }
-                },
-            ]);
-        }
-    }
-    if (earned) {
-        localStorage.setItem("achievements", JSON.stringify(achievements));
-    }
-    updateAchievementsTable(clicks);
-}
 
 // Detect if the website is loaded on a desktop
 const isDesktop = window.innerWidth > 1024;
@@ -54,9 +23,6 @@ document.getElementById("button-container").prepend(mobileCounterElement);
 const fullscreenButton = document.getElementById("fullscreen-button");
 
 let clickCounter = Number.parseInt(localStorage.getItem("clickCount") || "0");
-let powerupActive = false;
-let powerupMultiplier = 1;
-let powerupTimeout = null;
 let lastClickTime = Date.now();
 let clickSpeed = 0; // clicks per second
 let streakCount = 0;
@@ -105,82 +71,6 @@ function changeBackgroundImage() {
     document.body.style.backgroundImage = images[imageIndex];
 }
 
-// Handle clicks for confetti
-function spawnPowerup() {
-    const powerup = document.createElement("div");
-    powerup.id = "powerup";
-    powerup.style.left = Math.random() * (window.innerWidth - 40) + "px";
-    powerup.style.top = "0";
-    powerup.style.position = "fixed";
-    powerup.style.animation = "fall 3s linear forwards";
-
-    powerup.addEventListener("click", (e) => {
-        e.stopPropagation();
-
-        visualEffects.createPowerupConfetti(e);
-
-        activatePowerup();
-        powerup.remove();
-    });
-
-    // Add animation keyframes
-    if (!document.querySelector("#powerup-animation")) {
-        const style = document.createElement("style");
-        style.id = "powerup-animation";
-        style.textContent = `
-            @keyframes fall {
-                from { top: -50px; }
-                to { top: calc(100vh - 50px); }
-            }
-        `;
-        document.head.appendChild(style);
-    }
-
-    document.body.appendChild(powerup);
-
-    // Remove powerup if not clicked after animation
-    setTimeout(() => powerup.remove(), 3000);
-}
-
-let fireCursor = null;
-
-function activatePowerup() {
-    powerupActive = true;
-    powerupMultiplier = 2;
-
-    const timerElement = document.getElementById("timer");
-    const mobileTimerElement = document.createElement("div");
-    mobileTimerElement.id = "mobile-timer";
-    document.getElementById("button-container").prepend(mobileTimerElement);
-    timerElement.style.display = "block";
-
-    // Initialize fire cursor if not already created
-    if (!fireCursor) {
-        const canvas = document.getElementById("fire-cursor");
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        fireCursor = new FireCursor(canvas);
-    }
-    document.getElementById("fire-cursor").style.display = "block";
-
-    let timeLeft = 30;
-
-    clearInterval(powerupTimeout);
-    powerupTimeout = setInterval(() => {
-        timeLeft--;
-        timerElement.textContent = `${timeLeft}s`;
-        mobileTimerElement.textContent = `${timeLeft}s`;
-
-        if (timeLeft <= 0) {
-            clearInterval(powerupTimeout);
-            powerupActive = false;
-            powerupMultiplier = 1;
-            timerElement.style.display = "none";
-            mobileTimerElement.remove(); // Remove the mobile timer element completely
-            document.getElementById("fire-cursor").style.display = "none";
-        }
-    }, 1000);
-}
 
 // Calculate time since last click and update click speed
 function updateClickSpeed() {
@@ -245,13 +135,13 @@ function startPowerupSpawnTimer() {
     const delay = maxDelay - (maxDelay - minDelay) * speedMultiplier;
 
     setTimeout(() => {
-        spawnPowerup();
+        powerupManager.spawnPowerup();
         startPowerupSpawnTimer(); // Schedule next spawn
     }, delay);
 }
 
-// Start the initial spawn timer
-startPowerupSpawnTimer();
+// Start the initial powerup spawn timer
+powerupManager.startPowerupSpawnTimer(0);
 
 // Initialize translations and setup
 async function initializeApp() {
@@ -289,7 +179,7 @@ document.addEventListener("click", (e) => {
     updateClickSpeed();
     visualEffects.createClickConfetti(e);
 
-    clickCounter += powerupMultiplier;
+    clickCounter += powerupManager.getMultiplier();
     localStorage.setItem("clickCount", clickCounter.toString());
 
     clickCounterElement.innerText = `${clickCounter}`;
