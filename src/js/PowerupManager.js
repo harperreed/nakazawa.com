@@ -1,3 +1,5 @@
+import { flashMessage } from "./flashMessage.js";
+
 export class PowerupManager {
     constructor() {
         this.active = false;
@@ -85,6 +87,11 @@ export class PowerupManager {
         this.active = true;
         this.multiplier = 2;
         this.timerElement.style.display = "block";
+
+        flashMessage(0, [{
+            clicks: 0,
+            messageKey: 'powerups.activated'
+        }]);
 
         let timeLeft = 30;
 
