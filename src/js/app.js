@@ -1,10 +1,10 @@
-import confetti from "canvas-confetti";
 import achievementsData from "../achievements.json";
 import messages from "../messages.json";
 import i18n, { i18nInstance } from './i18n';
 import { flashMessage } from "./flashMessage.js";
 import { FireCursor } from "./fireCursor.js";
 import { AchievementManager } from "./AchievementManager.js";
+import { VisualEffects } from "./VisualEffects.js";
 
 const achievementManager = new AchievementManager(achievementsData);
 
