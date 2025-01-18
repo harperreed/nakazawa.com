@@ -7,6 +7,7 @@ import { AchievementManager } from "./AchievementManager.js";
 import { VisualEffects } from "./VisualEffects.js";
 
 const achievementManager = new AchievementManager(achievementsData);
+const visualEffects = new VisualEffects();
 
 function updateAchievementsTable(clicks) {
     const table = document.getElementById("achievements-table");
@@ -141,43 +142,6 @@ if ("serviceWorker" in navigator) {
     });
 }
 
-// Initialize confetti canvas
-const myCanvas = document.createElement("canvas");
-document.body.appendChild(myCanvas);
-const myConfetti = confetti.create(myCanvas, {
-    resize: true,
-    useWorker: true,
-});
-
-// Define vibration patterns
-const patterns = {
-    small: 200,
-    large: [200, 100, 200],
-    evenBigger: [200, 100, 200, 100, 200],
-};
-
-// Vibration pattern function
-function vibrationPattern(index) {
-    if (!window.navigator.vibrate) {
-        console.log(
-            "Your device does not support the Vibration API. Try on an Android phone!",
-        );
-    } else {
-        window.navigator.vibrate(patterns[index]);
-    }
-}
-
-// Function to blend/fade the background color every 25 clicks
-function blendBackgroundColor() {
-    const colors = ["#FFB6C1", "#87CEEB", "#98FB98", "#DDA0DD", "#F0E68C"];
-    const currentColorIndex = Math.floor(clickCounter / 25) % colors.length;
-    const nextColorIndex = (currentColorIndex + 1) % colors.length;
-    const currentColor = colors[currentColorIndex];
-    const nextColor = colors[nextColorIndex];
-
-    document.body.style.transition = "background-color 1s ease-in-out";
-    document.body.style.backgroundColor = nextColor;
-}
 
 // Function to change the background to various images after 500 clicks
 function changeBackgroundImage() {
@@ -204,34 +168,7 @@ function spawnPowerup() {
     powerup.addEventListener("click", (e) => {
         e.stopPropagation();
 
-        // Create large confetti explosion
-        const count = 200;
-        const defaults = {
-            origin: {
-                x: e.clientX / window.innerWidth,
-                y: e.clientY / window.innerHeight,
-            },
-            spread: 360,
-            startVelocity: 45,
-            scalar: 2,
-            ticks: 100,
-            colors: ["#ff0000", "#000000"],
-            shapes: ["square", "circle"],
-        };
-
-        confetti({
-            ...defaults,
-            particleCount: count,
-            gravity: 0.8,
-        });
-
-        // Second wave for more density
-        confetti({
-            ...defaults,
-            particleCount: count,
-            gravity: 1.2,
-            scalar: 1.5,
-        });
+        visualEffects.createPowerupConfetti(e);
 
         activatePowerup();
         powerup.remove();
@@ -401,17 +338,7 @@ initializeApp().catch(console.error);
 
 document.addEventListener("click", (e) => {
     updateClickSpeed();
-    confetti({
-        particleCount: 100,
-        spread: 70,
-        gravity: 0.4,
-        shapes: ["star", "circle", "square"],
-        colors: ["#FFB6C1", "#87CEEB", "#98FB98", "#DDA0DD", "#F0E68C"],
-        origin: {
-            x: e.clientX / window.innerWidth,
-            y: e.clientY / window.innerHeight,
-        },
-    });
+    visualEffects.createClickConfetti(e);
 
     clickCounter += powerupMultiplier;
     localStorage.setItem("clickCount", clickCounter.toString());
@@ -447,7 +374,7 @@ document.addEventListener("click", (e) => {
         console.log(
             `Click count ${clickCounter} divisible by 100 - triggering even bigger vibration`,
         );
-        vibrationPattern("evenBigger"); // Even bigger vibration
+        visualEffects.vibrate("evenBigger"); // Even bigger vibration
         // Display flash message
         console.log(
             `Flash message displayed: ${i18n.t('powerups.clickStreak', { count: clickCounter })}`,
@@ -456,17 +383,17 @@ document.addEventListener("click", (e) => {
         console.log(
             `Click count ${clickCounter} divisible by 10 - triggering large vibration`,
         );
-        vibrationPattern("large"); // Large vibration
+        visualEffects.vibrate("large"); // Large vibration
     } else {
         console.log(`Click count ${clickCounter} - triggering small vibration`);
-        vibrationPattern("small"); // Small vibration
+        visualEffects.vibrate("small"); // Small vibration
     }
 
     if (clickCounter % 25 === 0) {
         console.log(
             `Click count ${clickCounter} divisible by 25 - changing background color`,
         );
-        blendBackgroundColor();
+        visualEffects.blendBackgroundColor(clickCounter);
     }
 
     if (clickCounter >= 500) {
