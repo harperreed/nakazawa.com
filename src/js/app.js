@@ -5,10 +5,13 @@ import { flashMessage } from "./flashMessage.js";
 import { FireCursor } from "./fireCursor.js";
 import { AchievementManager } from "./AchievementManager.js";
 import { VisualEffects } from "./VisualEffects.js";
+import { PowerupManager } from "./PowerupManager.js";
+import { ClickTracker } from "./ClickTracker.js";
 
 const achievementManager = new AchievementManager(achievementsData);
 const visualEffects = new VisualEffects();
 const powerupManager = new PowerupManager();
+const clickTracker = new ClickTracker();
 
 
 
@@ -58,18 +61,6 @@ if ("serviceWorker" in navigator) {
 }
 
 
-// Function to change the background to various images after 500 clicks
-function changeBackgroundImage() {
-    const images = [
-        "url('image1.jpg')",
-        "url('image2.jpg')",
-        "url('image3.jpg')",
-        "url('image4.jpg')",
-        "url('image5.jpg')",
-    ];
-    const imageIndex = Math.floor((clickCounter - 500) / 25) % images.length;
-    document.body.style.backgroundImage = images[imageIndex];
-}
 
 
 // Calculate time since last click and update click speed
@@ -98,33 +89,6 @@ function updateClickSpeed() {
     lastClickTime = now;
 }
 
-// Dynamic powerup spawn timing
-function spawnRandomCarrot() {
-    const carrot = document.createElement("div");
-    carrot.style.position = "absolute";
-    carrot.style.left = `${Math.random() * (window.innerWidth - 50)}px`;
-    carrot.style.top = `${Math.random() * (window.innerHeight - 50)}px`;
-    carrot.style.width = "50px";
-    carrot.style.height = "50px";
-    carrot.style.cursor = "pointer";
-    carrot.style.backgroundImage = `url("${new URL("../images/carrot-powerup.webp", import.meta.url)}")`;
-    carrot.style.backgroundSize = "contain";
-    carrot.style.filter = "drop-shadow(3px 3px 3px rgba(0,0,0,0.5))";
-
-    carrot.onclick = () => {
-        clickCounter += 50; // Bonus points
-        carrot.remove();
-        flashMessage(clickCounter, [
-            { 
-                clicks: clickCounter, 
-                messageKey: 'powerups.bonusPoints'
-            },
-        ]);
-    };
-
-    document.body.appendChild(carrot);
-    setTimeout(() => carrot.remove(), 3000); // Remove after 3 seconds
-}
 
 function startPowerupSpawnTimer() {
     const minDelay = 45000; // 45 seconds minimum
@@ -176,7 +140,7 @@ async function initializeApp() {
 initializeApp().catch(console.error);
 
 document.addEventListener("click", (e) => {
-    updateClickSpeed();
+    clickTracker.updateClickSpeed();
     visualEffects.createClickConfetti(e);
 
     clickCounter += powerupManager.getMultiplier();
@@ -205,7 +169,7 @@ document.addEventListener("click", (e) => {
     if (Math.random() < 0.01) {
         // 1% chance on each click
         console.log(i18n.t('powerups.bonusPoints'));
-        spawnRandomCarrot();
+        powerupManager.spawnRandomCarrot();
     }
 
     // Haptic feedback
@@ -266,7 +230,7 @@ achievementsButton.addEventListener("click", () => {
     modalAchievements.innerHTML = ""; // Clear existing content
 
     // Filter and sort earned achievements
-    const earnedAchievements = Object.entries(achievements)
+    const earnedAchievements = Object.entries(achievementManager.achievements)
         .map(([name, achievement]) => ({ name, ...achievement }))
         .filter((achievement) => achievement.earned)
         .sort((a, b) => a.threshold - b.threshold);
