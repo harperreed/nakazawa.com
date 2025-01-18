@@ -4,15 +4,9 @@ import messages from "../messages.json";
 import i18n, { i18nInstance } from './i18n';
 import { flashMessage } from "./flashMessage.js";
 import { FireCursor } from "./fireCursor.js";
+import { AchievementManager } from "./AchievementManager.js";
 
-// Achievement System
-const achievements = achievementsData.achievements;
-
-// Load saved achievements
-const savedAchievements = localStorage.getItem("achievements");
-if (savedAchievements) {
-    Object.assign(achievements, JSON.parse(savedAchievements));
-}
+const achievementManager = new AchievementManager(achievementsData);
 
 function updateAchievementsTable(clicks) {
     const table = document.getElementById("achievements-table");
