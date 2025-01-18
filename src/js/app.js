@@ -9,57 +9,6 @@ import { VisualEffects } from "./VisualEffects.js";
 const achievementManager = new AchievementManager(achievementsData);
 const visualEffects = new VisualEffects();
 
-function updateAchievementsTable(clicks) {
-    const table = document.getElementById("achievements-table");
-    const tbody = document.getElementById("achievements-body");
-    tbody.innerHTML = "";
-
-    // Convert achievements to array and sort by threshold
-    const achievementsArray = Object.entries(achievements)
-        .map(([name, achievement]) => ({ name, ...achievement }))
-        .sort((a, b) => a.threshold - b.threshold);
-
-    // Find the last earned achievement and next two unearned
-    let lastEarned = null;
-    const nextUnearned = [];
-
-    for (const achievement of achievementsArray) {
-        if (achievement.earned) {
-            lastEarned = achievement;
-        } else if (nextUnearned.length < 2) {
-            nextUnearned.push(achievement);
-        }
-    }
-
-    // Show different achievements based on screen size
-    let hasEarned = false;
-    const isMobile = window.innerWidth <= 768;
-    const achievementsToShow = isMobile
-        ? nextUnearned.slice(0, 1) // Show only next achievement on mobile
-        : [lastEarned, ...nextUnearned].filter((a) => a !== null); // Show last earned + next two on desktop
-
-    for (const achievement of achievementsToShow) {
-        const row = document.createElement("tr");
-        const progress = Math.min(
-            (clicks / achievement.threshold) * 100,
-            100,
-        ).toFixed(0);
-        row.innerHTML = `
-            <td class="${achievement.earned ? "earned" : "locked"}">${i18n.t(achievement.messageKey)}</td>
-            <td>${i18n.t('achievements.progress', { progress })}</td>
-        `;
-        tbody.appendChild(row);
-        if (achievement.earned) {
-            hasEarned = true;
-        }
-    }
-
-    // Always show the table on mobile if there are achievements to show
-    table.style.display =
-        (isMobile && achievementsToShow.length > 0) || hasEarned
-            ? "table"
-            : "none";
-}
 
 function screenShake() {
     document.body.style.transform = "translate(5px, 5px)";
@@ -119,11 +68,11 @@ clickCounterElement.innerText = `${clickCounter}`;
 mobileCounterElement.innerText = `${clickCounter}`;
 
 // Initialize achievements table
-updateAchievementsTable(clickCounter);
+achievementManager.updateAchievementsTable(clickCounter);
 
 // Update achievements table on window resize
 window.addEventListener("resize", () => {
-    updateAchievementsTable(clickCounter);
+    achievementManager.updateAchievementsTable(clickCounter);
 });
 
 // Register Service Worker
@@ -360,7 +309,7 @@ document.addEventListener("click", (e) => {
     flashMessage(clickCounter, messages.messages);
 
     // Check achievements
-    checkAchievements(clickCounter);
+    achievementManager.checkAchievements(clickCounter);
 
     // Random carrot spawn chance
     if (Math.random() < 0.01) {
@@ -468,11 +417,8 @@ resetButton.addEventListener("click", () => {
     if (confirm(i18n.t('reset.confirm'))) {
         localStorage.clear();
         clickCounter = 0;
-        Object.keys(achievements).forEach((key) => {
-            achievements[key].earned = false;
-        });
+        achievementManager.reset();
         clickCounterElement.style.display = "none";
-        updateAchievementsTable(0);
         location.reload(); // Refresh the page to reset everything
     }
 });
