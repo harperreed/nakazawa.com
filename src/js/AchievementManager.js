@@ -1,4 +1,5 @@
 import i18n from './i18n';
+import { flashMessage } from "./flashMessage.js";
 
 export class AchievementManager {
     constructor(achievementsData) {
@@ -88,24 +89,10 @@ export class AchievementManager {
     }
 
     flashAchievement(achievement) {
-        const messageElement = document.createElement("div");
-        messageElement.className = "flash-message";
-        messageElement.innerText = i18n.t('achievements.unlocked', {
-            message: i18n.t(achievement.messageKey)
-        });
-        
-        const container = document.getElementById("flash-messages-container") ||
-            this.createMessagesContainer();
-        container.appendChild(messageElement);
-        
-        setTimeout(() => messageElement.remove(), 3000);
-    }
-
-    createMessagesContainer() {
-        const container = document.createElement("div");
-        container.id = "flash-messages-container";
-        document.body.appendChild(container);
-        return container;
+        flashMessage(achievement.threshold, [{
+            clicks: achievement.threshold,
+            messageKey: achievement.messageKey
+        }]);
     }
 
     reset() {
