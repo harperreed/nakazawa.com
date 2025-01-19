@@ -30,6 +30,8 @@ export const languages = {
   it: { nativeName: 'Italiano' }
 };
 
+// You can override the language by adding ?lng=LANGUAGE_CODE to the URL
+// For example: ?lng=ja for Japanese, ?lng=es for Spanish
 const i18nInstance = i18n
   .use(LanguageDetector)
   .init({
