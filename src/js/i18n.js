@@ -35,6 +35,10 @@ export const languages = {
 // You can override the language by adding ?lng=LANGUAGE_CODE to the URL
 // For example: ?lng=ja for Japanese, ?lng=es for Spanish
 const i18nInstance = i18n.use(LanguageDetector).init({
+    detection: {
+        order: ['querystring', 'navigator'],
+        lookupQuerystring: 'lng'
+    },
     debug: true,
     fallbackLng: {
         "zh-TW": ["zh"],
@@ -58,6 +62,14 @@ const i18nInstance = i18n.use(LanguageDetector).init({
     interpolation: {
         escapeValue: false,
     },
+});
+
+// Set the language dropdown to match the detected/selected language
+i18nInstance.then(() => {
+    const languageSelect = document.getElementById('language-select');
+    if (languageSelect) {
+        languageSelect.value = i18n.language;
+    }
 });
 
 export { i18nInstance };
