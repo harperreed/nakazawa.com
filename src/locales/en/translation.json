@@ -75,7 +75,8 @@
     },
     "powerups": {
         "bonusPoints": "🥕 +50 Bonus Points!",
-        "clickStreak": "🔥 {{count}} Click Streak!"
+        "clickStreak": "🔥 {{count}} Click Streak!",
+        "fire": "🔥 Fire Power Activated!"
     },
     "reset": {
         "confirm": "Are you sure you want to reset all progress? This cannot be undone."
