@@ -1,4 +1,5 @@
 import { flashMessage } from "./flashMessage.js";
+import confetti from "canvas-confetti";
 
 export class PowerupManager {
     constructor() {
@@ -50,6 +51,10 @@ export class PowerupManager {
             e.stopPropagation();
             this.createConfettiExplosion(e);
             this.activate();
+            flashMessage(0, [{
+                clicks: 0,
+                messageKey: 'powerups.activated'
+            }]);
             powerup.remove();
         });
     }
@@ -87,11 +92,6 @@ export class PowerupManager {
         this.active = true;
         this.multiplier = 2;
         this.timerElement.style.display = "block";
-
-        flashMessage(0, [{
-            clicks: 0,
-            messageKey: 'powerups.activated'
-        }]);
 
         let timeLeft = 30;
 
