@@ -13,6 +13,9 @@ const visualEffects = new VisualEffects();
 const powerupManager = new PowerupManager();
 const clickTracker = new ClickTracker();
 
+// Expose powerupManager globally for debugging
+window.powerupManager = powerupManager;
+
 
 
 
