@@ -1,5 +1,6 @@
 import { flashMessage } from "./flashMessage.js";
 import confetti from "canvas-confetti";
+import { FireCursor } from "./fireCursor.js";
 
 export class PowerupManager {
     constructor() {
@@ -8,6 +9,7 @@ export class PowerupManager {
         this.timeout = null;
         this.timerElement = document.getElementById("timer");
         this.mobileTimerElement = null;
+        this.fireCursor = null;
         this.setupMobileTimer();
     }
 
@@ -53,7 +55,7 @@ export class PowerupManager {
             this.activate();
             flashMessage(0, [{
                 clicks: 0,
-                messageKey: 'powerups.activated'
+                messageKey: 'powerups.fire'
             }]);
             powerup.remove();
         });
@@ -92,6 +94,19 @@ export class PowerupManager {
         this.active = true;
         this.multiplier = 2;
         this.timerElement.style.display = "block";
+        
+        // Initialize fire cursor
+        const canvas = document.createElement("canvas");
+        canvas.style.position = "fixed";
+        canvas.style.top = "0";
+        canvas.style.left = "0";
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+        canvas.style.pointerEvents = "none";
+        canvas.style.zIndex = "9999";
+        document.body.appendChild(canvas);
+        this.fireCursor = new FireCursor(canvas);
+        this.fireCursor.startAnimation();
 
         let timeLeft = 30;
 
@@ -113,6 +128,12 @@ export class PowerupManager {
         this.multiplier = 1;
         this.timerElement.style.display = "none";
         this.mobileTimerElement.textContent = "";
+        
+        // Remove fire cursor
+        if (this.fireCursor) {
+            this.fireCursor.canvas.remove();
+            this.fireCursor = null;
+        }
     }
 
     spawnRandomCarrot() {
