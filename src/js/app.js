@@ -107,6 +107,16 @@ async function initializeApp() {
 // Start initialization
 initializeApp().catch(console.error);
 
+// Listen for powerup collection
+document.addEventListener('powerupCollected', (e) => {
+    clickCounter += e.detail.bonus;
+    localStorage.setItem("clickCount", clickCounter.toString());
+    clickCounterElement.innerText = `${clickCounter}`;
+    mobileCounterElement.innerText = `${clickCounter}`;
+    visualEffects.screenShake();
+    visualEffects.vibrate("large");
+});
+
 document.addEventListener("click", (e) => {
     clickTracker.updateClickSpeed();
     visualEffects.createClickConfetti(e);
@@ -136,17 +146,7 @@ document.addEventListener("click", (e) => {
     // Random carrot spawn chance
     if (Math.random() < 0.01) {
         // 1% chance on each click
-        const carrot = powerupManager.spawnRandomCarrot();
-        if (carrot) {
-            carrot.onclick = (e) => {
-                clickCounter += 50;
-                localStorage.setItem("clickCount", clickCounter.toString());
-                clickCounterElement.innerText = `${clickCounter}`;
-                mobileCounterElement.innerText = `${clickCounter}`;
-                visualEffects.screenShake();
-                visualEffects.vibrate("large");
-            };
-        }
+        powerupManager.spawnRandomCarrot();
     }
 
     // Haptic feedback

@@ -135,7 +135,9 @@ export class PowerupManager {
                 messageKey: 'powerups.bonusPoints'
             }]);
             carrot.remove();
-            return bonus;
+            document.dispatchEvent(new CustomEvent('powerupCollected', { 
+                detail: { bonus }
+            }));
         };
 
         document.body.appendChild(carrot);
