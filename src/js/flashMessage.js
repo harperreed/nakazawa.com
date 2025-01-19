@@ -1,3 +1,5 @@
+import i18n from './i18n';
+
 export function flashMessage(clickCount, messages) {
 	const container =
 		document.getElementById("flash-messages-container") ||
@@ -7,7 +9,9 @@ export function flashMessage(clickCount, messages) {
 	if (messageObj) {
 		const messageElement = document.createElement("div");
 		messageElement.className = "flash-message";
-		messageElement.innerText = messageObj.message;
+		messageElement.innerText = messageObj.translationVars 
+		    ? i18n.t(messageObj.messageKey, messageObj.translationVars)
+		    : i18n.t(messageObj.messageKey);
 		container.appendChild(messageElement);
 
 		// Adjust positions of existing messages
