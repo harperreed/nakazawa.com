@@ -100,13 +100,17 @@ class Pixel {
 export class FireCursor {
     constructor(canvas) {
         this.canvas = canvas;
+        canvas.width = window.innerWidth * DPR;
+        canvas.height = window.innerHeight * DPR;
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
         this.ctx = canvas.getContext("2d");
         this.bounds = {
-            w: window.innerWidth,
-            h: window.innerHeight,
+            w: window.innerWidth * DPR,
+            h: window.innerHeight * DPR,
             center: {
-                x: window.innerWidth / 2,
-                y: window.innerHeight / 2,
+                x: (window.innerWidth * DPR) / 2,
+                y: (window.innerHeight * DPR) / 2,
             },
         };
         this.pointer = { position: { x: 0, y: 0 } };
@@ -125,12 +129,12 @@ export class FireCursor {
         });
 
         window.addEventListener("resize", () => {
-            this.canvas.width = window.innerWidth;
-            this.canvas.height = window.innerHeight;
-            this.bounds.w = window.innerWidth;
-            this.bounds.h = window.innerHeight;
-            this.bounds.center.x = window.innerWidth / 2;
-            this.bounds.center.y = window.innerHeight / 2;
+            this.canvas.width = window.innerWidth * DPR;
+            this.canvas.height = window.innerHeight * DPR;
+            this.bounds.w = window.innerWidth * DPR;
+            this.bounds.h = window.innerHeight * DPR;
+            this.bounds.center.x = (window.innerWidth * DPR) / 2;
+            this.bounds.center.y = (window.innerHeight * DPR) / 2;
             this.matrix.resize({ bounds: this.bounds });
         });
     }
