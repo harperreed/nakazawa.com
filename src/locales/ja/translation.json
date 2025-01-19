@@ -78,6 +78,10 @@
         "bonusPoints": "🥕 +50 ボーナスポイント！",
         "clickStreak": "🔥 {{count}}連続クリック！"
     },
+    "table": {
+        "achievement": "実績",
+        "progress": "進捗"
+    },
     "reset": {
         "confirm": "本当に全ての進行状況をリセットしますか？この操作は取り消せません。"
     }

@@ -79,6 +79,10 @@
         "bonusPoints": "🥕 ¡+50 Puntos Extra!",
         "clickStreak": "🔥 ¡{{count}} Clics Seguidos!"
     },
+    "table": {
+        "achievement": "Logro",
+        "progress": "Progreso"
+    },
     "reset": {
         "confirm": "¿Estás seguro de que quieres reiniciar todo el progreso? Esta acción no se puede deshacer."
     }

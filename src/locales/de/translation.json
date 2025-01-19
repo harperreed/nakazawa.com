@@ -78,6 +78,10 @@
         "bonusPoints": "🥕 +50 Bonuspunkte!",
         "clickStreak": "🔥 {{count}} Klick-Serie!"
     },
+    "table": {
+        "achievement": "Erfolg",
+        "progress": "Fortschritt"
+    },
     "reset": {
         "confirm": "Bist du sicher, dass du den gesamten Fortschritt zurücksetzen möchtest? Dies kann nicht rückgängig gemacht werden."
     }

@@ -78,6 +78,10 @@
         "bonusPoints": "🥕 +50 Punti Bonus!",
         "clickStreak": "🔥 {{count}} Click Consecutivi!"
     },
+    "table": {
+        "achievement": "Obiettivo",
+        "progress": "Progresso"
+    },
     "reset": {
         "confirm": "Sei sicuro di voler azzerare tutti i progressi? Questa azione non può essere annullata."
     }

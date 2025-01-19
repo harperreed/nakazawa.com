@@ -76,8 +76,12 @@
         "godhood": "VOUS AVEZ ATTEINT LA DIVINITÉ DU CLIC"
     },
     "powerups": {
-        "bonusPoints": "🥕 +50 Points Bonus !",
+        "bonusPoints": "🥕 +50 Bonus Points!",
         "clickStreak": "🔥 {{count}} Clics d'Affilée !"
+    },
+    "table": {
+        "achievement": "Succès",
+        "progress": "Progrès"
     },
     "reset": {
         "confirm": "Êtes-vous sûr de vouloir réinitialiser toute la progression ? Cette action est irréversible."

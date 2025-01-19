@@ -79,6 +79,10 @@
         "bonusPoints": "🥕 +50 Poin Bonus!",
         "clickStreak": "🔥 {{count}} Klik Beruntun!"
     },
+    "table": {
+        "achievement": "Prestasi",
+        "progress": "Kemajuan"
+    },
     "reset": {
         "confirm": "Apakah Anda yakin ingin mengatur ulang semua kemajuan? Ini tidak dapat dibatalkan."
     }
