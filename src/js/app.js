@@ -105,7 +105,7 @@ async function initializeApp() {
         await i18n.changeLanguage(event.target.value);
         updatePageTranslations();
         // Update any dynamic content that needs translation
-        updateAchievementsTable(clickCounter);
+        achievementManager.updateAchievementsTable(clickCounter);
     });
 }
 
