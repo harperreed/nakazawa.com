@@ -184,4 +184,16 @@ export class PowerupManager {
     isActive() {
         return this.active;
     }
+
+    // Debug methods
+    debug = {
+        triggerFirePowerup: (e = { clientX: window.innerWidth/2, clientY: window.innerHeight/2 }) => {
+            this.createConfettiExplosion(e);
+            this.activate();
+            flashMessage(0, [{
+                clicks: 0,
+                messageKey: 'powerups.fire'
+            }]);
+        }
+    }
 }
