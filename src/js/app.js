@@ -97,7 +97,9 @@ async function initializeApp() {
 
     // Handle language changes
     const languageSelect = document.getElementById('language-select');
-    languageSelect.value = i18n.language || 'en';
+    // Set initial language value after i18next has detected the language
+    const currentLanguage = i18n.language.split('-')[0]; // Handle cases like 'en-US' -> 'en'
+    languageSelect.value = currentLanguage;
     
     languageSelect.addEventListener('change', async (event) => {
         await i18n.changeLanguage(event.target.value);
