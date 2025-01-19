@@ -120,8 +120,8 @@ export class FireCursor {
 
     setupEventListeners() {
         window.addEventListener("mousemove", (e) => {
-            this.pointer.position.x = e.clientX;
-            this.pointer.position.y = e.clientY;
+            this.pointer.position.x = e.clientX * DPR;
+            this.pointer.position.y = e.clientY * DPR;
         });
 
         window.addEventListener("resize", () => {
