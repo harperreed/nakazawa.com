@@ -397,3 +397,16 @@ body {
     z-index: 10;
     display: none;
 }
+
+/* Media query to hide language word in dropdown for screens smaller than 768px */
+@media (max-width: 768px) {
+    #language-select option {
+        display: flex;
+        justify-content: center;
+    }
+
+    #language-select option::after {
+        content: "";
+        display: none;
+    }
+}
