@@ -403,16 +403,18 @@ body {
     #language-select {
         width: auto;
     }
-    
+
     #language-select option {
         font-size: 16px;
     }
 
     #language-select option span.lang-text {
         display: none;
+        font-size: 50px;
     }
 
     #language-select option span.lang-emoji {
         display: inline;
+        font-size: 20px;
     }
 }
