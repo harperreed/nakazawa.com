@@ -78,6 +78,10 @@
         "clickStreak": "🔥 {{count}} Click Streak!",
         "fire": "🔥 Fire Power Activated!"
     },
+    "table": {
+        "achievement": "Achievement",
+        "progress": "Progress"
+    },
     "reset": {
         "confirm": "Are you sure you want to reset all progress? This cannot be undone."
     }
