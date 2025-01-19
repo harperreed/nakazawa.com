@@ -127,8 +127,13 @@ export class PowerupManager {
         carrot.style.backgroundSize = "contain";
         carrot.style.filter = "drop-shadow(3px 3px 3px rgba(0,0,0,0.5))";
 
-        carrot.onclick = () => {
+        carrot.onclick = (e) => {
             const bonus = 50;
+            this.createConfettiExplosion(e);
+            flashMessage(bonus, [{
+                clicks: bonus,
+                messageKey: 'powerups.bonusPoints'
+            }]);
             carrot.remove();
             return bonus;
         };

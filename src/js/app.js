@@ -136,8 +136,17 @@ document.addEventListener("click", (e) => {
     // Random carrot spawn chance
     if (Math.random() < 0.01) {
         // 1% chance on each click
-        console.log(i18n.t('powerups.bonusPoints'));
-        powerupManager.spawnRandomCarrot();
+        const carrot = powerupManager.spawnRandomCarrot();
+        if (carrot) {
+            carrot.onclick = (e) => {
+                clickCounter += 50;
+                localStorage.setItem("clickCount", clickCounter.toString());
+                clickCounterElement.innerText = `${clickCounter}`;
+                mobileCounterElement.innerText = `${clickCounter}`;
+                visualEffects.screenShake();
+                visualEffects.vibrate("large");
+            };
+        }
     }
 
     // Haptic feedback
