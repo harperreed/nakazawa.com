@@ -5,10 +5,11 @@ X-Content-Type-Options = "nosniff"
 Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
 X-Frame-Options = "SAMEORIGIN"
 Referrer-Policy = "strict-origin-when-cross-origin"
-Permissions-Policy = "microphone 'none'; payment 'none'; geolocation 'none'; midi 'none'; sync-xhr 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'"
+Permissions-Policy = "microphone=(), payment=(), geolocation=(), midi=(), sync-xhr=(), camera=(), magnetometer=(), gyroscope=()"
 Content-Security-Policy = """
     default-src 'self';
-    script-src 'self' https://cdn.jsdelivr.net https://tinylytics.app;
+    script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net https://tinylytics.app;
+    worker-src blob: 'self';
     style-src 'self' https://fonts.googleapis.com;
     font-src 'self' https://fonts.gstatic.com;
     img-src 'self' data: https: http: * https://s.gravatar.com;
@@ -84,5 +85,5 @@ to = "https://linkedin.com/in/hiromi"
 status = 302
 
 [build]
-command = "yarn install --frozen-lockfile; yarn build;"
+command = "npm install && npm run build"
 publish = "dist"
