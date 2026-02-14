@@ -84,6 +84,21 @@
 			"threshold": 15000,
 			"earned": false,
 			"messageKey": "achievements.bunnyMatrix"
+		},
+		"CosmicHare": {
+			"threshold": 25000,
+			"earned": false,
+			"messageKey": "achievements.cosmicHare"
+		},
+		"WarrenSingularity": {
+			"threshold": 42000,
+			"earned": false,
+			"messageKey": "achievements.warrenSingularity"
+		},
+		"EternalBunny": {
+			"threshold": 50000,
+			"earned": false,
+			"messageKey": "achievements.eternalBunny"
 		}
 	}
 }

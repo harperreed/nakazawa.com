@@ -2,398 +2,397 @@
 
 html,
 body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: "Press Start 2P", serif;
-    font-weight: 400;
-    font-style: normal;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: "Press Start 2P", serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 body {
-    background-image: url("../images/bunnies.gif");
-    background-repeat: repeat;
-    cursor:
-        url("../images/carrot.png") 16 16,
-        auto;
+	background-image: url("../images/bunnies.gif");
+	background-repeat: repeat;
+	cursor: url("../images/carrot.png") 16 16, auto;
 
-    min-height: 100vh;
-    max-width: 100vw;
-    overflow: hidden;
-    font-family: "Press Start 2P", serif;
-    font-weight: 400;
-    font-style: normal;
+	min-height: 100vh;
+	max-width: 100vw;
+	overflow: hidden;
+	font-family: "Press Start 2P", serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
-#click-counter, #mobile-counter {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #fff;
-    padding: 10px;
-    border: 4px solid #333;
-    border-style: double;
-    image-rendering: pixelated;
-    font-size: 24px;
-    color: #333;
-    box-shadow: 4px 4px 0px #333;
-    animation: fadeIn 1s ease-in-out;
-    user-select: none;
+#click-counter,
+#mobile-counter {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-color: #fff;
+	padding: 10px;
+	border: 4px solid #333;
+	border-style: double;
+	image-rendering: pixelated;
+	font-size: 24px;
+	color: #333;
+	box-shadow: 4px 4px 0px #333;
+	animation: fadeIn 1s ease-in-out;
+	user-select: none;
 }
 
 #mobile-counter {
-    display: none !important;
+	display: none !important;
 }
 
 @media (max-width: 768px) {
-    #click-counter {
-        display: none !important;
-    }
-    
-    #mobile-counter {
-        display: block !important;
-        position: static;
-        margin: 0;
-        box-shadow: none;
-        border: none;
-        border-right: 4px solid #333;
-        padding: 10px 15px;
-        font-size: 16px;
-        flex: 1;
-        text-align: center;
-        background: transparent;
-    }
+	#click-counter {
+		display: none !important;
+	}
+
+	#mobile-counter {
+		display: block !important;
+		position: static;
+		margin: 0;
+		box-shadow: none;
+		border: none;
+		border-right: 4px solid #333;
+		padding: 10px 15px;
+		font-size: 16px;
+		flex: 1;
+		text-align: center;
+		background: transparent;
+	}
 }
 
 #achievements-table {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 15px;
-    border: 4px solid #333;
-    border-style: double;
-    box-shadow: 4px 4px 0px #333;
-    font-size: 12px;
-    color: #333;
-    border-collapse: collapse;
-    user-select: none;
-    max-height: 50vh;
-    overflow-y: auto;
-    z-index: 900;
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	background-color: rgba(255, 255, 255, 0.95);
+	padding: 15px;
+	border: 4px solid #333;
+	border-style: double;
+	box-shadow: 4px 4px 0px #333;
+	font-size: 12px;
+	color: #333;
+	border-collapse: collapse;
+	user-select: none;
+	max-height: 50vh;
+	overflow-y: auto;
+	z-index: 900;
 }
 
 @media (max-width: 768px) {
-    #achievements-table {
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-        font-size: 12px;
-        max-height: unset;
-        background-color: rgba(255, 255, 255, 0.98);
-        border-bottom: none;
-        margin: 0;
-        padding: 10px;
-    }
+	#achievements-table {
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		max-width: 100%;
+		box-sizing: border-box;
+		font-size: 12px;
+		max-height: unset;
+		background-color: rgba(255, 255, 255, 0.98);
+		border-bottom: none;
+		margin: 0;
+		padding: 10px;
+	}
 
-    #achievements-table td {
-        padding: 8px 12px;
-        border-bottom: none;
-    }
+	#achievements-table td {
+		padding: 8px 12px;
+		border-bottom: none;
+	}
 }
 
 #achievements-table th,
 #achievements-table td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 2px solid #333;
+	padding: 8px;
+	text-align: left;
+	border-bottom: 2px solid #333;
 }
 
 #achievements-table .earned {
-    color: #4caf50;
+	color: #4caf50;
 }
 
 #achievements-table .locked {
-    color: #999;
+	color: #999;
 }
 
-
 #button-container {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    z-index: 1000;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	display: none;
+	flex-direction: column;
+	gap: 10px;
+	z-index: 1000;
 }
 
 @media (max-width: 768px) {
-    #button-container {
-        flex-direction: row;
-        justify-content: space-around;
-        top: 0;
-        bottom: auto;
-        right: 0;
-        left: 0;
-        background: rgba(255, 255, 255, 0.95);
-        padding: 10px;
-        gap: 5px;
-        border-bottom: 4px solid #333;
-    }
+	#button-container {
+		flex-direction: row;
+		justify-content: space-around;
+		top: 0;
+		bottom: auto;
+		right: 0;
+		left: 0;
+		background: rgba(255, 255, 255, 0.95);
+		padding: 10px;
+		gap: 5px;
+		border-bottom: 4px solid #333;
+	}
 }
 
 .control-button {
-    background-color: #4caf50;
-    color: white;
-    border: 4px solid #45a049;
-    border-style: double;
-    padding: 15px 25px;
-    box-shadow: 4px 4px 0px #333;
-    cursor: pointer;
-    image-rendering: pixelated;
-    transition: all 0.1s ease;
-    user-select: none;
-    font-family: "Press Start 2P", serif;
-    font-weight: 400;
-    font-style: normal;
-    min-width: 200px;
+	background-color: #4caf50;
+	color: white;
+	border: 4px solid #45a049;
+	border-style: double;
+	padding: 15px 25px;
+	box-shadow: 4px 4px 0px #333;
+	cursor: pointer;
+	image-rendering: pixelated;
+	transition: all 0.1s ease;
+	user-select: none;
+	font-family: "Press Start 2P", serif;
+	font-weight: 400;
+	font-style: normal;
+	min-width: 200px;
 }
 
 @media (max-width: 768px) {
-    .control-button {
-        min-width: unset;
-        width: auto;
-        padding: 10px;
-        font-size: 10px;
-        margin: 0;
-        flex: 1;
-    }
+	.control-button {
+		min-width: unset;
+		width: auto;
+		padding: 10px;
+		font-size: 10px;
+		margin: 0;
+		flex: 1;
+	}
 
-    #fullscreen-button {
-        display: none;
-    }
+	#fullscreen-button {
+		display: none;
+	}
 }
 
 .control-button:hover {
-    background-color: #45a049;
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0px #333;
+	background-color: #45a049;
+	transform: translate(2px, 2px);
+	box-shadow: 2px 2px 0px #333;
 }
 
 .control-button:active {
-    transform: translate(4px, 4px);
-    box-shadow: none;
+	transform: translate(4px, 4px);
+	box-shadow: none;
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    cursor: help;
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	cursor: help;
 }
 
 .modal-content {
-    background-color: white;
-    margin: 15% auto;
-    padding: 20px;
-    border: 4px solid #333;
-    border-style: double;
-    width: 80%;
-    max-width: 600px;
-    position: relative;
-    font-family: "Press Start 2P", serif;
+	background-color: white;
+	margin: 15% auto;
+	padding: 20px;
+	border: 4px solid #333;
+	border-style: double;
+	width: 80%;
+	max-width: 600px;
+	position: relative;
+	font-family: "Press Start 2P", serif;
 }
 
 .close {
-    position: absolute;
-    right: 10px;
-    top: 5px;
-    font-size: 28px;
-    cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	font-size: 28px;
+	cursor: pointer;
 }
 
 #modal-achievements {
-    margin-top: 20px;
+	margin-top: 20px;
 }
 
 @media (max-width: 600px) {
-    #click-counter {
-        font-size: 36px;
-    }
+	#click-counter {
+		font-size: 36px;
+	}
 }
 
 @media (max-width: 400px) {
-    #click-counter {
-        font-size: 24px;
-    }
+	#click-counter {
+		font-size: 24px;
+	}
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 /* New background colors */
 .bg-color-1 {
-    background-color: #ffb6c1;
+	background-color: #ffb6c1;
 }
 
 .bg-color-2 {
-    background-color: #87ceeb;
+	background-color: #87ceeb;
 }
 
 .bg-color-3 {
-    background-color: #98fb98;
+	background-color: #98fb98;
 }
 
 .bg-color-4 {
-    background-color: #dda0dd;
+	background-color: #dda0dd;
 }
 
 .bg-color-5 {
-    background-color: #f0e68c;
+	background-color: #f0e68c;
 }
 
 /* New background images */
 .bg-image-1 {
-    background-image: url("../images/image1.jpg");
+	background-image: url("../images/image1.jpg");
 }
 
 .bg-image-2 {
-    background-image: url("../images/image2.jpg");
+	background-image: url("../images/image2.jpg");
 }
 
 .bg-image-3 {
-    background-image: url("../images/image2.jpg");
+	background-image: url("../images/image2.jpg");
 }
 
 .bg-image-4 {
-    background-image: url("../images/image2.jpg");
+	background-image: url("../images/image2.jpg");
 }
 
 .bg-image-5 {
-    background-image: url("../images/image2.jpg");
+	background-image: url("../images/image2.jpg");
 }
 
 /* Styles for the flash message */
 .flash-message {
-    position: relative;
-    width: 75%;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #333;
-    text-align: center;
-    padding: 8px;
-    /* margin-bottom: 2px; */
-    font-size: 16px;
-    border: 4px solid #333;
-    border-style: double;
-    image-rendering: pixelated;
-    z-index: -1;
-    display: none;
-    user-select: none;
+	position: relative;
+	width: 75%;
+	background-color: rgba(255, 255, 255, 0.9);
+	color: #333;
+	text-align: center;
+	padding: 8px;
+	/* margin-bottom: 2px; */
+	font-size: 16px;
+	border: 4px solid #333;
+	border-style: double;
+	image-rendering: pixelated;
+	z-index: -1;
+	display: none;
+	user-select: none;
 }
 
 #flash-messages-container {
-    position: fixed;
-    top: 20px;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    pointer-events: none;
+	position: fixed;
+	top: 20px;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	pointer-events: none;
 }
 
 @media (max-width: 768px) {
-    #flash-messages-container {
-        top: auto;
-        bottom: 80px;
-    }
+	#flash-messages-container {
+		top: auto;
+		bottom: 80px;
+	}
 }
 
 #powerup {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background: url("../images/egg.webp") no-repeat center/contain;
-    cursor: pointer;
-    transition: transform 0.2s;
-    animation: fall 5s linear;
-    pointer-events: auto;
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	background: url("../images/egg.webp") no-repeat center / contain;
+	cursor: pointer;
+	transition: transform 0.2s;
+	animation: fall 5s linear;
+	pointer-events: auto;
 }
 
 #powerup:hover {
-    transform: scale(1.1);
+	transform: scale(1.1);
 }
 
-#timer, #mobile-timer {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    background-color: #fff;
-    padding: 10px;
-    border: 4px solid #333;
-    border-style: double;
-    font-size: 16px;
-    color: #333;
-    box-shadow: 4px 4px 0px #333;
-    display: none;
-    z-index: 10;
-    pointer-events: none;
-    user-select: none;
+#timer,
+#mobile-timer {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	background-color: #fff;
+	padding: 10px;
+	border: 4px solid #333;
+	border-style: double;
+	font-size: 16px;
+	color: #333;
+	box-shadow: 4px 4px 0px #333;
+	display: none;
+	z-index: 10;
+	pointer-events: none;
+	user-select: none;
 }
 
 #mobile-timer {
-    display: none;
+	display: none;
 }
 
 @media (max-width: 768px) {
-    #timer {
-        display: none !important;
-    }
-    
-    #mobile-timer {
-        display: block;
-        position: static;
-        margin: 0;
-        box-shadow: none;
-        border: none;
-        padding: 10px 15px;
-        font-size: 16px;
-        order: -1;
-        flex: 1;
-        text-align: center;
-        background: transparent;
-    }
+	#timer {
+		display: none !important;
+	}
+
+	#mobile-timer {
+		display: block;
+		position: static;
+		margin: 0;
+		box-shadow: none;
+		border: none;
+		padding: 10px 15px;
+		font-size: 16px;
+		order: -1;
+		flex: 1;
+		text-align: center;
+		background: transparent;
+	}
 }
 
 @keyframes fall {
-    from {
-        top: -50px;
-    }
-    to {
-        top: calc(100vh - 50px);
-    }
+	from {
+		top: -50px;
+	}
+	to {
+		top: calc(100vh - 50px);
+	}
 }
 
 #fire-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 10;
-    display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	z-index: 10;
+	display: none;
 }

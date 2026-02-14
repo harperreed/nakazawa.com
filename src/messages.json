@@ -1,172 +1,66 @@
 {
-    "messages": [
-        {
-            "clicks": 13,
-            "messageKey": "messages.prophecy"
-        },
-        {
-            "clicks": 42,
-            "messageKey": "messages.cosmic"
-        },
-        {
-            "clicks": 67,
-            "messageKey": "messages.astral"
-        },
-        {
-            "clicks": 87,
-            "messageKey": "messages.speaking"
-        },
-        {
-            "clicks": 110,
-            "messageKey": "messages.ancient"
-        },
-        {
-            "clicks": 133,
-            "messageKey": "messages.sages"
-        },
-        {
-            "clicks": 156,
-            "messageKey": "messages.demons"
-        },
-        {
-            "clicks": 189,
-            "messageKey": "messages.veil"
-        },
-        {
-            "clicks": 215,
-            "messageKey": "messages.spirits"
-        },
-        {
-            "clicks": 238,
-            "messageKey": "messages.council"
-        },
-        {
-            "clicks": 275,
-            "messageKey": "messages.primordial"
-        },
-        {
-            "clicks": 299,
-            "messageKey": "messages.void"
-        },
-        {
-            "clicks": 315,
-            "messageKey": "messages.runes"
-        },
-        {
-            "clicks": 333,
-            "messageKey": "messages.beast"
-        },
-        {
-            "clicks": 350,
-            "messageKey": "messages.prophets"
-        },
-        {
-            "clicks": 375,
-            "messageKey": "messages.dimensions"
-        },
-        {
-            "clicks": 420,
-            "messageKey": "messages.portal"
-        },
-        {
-            "clicks": 567,
-            "messageKey": "messages.sacrifice"
-        },
-        {
-            "clicks": 777,
-            "messageKey": "messages.jackpot"
-        },
-        {
-            "clicks": 888,
-            "messageKey": "messages.unmatched"
-        },
-        {
-            "clicks": 999,
-            "messageKey": "messages.reality"
-        },
-        {
-            "clicks": 1337,
-            "messageKey": "messages.elite"
-        },
-        {
-            "clicks": 1500,
-            "messageKey": "messages.power"
-        },
-        {
-            "clicks": 1666,
-            "messageKey": "messages.devils"
-        },
-        {
-            "clicks": 1777,
-            "messageKey": "messages.lucky"
-        },
-        {
-            "clicks": 1888,
-            "messageKey": "messages.dynasty"
-        },
-        {
-            "clicks": 2000,
-            "messageKey": "messages.twoThousand"
-        },
-        {
-            "clicks": 2222,
-            "messageKey": "messages.quartet"
-        },
-        {
-            "clicks": 2500,
-            "messageKey": "messages.transcend"
-        },
-        {
-            "clicks": 2750,
-            "messageKey": "messages.constellation"
-        },
-        {
-            "clicks": 3000,
-            "messageKey": "messages.destiny"
-        },
-        {
-            "clicks": 3333,
-            "messageKey": "messages.triforce"
-        },
-        {
-            "clicks": 3777,
-            "messageKey": "messages.fortune"
-        },
-        {
-            "clicks": 4000,
-            "messageKey": "messages.newDimensions"
-        },
-        {
-            "clicks": 4444,
-            "messageKey": "messages.quartet2"
-        },
-        {
-            "clicks": 4999,
-            "messageKey": "messages.threshold"
-        },
-        {
-            "clicks": 5000,
-            "messageKey": "messages.ultimate"
-        },
-        {
-            "clicks": 5555,
-            "messageKey": "messages.force"
-        },
-        {
-            "clicks": 6666,
-            "messageKey": "messages.underworld"
-        },
-        {
-            "clicks": 7777,
-            "messageKey": "messages.maxJackpot"
-        },
-        {
-            "clicks": 8888,
-            "messageKey": "messages.infinite"
-        },
-        {
-            "clicks": 10000,
-            "messageKey": "messages.godhood"
-        }
-    ]
+	"messages": [
+		{ "clicks": 13, "messageKey": "messages.prophecy" },
+		{ "clicks": 42, "messageKey": "messages.cosmic" },
+		{ "clicks": 67, "messageKey": "messages.astral" },
+		{ "clicks": 87, "messageKey": "messages.speaking" },
+		{ "clicks": 110, "messageKey": "messages.ancient" },
+		{ "clicks": 133, "messageKey": "messages.sages" },
+		{ "clicks": 156, "messageKey": "messages.demons" },
+		{ "clicks": 189, "messageKey": "messages.veil" },
+		{ "clicks": 215, "messageKey": "messages.spirits" },
+		{ "clicks": 238, "messageKey": "messages.council" },
+		{ "clicks": 275, "messageKey": "messages.primordial" },
+		{ "clicks": 299, "messageKey": "messages.void" },
+		{ "clicks": 315, "messageKey": "messages.runes" },
+		{ "clicks": 333, "messageKey": "messages.beast" },
+		{ "clicks": 350, "messageKey": "messages.prophets" },
+		{ "clicks": 375, "messageKey": "messages.dimensions" },
+		{ "clicks": 420, "messageKey": "messages.portal" },
+		{ "clicks": 469, "messageKey": "messages.burrow" },
+		{ "clicks": 512, "messageKey": "messages.warren" },
+		{ "clicks": 567, "messageKey": "messages.sacrifice" },
+		{ "clicks": 616, "messageKey": "messages.thump" },
+		{ "clicks": 666, "messageKey": "messages.darkWarren" },
+		{ "clicks": 717, "messageKey": "messages.ears" },
+		{ "clicks": 777, "messageKey": "messages.jackpot" },
+		{ "clicks": 888, "messageKey": "messages.unmatched" },
+		{ "clicks": 950, "messageKey": "messages.carrotThrone" },
+		{ "clicks": 999, "messageKey": "messages.reality" },
+		{ "clicks": 1111, "messageKey": "messages.onesAlignment" },
+		{ "clicks": 1337, "messageKey": "messages.elite" },
+		{ "clicks": 1500, "messageKey": "messages.power" },
+		{ "clicks": 1666, "messageKey": "messages.devils" },
+		{ "clicks": 1777, "messageKey": "messages.lucky" },
+		{ "clicks": 1888, "messageKey": "messages.dynasty" },
+		{ "clicks": 2000, "messageKey": "messages.twoThousand" },
+		{ "clicks": 2222, "messageKey": "messages.quartet" },
+		{ "clicks": 2500, "messageKey": "messages.transcend" },
+		{ "clicks": 2750, "messageKey": "messages.constellation" },
+		{ "clicks": 3000, "messageKey": "messages.destiny" },
+		{ "clicks": 3333, "messageKey": "messages.triforce" },
+		{ "clicks": 3777, "messageKey": "messages.fortune" },
+		{ "clicks": 4000, "messageKey": "messages.newDimensions" },
+		{ "clicks": 4444, "messageKey": "messages.quartet2" },
+		{ "clicks": 4999, "messageKey": "messages.threshold" },
+		{ "clicks": 5000, "messageKey": "messages.ultimate" },
+		{ "clicks": 5555, "messageKey": "messages.force" },
+		{ "clicks": 6666, "messageKey": "messages.underworld" },
+		{ "clicks": 7500, "messageKey": "messages.moonSummon" },
+		{ "clicks": 7777, "messageKey": "messages.maxJackpot" },
+		{ "clicks": 8888, "messageKey": "messages.infinite" },
+		{ "clicks": 9999, "messageKey": "messages.edgeOfForever" },
+		{ "clicks": 10000, "messageKey": "messages.godhood" },
+		{ "clicks": 11111, "messageKey": "messages.beyondTheVeil" },
+		{ "clicks": 12345, "messageKey": "messages.sequence" },
+		{ "clicks": 13337, "messageKey": "messages.hyperElite" },
+		{ "clicks": 14000, "messageKey": "messages.eventHorizon" },
+		{ "clicks": 15000, "messageKey": "messages.matrixAwakens" },
+		{ "clicks": 17777, "messageKey": "messages.luckyForever" },
+		{ "clicks": 20000, "messageKey": "messages.twentyK" },
+		{ "clicks": 25000, "messageKey": "messages.singularity" },
+		{ "clicks": 33333, "messageKey": "messages.tripleAscension" },
+		{ "clicks": 42000, "messageKey": "messages.ultimateAnswer" },
+		{ "clicks": 50000, "messageKey": "messages.eternity" }
+	]
 }
