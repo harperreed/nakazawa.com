@@ -5,7 +5,7 @@
     "scripts": {
         "start": "parcel src/index.html",
         "clean": "rm -rf dist .parcel-cache",
-        "build": "parcel build src/index.html",
+        "build": "parcel build src/index.html && node scripts/fix-parcel-resolve.js",
         "lint": "npx @biomejs/biome check src/",
         "lint-fix": "npx @biomejs/biome check --fix src/",
         "format": "npx @biomejs/biome format --write src/",

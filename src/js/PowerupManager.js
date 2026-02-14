@@ -2,6 +2,7 @@
 // ABOUTME: Egg powerups grant fire mode, carrots give bonus points, both scale with progression.
 
 import confetti from "canvas-confetti";
+import carrotPowerupUrl from "../images/carrot-powerup.webp";
 import { FireCursor } from "./fireCursor.js";
 import { flashMessage } from "./flashMessage.js";
 
@@ -170,7 +171,7 @@ export class PowerupManager {
 		carrot.style.width = "50px";
 		carrot.style.height = "50px";
 		carrot.style.cursor = "pointer";
-		carrot.style.backgroundImage = `url("${new URL("../images/carrot-powerup.webp", import.meta.url)}")`;
+		carrot.style.backgroundImage = `url("${carrotPowerupUrl}")`;
 		carrot.style.backgroundSize = "contain";
 		carrot.style.filter = "drop-shadow(3px 3px 3px rgba(0,0,0,0.5))";
 
